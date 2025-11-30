@@ -1,4 +1,4 @@
-const questions = [
+const originalQuestions = [
  {
     num: 1,
     question_en: "Which CSS property is used to change the background color of an input field?",
@@ -585,15 +585,42 @@ const questions = [
 
 // A
 
+
+// Create randomized questions array
+let questions = [];
 let currentQuestion = 0; 
 let language = "en";
-let timeLeft = 180 * 60; // 180 minutes
+let timeLeft = 60 * 60; // 60 minutes
 let timerInterval;
+let videoStream;
+let movementCount = 0;
+
+// Function to shuffle array randomly
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Initialize questions with random order
+function initializeQuestions() {
+    // Create a copy of original questions and shuffle them
+    questions = JSON.parse(JSON.stringify(originalQuestions));
+    questions = shuffleArray(questions);
+    
+    // Reassign question numbers based on new order
+    questions.forEach((q, index) => {
+        q.displayNum = index + 1; // This will be used for display
+    });
+}
 
 // ----------------- Quiz Logic -----------------
 function loadQuestion(index) {
     const q = questions[index];
-    document.getElementById("question").textContent = `${q.num}. ${
+    // Use displayNum instead of num for showing question number
+    document.getElementById("question").textContent = `${q.displayNum}. ${
         language === "en" ? q.question_en : q.question_hi
     }`;
     document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
@@ -658,24 +685,6 @@ function changeLanguage() {
     loadQuestion(currentQuestion);
 }
 
-function submitQuiz() {
-    clearInterval(timerInterval);
-    let attempted = 0,
-        notAttempted = 0,
-        score = 0;
-
-    questions.forEach((q) => {
-        if (q.attempted) {
-            attempted++;
-            if (q.selected === q.answer_en || q.selected === q.answer_hi) score++;
-        } else notAttempted++;
-    });
-
-    alert(
-        `Quiz submitted!\nAttempted: ${attempted}\nNot Attempted: ${notAttempted}\nScore: ${score}/${questions.length}`
-    );
-}
-
 function startTimer() {
     const timerElement = document.getElementById("timer");
     clearInterval(timerInterval);
@@ -698,6 +707,64 @@ function startTimer() {
     }, 1000);
 }
 
+function jumpToQuestion(index) {
+    currentQuestion = index;
+    loadQuestion(index);
+}
+
+function submitQuiz() {
+    let confirmation = confirm("Are you sure you want to submit the test?");
+    
+    if (!confirmation) {
+        return;
+    }
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let score = 0;
+    const results = [];
+
+    questions.forEach(q => {
+        if (q.attempted && q.selected) {
+            attempted++;
+            // Check if answer is correct
+            const isCorrect = q.selected === q.answer_en || q.selected === q.answer_hi;
+            if (isCorrect) {
+                score++;
+            }
+        } else {
+            notAttempted++;
+        }
+        
+        // Store results with proper question and answer data
+        const correctAnswer = language === "en" ? q.answer_en : q.answer_hi;
+        const questionText = language === "en" ? q.question_en : q.question_hi;
+        
+        results.push({ 
+            num: q.displayNum,
+            question: questionText, 
+            selected: q.selected || "Not Answered", 
+            correct: correctAnswer,
+            isCorrect: q.attempted && q.selected ? (q.selected === q.answer_en || q.selected === q.answer_hi) : false
+        });
+    });
+
+    // Sort results by question number for proper display
+    results.sort((a, b) => a.num - b.num);
+
+    localStorage.setItem("attempted", attempted);
+    localStorage.setItem("notAttempted", notAttempted);
+    localStorage.setItem("score", score);
+    localStorage.setItem("results", JSON.stringify(results));
+    localStorage.setItem("totalQuestions", questions.length);
+    localStorage.setItem("language", language); // Store current language
+
+    let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
+    if (viewResult) {
+        window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
+    }
+}
+
 function updateNavigation() {
     const nav = document.getElementById("circleContainer");
     nav.innerHTML = "";
@@ -705,20 +772,18 @@ function updateNavigation() {
         let color = "gray";
         if (i === currentQuestion) color = "blue";
         else if (q.attempted) color = "green";
-        nav.innerHTML += `<div class='circle' style='background-color:${color}' onclick='loadQuestion(${i})'>${i + 1}</div>`;
+        // Use displayNum for navigation circles - FIXED SYNTAX ERROR
+        nav.innerHTML += `<div class='circle' style='background-color:${color}' onclick='jumpToQuestion(${i})'>${q.displayNum}</div>`;
     });
 }
 
 // ----------------- Camera & Movement Logic -----------------
-let videoStream;
-let movementCount = 0;
-
 function startCamera() {
     const container = document.createElement("div");
     container.id = "camera-container";
     container.style.position = "fixed";
     container.style.top = "10px";
-    container.style.left = "10px"; // ✅ Left side
+    container.style.left = "10px";
     container.style.width = "130px";
     container.style.height = "130px";
     container.style.zIndex = "9999";
@@ -742,7 +807,7 @@ function startCamera() {
     video.style.objectFit = "cover";
     container.appendChild(video);
 
-    // ✅ Resize handle
+    // Resize handle
     const resizeHandle = document.createElement("div");
     resizeHandle.style.position = "absolute";
     resizeHandle.style.bottom = "2px";
@@ -754,7 +819,7 @@ function startCamera() {
     resizeHandle.style.cursor = "se-resize";
     container.appendChild(resizeHandle);
 
-    // ✅ Drag logic
+    // Drag logic
     let isDragging = false;
     let offsetX, offsetY;
 
@@ -781,7 +846,7 @@ function startCamera() {
         container.style.cursor = "grab";
     });
 
-    // ✅ Resize logic
+    // Resize logic
     let isResizing = false;
     let startWidth, startHeight, startX, startY;
 
@@ -807,7 +872,7 @@ function startCamera() {
         isResizing = false;
     });
 
-    // ✅ Camera stream
+    // Camera stream
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
             video.srcObject = stream;
@@ -840,11 +905,11 @@ function detectMovement(video) {
             if (diff > 1000000) {
                 movementCount++;
                 if (movementCount === 1) {
-                    alert("⚠️ Alert 1: Face is not move");
+                    alert("⚠ Alert 1: Face is not move");
                 } else if (movementCount === 2) {
-                    alert("⚠️ Alert 2: Head is not move");
+                    alert("⚠ Alert 2: Head is not move");
                 } else if (movementCount === 3) {
-                    alert("⚠️ Alert 3: Test series is restarting...");
+                    alert("⚠ Alert 3: Test series is restarting...");
                     restartTest();
                 }
             }
@@ -862,12 +927,10 @@ function restartTest() {
 
     movementCount = 0;
     currentQuestion = 0;
-    timeLeft = 180 * 60;
+    timeLeft = 60 * 60;
 
-    questions.forEach(q => {
-        q.attempted = false;
-        q.selected = null;
-    });
+    // Reinitialize questions with new random order
+    initializeQuestions();
 
     loadQuestion(currentQuestion);
     startTimer();
@@ -876,7 +939,11 @@ function restartTest() {
 
 // ----------------- Page Load -----------------
 window.onload = function () {
+    // Initialize questions with random order
+    initializeQuestions();
+    
     loadQuestion(currentQuestion);
     startTimer();
-    startCamera(); // ✅ Camera starts with test
+    startCamera();
 };
+// ... (Camera & Movement Logic and Page Load code unchanged)

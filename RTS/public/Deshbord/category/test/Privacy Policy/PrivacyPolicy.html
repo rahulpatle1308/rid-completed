@@ -111,11 +111,15 @@
         <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html"> Category</a></li>
         <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/dasborde_main/my purchase/my_purchase.html">My Purchase</a> </li>
         <li><i class="fas fa-comment-dots feedback-icon"></i><a href="/RTS/public/Deshbord/category/test/feedback/feedback.html"> Feedback</a></li>
-        <li><i class="fas fa-dollar-sign refund-icon"></i><a href="">Refund/Cancellation Policy</a> </li>
+        <li><i class="fas fa-dollar-sign refund-icon"></i><a href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a> </li>
         <li><i class="fas fa-shield-alt privacy-icon"></i><a href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a> </li>
         <li><i class="fas fa-file-contract terms-icon"></i><a href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a> </li>
-        <li><i class="fas fa-star-half-alt rate-icon"></i><a href="">Rate Us</a> </li>
-        <li><i class="fas fa-sign-out-alt logout-icon"></i><a href=""> Logout</a></li>
+        <li><i class="fas fa-star-half-alt rate-icon"></i><a href="/RTS/public/Deshbord/reating/reating.html">Rate Us</a> </li>
+      <li>
+  <i class="fas fa-sign-out-alt logout-icon"></i>
+  <a href="#" onclick="logout(event)">Logout</a>
+</li>
+
       </ul>
     </aside><br>
     <main>
@@ -140,5 +144,13 @@
       </div>
     </div>
   </main>
+
+  <script>
+  function logout(e) {
+    e.preventDefault(); // Page reload stop karega
+    window.location.href = "/index.html";
+  }
+</script>
+
 </body>
 </html>

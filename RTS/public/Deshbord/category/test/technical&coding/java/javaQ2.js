@@ -100,117 +100,253 @@ const questions = [
   { num: 50, question: "Which operator is used for logical OR?", options: ["||", "|", "&&", "&"], answer: "||", attempted: false, selected: "" }
 ];
 
-
 let currentQuestion = 0;
+let language = "en";
+let timeLeft = 60 * 60; 
+let timerInterval;
+
+// ----------------- Load Question -----------------
 function loadQuestion(index) {
-    const question = questions[index];
+    const q = questions[index];
+    if (!q) return; // ❌ undefined error fix
 
-    // Question text
-    document.getElementById("question").textContent = question.question;
-    document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
+    document.getElementById("question").textContent =
+        `${q.num}. ${language === "en" ? q.question_en : q.question_hi}`;
 
-    // Options
+    document.getElementById("questionCounter").textContent =
+        `Question ${index + 1} of ${questions.length}`;
+
     const optionsElement = document.getElementById("options");
     optionsElement.innerHTML = "";
-    question.options.forEach(option => {
-        const checked = question.selected === option ? "checked" : "";
-        optionsElement.innerHTML += `<li>
-            <input type="radio" name="option" value="${option}" onclick="markAttempted(${index}, '${option}')" ${checked}>
+
+    const options = language === "en" ? q.options_en : q.options_hi;
+
+    options.forEach(option => {
+        const isSelected = q.selected === option;
+
+        const div = document.createElement("div");
+        div.className = "option-box";
+
+        div.style = `
+            border: 2px solid ${isSelected ? "#007bff" : "#ccc"};
+            background-color: ${isSelected ? "#e7f1ff" : "white"};
+            padding: 10px;
+            border-radius: 8px;
+            margin: 6px 0;
+            cursor: pointer;
+        `;
+
+        div.innerHTML = `
+            <input type="radio" name="option" value="${option}" 
+            ${isSelected ? "checked" : ""} style="margin-right:8px;">
             ${option}
-        </li>`;
+        `;
+
+        div.addEventListener("click", () => {
+            markAttempted(index, option);
+            loadQuestion(index);
+        });
+
+        optionsElement.appendChild(div);
     });
 
-    // Agar question visit ho gaya lekin attempt nahi hua
-    if (!question.attempted) {
-        question.visited = true;
-    }
-
-    updateCircles();
+    updateNavigation();
 }
 
-        function markAttempted(index, selectedAnswer) {
+// ----------------- Attempt Mark -----------------
+function markAttempted(index, selectedAnswer) {
+    questions[index].attempted = true;
     questions[index].selected = selectedAnswer;
-    questions[index].attempted = true; // Attempt flag set
-    questions[index].visited = true;   // Visited flag bhi set
-    updateCircles();
+    updateNavigation();
 }
 
+// ----------------- Next / Previous -----------------
+function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+    }
+}
 
-        function nextQuestion() {
-            if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                loadQuestion(currentQuestion);
+function prevQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion(currentQuestion);
+    }
+}
+
+function changeLanguage() {
+    language = document.getElementById("languageSelect").value;
+    loadQuestion(currentQuestion);
+}
+
+// ----------------- Final Submit -----------------
+function submitQuiz() {
+    let confirmation = confirm("Are you sure you want to submit the test?");
+    if (!confirmation) return;
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let score = 0;
+    const results = [];
+
+    questions.forEach(q => {
+        if (q.attempted) {
+            attempted++;
+
+            if (q.selected === q.answer_en || q.selected === q.answer_hi) {
+                score++;
             }
+        } else {
+            notAttempted++;
         }
 
-        function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                loadQuestion(currentQuestion);
-            }
-        }
+        results.push({
+            question: language === "en" ? q.question_en : q.question_hi,
+            selected: q.selected || "Not Answered",
+            correct: language === "en" ? q.answer_en : q.answer_hi
+        });
+    });
 
-        function updateCircles() {
-    const circleContainer = document.getElementById("circleContainer");
-    circleContainer.innerHTML = "";
+    localStorage.setItem("attempted", attempted);
+    localStorage.setItem("notAttempted", notAttempted);
+    localStorage.setItem("score", score);
+    localStorage.setItem("results", JSON.stringify(results));
+
+    let viewResult = confirm("Test submitted! Do you want to view result?");
+    if (viewResult) {
+        window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
+    }
+}
+
+// ----------------- Navigation Circles -----------------
+function updateNavigation() {
+    const nav = document.getElementById("circleContainer");
+    nav.innerHTML = "";
 
     questions.forEach((q, i) => {
-        let status = "";
+        let color = "gray";
+        if (i === currentQuestion) color = "blue";
+        else if (q.attempted) color = "green";
 
-        if (i === currentQuestion) {
-            status = "active"; // Current question
-        } else if (q.attempted) {
-            status = "answered"; // Green
-        } else if (q.visited) {
-            status = "visited"; // White
-        } else {
-            status = "not-attempted"; // Default gray
-        }
-
-        circleContainer.innerHTML += `<div class="circle ${status}" onclick="jumpToQuestion(${i})">${i + 1}</div>`;
+        nav.innerHTML += `
+            <div class="circle" style="background:${color};"
+            onclick="jumpToQuestion(${i})">${i + 1}</div>
+        `;
     });
 }
 
-        function jumpToQuestion(index) {
-            currentQuestion = index;
-            loadQuestion(index);
-        }
+function jumpToQuestion(index) {
+    currentQuestion = index;
+    loadQuestion(index);
+}
 
-        function submitQuiz() {
-            let confirmation = confirm("Are you sure you want to submit the test?");
-            
-            if (!confirmation) {
-                return; // अगर यूज़र 'Cancel' करता है तो आगे नहीं बढ़ेंगे
+// ----------------- Timer -----------------
+function startTimer() {
+    const timerElement = document.getElementById("timer");
+
+    timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("Time's up!");
+            submitQuiz();
+        } else {
+            const hours = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
+            const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
+            const seconds = String(timeLeft % 60).padStart(2, "0");
+
+            timerElement.textContent = `Time Left: ${hours}:${minutes}:${seconds}`;
+            timeLeft--;
+        }
+    }, 1000);
+}
+
+// ----------------- Camera & Movement Detection -----------------
+let videoStream;
+let movementCount = 0;
+
+function startCamera() {
+    const container = document.createElement("div");
+    container.id = "camera-container";
+    container.style = `
+        position:fixed; top:10px; left:10px; width:130px; height:130px;
+        border-radius:50%; overflow:hidden; border:3px solid red; z-index:9999;
+    `;
+
+    document.body.appendChild(container);
+
+    const video = document.createElement("video");
+    video.autoplay = true;
+    video.playsinline = true;
+    video.style = "width:100%; height:100%; object-fit:cover;";
+    container.appendChild(video);
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            videoStream = stream;
+            detectMovement(video);
+        })
+        .catch(() => alert("Camera access denied!"));
+}
+
+function detectMovement(video) {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = 160;
+    canvas.height = 160;
+
+    let lastData = null;
+
+    setInterval(() => {
+        ctx.drawImage(video, 0, 0, 160, 160);
+        const data = ctx.getImageData(0, 0, 160, 160);
+
+        if (lastData) {
+            let diff = 0;
+            for (let i = 0; i < data.data.length; i += 4) {
+                diff += Math.abs(data.data[i] - lastData.data[i]);
             }
 
-            let attempted = 0;
-            let notAttempted = 0;
-            let score = 0;
-            const results = [];
+            if (diff > 1000000) {
+                movementCount++;
 
-            questions.forEach(q => {
-                if (q.attempted) {
-                    attempted++;
-                    if (q.selected === q.answer) {
-                        score++;
-                    }
-                } else {
-                    notAttempted++;
+                if (movementCount === 1) alert("⚠ Alert 1: No movement detected!");
+                if (movementCount === 2) alert("⚠ Alert 2: Head not moving!");
+                if (movementCount === 3) {
+                    alert("⚠ Alert 3: Restarting test...");
+                    restartTest();
                 }
-                results.push({ question: q.question, selected: q.selected || "Not Answered", correct: q.answer });
-            });
-
-            localStorage.setItem("attempted", attempted);
-            localStorage.setItem("notAttempted", notAttempted);
-            localStorage.setItem("score", score);
-            localStorage.setItem("results", JSON.stringify(results));
-
-            // रिजल्ट देखने से पहले एक और कन्फर्मेशन ले सकते हैं
-            let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
-            if (viewResult) {
-                window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
             }
         }
-        window.onload = () => {
-            loadQuestion(currentQuestion);
-        };
+        lastData = data;
+
+    }, 2000);
+}
+
+function restartTest() {
+    if (videoStream) videoStream.getTracks().forEach(t => t.stop());
+
+    const cam = document.getElementById("camera-container");
+    if (cam) cam.remove();
+
+    movementCount = 0;
+    currentQuestion = 0;
+    timeLeft = 60 * 60;
+
+    questions.forEach(q => {
+        q.attempted = false;
+        q.selected = null;
+    });
+
+    loadQuestion(0);
+    startTimer();
+    startCamera();
+}
+
+// ----------------- Page Load -----------------
+window.onload = function () {
+    loadQuestion(currentQuestion);
+    startTimer();
+    startCamera();
+};

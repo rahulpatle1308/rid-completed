@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-  <link rel="stylesheet" href="/RTS/public/css/Deshbord.css">
-  <link rel="stylesheet" href="/RTS/public/css/navbar.css">
-  <link rel="stylesheet" href="/RTS/public/css/footer.css">
-
-<!-- <style>
-    
-</style> -->
-
+<link rel="stylesheet" href="/RTS/public/css/Deshbord.css">
+<link rel="stylesheet" href="/RTS/public/css/footer.css">
 </head>
 
 <body>
@@ -38,8 +33,13 @@
     <!-- Main Navigation -->
     <div class="nav-container">
       <div class="logo">
-        <img src="/RTS/public/Deshbord/logo.svg" alt="RID Bharat Logo">
+        <img src="logo.svg" alt="RID Bharat Logo">
       </div>
+
+      <!-- Menu Toggle Button for Mobile -->
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
 
       <div class="nav-menu" id="navMenu">
         <!-- Search Box -->
@@ -50,19 +50,18 @@
 
         <!-- Certificate and Profile Buttons -->
         <div class="nav-buttons">
-          <!-- <a href="#" class="btn"><i class="fas fa-award" ></i> Certificate</a> -->
-<a href="/Certificate-Verification/verify.html" class="btn">
-  <i class="fas fa-award"></i> Certificate
-</a>
-          
+          <a href="/Certificate-Verification/verify.html" class="btn">
+            <i class="fas fa-award"></i> Certificate
+          </a>
+
           <a href="/RTS/public/profile.html" class="btn"><i class="fas fa-user"></i> Profile</a>
         </div>
 
         <!-- Mobile Navigation -->
         <ul class="mobile-nav" id="mobileNav">
           <!-- Mobile Search Box -->
-          <div class="search-box">
-            <input type="text" placeholder="Search Anything..." id="searchInput">
+          <div class="mobile-search-box">
+            <input type="text" placeholder="Search Anything..." id="mobileSearchInput">
             <i class="fas fa-search"></i>
           </div>
 
@@ -107,98 +106,116 @@
     <ul class="menu">
       <li><i class="fas fa-home home-icon"></i><a href="/RTS/public/Deshbord.html">Home</a></li>
       <li><i class="fas fa-user profile-icon"></i><a href="">My Profile</a></li>
-      <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html">Category</a></li>
-      <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/dasborde_main/my purchase/my_purchase.html">My Purchase</a></li>
-      <li><i class="fas fa-comment-dots feedback-icon"></i><a href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
-      <li><i class="fas fa-dollar-sign refund-icon"></i><a href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
-      <li><i class="fas fa-shield-alt privacy-icon"></i><a href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
-      <li><i class="fas fa-file-contract terms-icon"></i><a href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
-      <li><i class="fas fa-star-half-alt rate-icon"></i><a href="/RTS/public/Deshbord/reating/reating.html">Rate Us</a></li>
-      <li><i class="fas fa-sign-out-alt logout-icon"></i><a href="#">Logout</a></li>
+      <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html">Category</a>
+      </li>
+      <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/RTS/public/Deshbord/myPurchases/my_purchase.html">My
+          Purchase</a></li>
+      <li><i class="fas fa-comment-dots feedback-icon"></i><a
+          href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
+      <li><i class="fas fa-dollar-sign refund-icon"></i><a
+          href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
+      <li><i class="fas fa-shield-alt privacy-icon"></i><a
+          href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
+      <li><i class="fas fa-file-contract terms-icon"></i><a
+          href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
+      <li><i class="fas fa-star-half-alt rate-icon"></i><a href="/RTS/public/Deshbord/reating/reating.html">Rate Us</a>
+      </li>
+      <li><i class="fas fa-sign-out-alt logout-icon"></i><a href="/index.html">Logout</a></li>
     </ul>
   </aside><br>
 
-<!-- Banner Section -->
-<div class="banner-main">
+  <!-- Banner Section -->
+  <div class="banner-main">
     <div class="banner-track">
-        <!-- Each slide now has a data-link attribute -->
-        <div class="banner-slide" data-link="https://example.com/course1">
-            <img src="/RTS/public/images/banner/1.jpg" alt="Course 1" class="banner-image" loading="lazy">
-        </div>
-        <div class="banner-slide" data-link="https://example.com/course2">
-            <img src="/RTS/public/images/banner/2.jpg" alt="Course 2" class="banner-image" loading="lazy">
-        </div>
-        <div class="banner-slide" data-link="https://example.com/course3">
-            <img src="/RTS/public/images/banner/3.jpg" alt="Course 3" class="banner-image" loading="lazy">
-        </div>
-        <div class="banner-slide" data-link="https://example.com/course4">
-            <img src="/RTS/public/images/banner/4.jpg" alt="Course 4" class="banner-image" loading="lazy">
-        </div>
+      <!-- Each slide now has a data-link attribute -->
+      <div class="banner-slide" data-link="https://example.com/course1">
+        <img src="/RTS/public/images/banner/1.jpg" alt="Course 1" class="banner-image" loading="lazy">
+      </div>
+      <div class="banner-slide" data-link="https://example.com/course2">
+        <img src="/RTS/public/images/banner/2.jpg" alt="Course 2" class="banner-image" loading="lazy">
+      </div>
+      <div class="banner-slide" data-link="https://example.com/course3">
+        <img src="/RTS/public/images/banner/3.jpg" alt="Course 3" class="banner-image" loading="lazy">
+      </div>
+      <div class="banner-slide" data-link="https://example.com/course4">
+        <img src="/RTS/public/images/banner/4.jpg" alt="Course 4" class="banner-image" loading="lazy">
+      </div>
     </div>
 
     <div class="banner-nav">
-        <button class="banner-arrow prev-arrow">❮</button>
-        <button class="banner-arrow next-arrow">❯</button>
+      <button class="banner-arrow prev-arrow">❮</button>
+      <button class="banner-arrow next-arrow">❯</button>
     </div>
-    
-    <div class="banner-dots">
-        <button class="banner-dot active"></button>
-        <button class="banner-dot"></button>
-        <button class="banner-dot"></button>
-        <button class="banner-dot"></button>
-    </div>
-</div>
 
-<main>
-    <section class="courses">
+    <div class="banner-dots">
+      <button class="banner-dot active"></button>
+      <button class="banner-dot"></button>
+      <button class="banner-dot"></button>
+      <button class="banner-dot"></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Mobile Search Container - NEW -->
+    <div class="mobile-search-container">
+      <div class="search-box">
+        <input type="text" placeholder="Search Anything..." id="mainMobileSearchInput">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+
+   <section class="courses">
       <div class="courses">
         <div class="course-card">
           <img src="/RTS/public/images/dashbord/tecnical.jpg" alt="Course Image">
           <div class="course-content">
             <h3>TECHNICAL & CODING</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/technical&coding/technical.html" class="btn">More Details</a>
+            <div class="marquee">
+              <p>All Test <span>Service</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/technical&coding/technical.html" class="btn">Open Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/RTS/public/Deshbord/category/test/10th/bihar/img_book/bihar.png" alt="Course Image">
+          <div class="course-content">
+            <h3>10th & (Bihar Board )</h3>
+            <div class="marquee">
+              <p>All Test <span>Service</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/10th/all-board.html" class="btn"> Open Now </a>
+            </div>
           </div>
         </div>
 
         <div class="course-card">
-          <img src="/RTS/public/images/dashbord/ssc.png" alt="Course Image">
+          <img src="/RTS/public/Deshbord/category/test/10th/bihar/img_book/bihar.png" alt="Course Image">
           <div class="course-content">
-            <h3>SSC</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/ssc/group-all.html" class="btn">More Details</a>
+            <h3>12th & ( Bihar Board) </h3>
+            <div class="marquee">
+              <p>All Test <span>Service</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/12th/all-board.html" class="btn"> Open Now </a>
+            </div>
           </div>
         </div>
-        <div class="course-card">
-          <img src="/RTS/public/images/dashbord/mppsc.png" alt="Course Image">
-          <div class="course-content">
-            <h3>MPPSC</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/mppsc/group-all.html" class="btn">More Details</a>
-          </div>
-        </div>
-        <div class="course-card">
-          <img src="/RTS/public/images/dashbord/10th-mpboard(1).webp" alt="Course Image">
-          <div class="course-content">
-            <h3>10TH</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/10th/all-board.html" class="btn">More Details</a>
-          </div>
-        </div>
-        <div class="course-card">
-          <img src="/RTS/public/images/dashbord/10th-mpboard(1).webp" alt="Course Image">
-          <div class="course-content">
-            <h3>12TH</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/12th/all-board.html" class="btn">More Details</a>
-          </div>
-        </div>
+
+
         <div class="course-card">
           <img src="/RTS/public/images/dashbord/jee.jpg" alt="Course Image">
           <div class="course-content">
             <h3>JEE</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/jee/test.html" class="btn">More Details</a>
+            <div class="marquee">
+              <p>All Test <span>Serice</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/jee/test.html" class="btn"> Open Now </a>
+            </div>
+
           </div>
         </div>
 
@@ -206,8 +223,40 @@
           <img src="/RTS/public/images/dashbord/neet.jpg" alt="Course Image">
           <div class="course-content">
             <h3>NEET</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/neet/purchase-test.html" class="btn">More Details</a>
+            <div class="marquee">
+              <p>All Test <span>Serice</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/neet/purchase-test.html" class="btn"> Open Now </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="/RTS/public/images/dashbord/ssc.png" alt="Course Image">
+          <div class="course-content">
+            <h3>SSC</h3>
+            <div class="marquee">
+              <p>All Test <span>Serice</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/ssc/group-all.html" class="btn"> Open Now </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/RTS/public/images/dashbord/mppsc.png" alt="Course Image">
+          <div class="course-content">
+            <h3>MPPSC</h3>
+            <div class="marquee">
+              <p>All Test <span>Serice</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/mppsc/group-all.html" class="btn"> Open Now </a>
+            </div>
+
           </div>
         </div>
 
@@ -215,16 +264,21 @@
           <img src="/RTS/public/images/dashbord/raliway.png" alt="Course Image">
           <div class="course-content">
             <h3>RAILWAY</h3>
-            <p>Beginner Basic <span>7:37</span></p>
-            <a href="/RTS/public/Deshbord/category/test/raliway/1test.html" class="btn">More Details</a>
+            <div class="marquee">
+              <p>All Test <span>Serice</span></p>
+            </div>
+            <div class="btn-container">
+              <a href="/RTS/public/Deshbord/category/test/raliway/1test.html" class="btn"> Open Now</a>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
-</main>
+  </main>
 
-<!----------------------------------------------------------Footer parts in desbord---------------------------------------------------------------->
-<section class="footer">
+  <!----------------------------------------------------------Footer parts in desbord---------------------------------------------------------------->
+  <section class="footer">
     <footer>
       <div class="left">
         <img src="/RTS/public/Deshbord/logo.svg" alt="RID Bharat Logo">
@@ -236,8 +290,8 @@
           <a href="mailto:ridorg.in@gmail.com">
             <i class="fas fa-envelope"></i> ridorg.in@gmail.com | Email
           </a>
-          <a href="tel:+919892782728">
-            <i class="fas fa-phone"></i> +91 9892782728 | Mobile
+          <a href="tel:+91 9202707903">
+            <i class="fas fa-phone"></i> +91 9202707903 | Mobile
           </a>
         </div>
       </div>
@@ -307,110 +361,189 @@
         <a href="#">Feedback</a>
       </div>
     </section>
-</section>
+  </section>
 
-<!-- JavaScript Files -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const bannerTrack = document.querySelector('.banner-track');
-        const slides = document.querySelectorAll('.banner-slide');
-        const dots = document.querySelectorAll('.banner-dot');
-        const prevArrow = document.querySelector('.prev-arrow');
-        const nextArrow = document.querySelector('.next-arrow');
-        
-        let currentIndex = 0;
-        const slideCount = slides.length;
-        let slideInterval;
-        const intervalTime = 3000;
-        
-        // Initialize slider
-        function initBanner() {
-            updateBannerPosition();
-            setupEventListeners();
-            startAutoSlide();
+  <!-- JavaScript Files -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Banner functionality
+      const bannerTrack = document.querySelector('.banner-track');
+      const slides = document.querySelectorAll('.banner-slide');
+      const dots = document.querySelectorAll('.banner-dot');
+      const prevArrow = document.querySelector('.prev-arrow');
+      const nextArrow = document.querySelector('.next-arrow');
+
+      let currentIndex = 0;
+      const slideCount = slides.length;
+      let slideInterval;
+      const intervalTime = 3000;
+
+      // Initialize slider
+      function initBanner() {
+        updateBannerPosition();
+        setupEventListeners();
+        startAutoSlide();
+      }
+
+      // Update banner position
+      function updateBannerPosition() {
+        const slideWidth = slides[0].clientWidth;
+        bannerTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      // Go to specific slide
+      function goToSlide(index) {
+        currentIndex = (index < 0) ? slideCount - 1 :
+          (index >= slideCount) ? 0 : index;
+        updateBannerPosition();
+        resetInterval();
+      }
+
+      // Handle click on slide
+      function handleSlideClick() {
+        const link = slides[currentIndex].getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
         }
-        
-        // Update banner position
-        function updateBannerPosition() {
-            const slideWidth = slides[0].clientWidth;
-            bannerTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-            
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
-        
-        // Go to specific slide
-        function goToSlide(index) {
-            currentIndex = (index < 0) ? slideCount - 1 : 
-                         (index >= slideCount) ? 0 : index;
-            updateBannerPosition();
-            resetInterval();
-        }
-        
-        // Handle click on slide
-        function handleSlideClick() {
-            const link = slides[currentIndex].getAttribute('data-link');
-            if (link) {
-                window.location.href = link;
-            }
-        }
-        
-        // Event listeners
-        function setupEventListeners() {
-            // Navigation arrows
-            prevArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                goToSlide(currentIndex - 1);
-            });
-            
-            nextArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                goToSlide(currentIndex + 1);
-            });
-            
-            // Dot navigation
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    goToSlide(index);
-                });
-            });
-            
-            // Click on slide
-            bannerTrack.addEventListener('click', handleSlideClick);
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
-                if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
-            });
-            
-            // Pause on hover
-            const banner = document.querySelector('.banner-main');
-            banner.addEventListener('mouseenter', pauseSlider);
-            banner.addEventListener('mouseleave', startAutoSlide);
-        }
-        
-        // Auto slide functions
-        function startAutoSlide() {
-            slideInterval = setInterval(() => goToSlide(currentIndex + 1), intervalTime);
-        }
-        
-        function pauseSlider() {
-            clearInterval(slideInterval);
-        }
-        
-        function resetInterval() {
-            pauseSlider();
-            startAutoSlide();
-        }
-        
-        initBanner();
+      }
+
+      // Event listeners
+      function setupEventListeners() {
+        // Navigation arrows
+        prevArrow.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToSlide(currentIndex - 1);
+        });
+
+        nextArrow.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToSlide(currentIndex + 1);
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(index);
+          });
+        });
+
+        // Click on slide
+        bannerTrack.addEventListener('click', handleSlideClick);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+          if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+        });
+
+        // Pause on hover
+        const banner = document.querySelector('.banner-main');
+        banner.addEventListener('mouseenter', pauseSlider);
+        banner.addEventListener('mouseleave', startAutoSlide);
+      }
+
+      // Auto slide functions
+      function startAutoSlide() {
+        slideInterval = setInterval(() => goToSlide(currentIndex + 1), intervalTime);
+      }
+
+      function pauseSlider() {
+        clearInterval(slideInterval);
+      }
+
+      function resetInterval() {
+        pauseSlider();
+        startAutoSlide();
+      }
+
+      initBanner();
+
+      // Sidebar toggle functionality
+      const sidebarToggle = document.querySelector('.sidebar-toggle');
+      const sidebar = document.querySelector('.sidebar');
+
+      if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+        });
+      }
+
+      // Navbar toggle functionality
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.getElementById('navMenu');
+      const mobileNav = document.getElementById('mobileNav');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          mobileNav.classList.toggle('active');
+        });
+      }
+
+      // Close mobile nav when a link is clicked
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+          mobileNav.classList.remove('active');
+        });
+      });
+
+      // Close sidebar when a link is clicked (on mobile)
+      const sidebarLinks = document.querySelectorAll('.sidebar a');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 992) {
+            sidebar.classList.remove('open');
+          }
+        });
+      });
     });
-</script>
-<script src="/RTS/public/js/main.js"></script>
-<script src="/RTS/public/js/search-course.js"></script>
-<script src="/RTS/public/js/Deshbord.js"></script>
+
+   
+  // ==========================
+  // SEARCH BAR FUNCTIONALITY
+  // ==========================
+
+  const searchInput = document.getElementById("searchInput");
+  const mobileSearchInput = document.getElementById("mainMobileSearchInput");
+  const courseCards = document.querySelectorAll(".course-card");
+
+  function filterCourses(value) {
+    value = value.toLowerCase().trim();
+
+    courseCards.forEach(card => {
+      const title = card.querySelector("h3").innerText.toLowerCase();
+
+      if (title.includes(value)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Desktop Search
+  if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+      filterCourses(this.value);
+    });
+  }
+
+  // Mobile Search
+  if (mobileSearchInput) {
+    mobileSearchInput.addEventListener("keyup", function () {
+      filterCourses(this.value);
+    });
+  }
+
+
+  </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -449,7 +450,7 @@
             margin-top: 160px;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 200px;
             position: relative;
@@ -498,7 +499,7 @@
         .buy-button:hover {
             background: #c1121f;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Course Details */
@@ -510,7 +511,7 @@
             margin-bottom: 20px;
             justify-content: center;
             padding: 0 20px;
-            margin-top: 50px;
+            margin-top: -100px;
         }
 
         .detail-item {
@@ -519,7 +520,7 @@
             border-radius: 30px;
             font-weight: bold;
             color: #000080;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-size: 1.1rem;
         }
 
@@ -533,7 +534,7 @@
 
         /* Description Section */
         .description-section {
-            margin: 40px 0;
+            margin: 1px 0;
             padding: 0 20px;
         }
 
@@ -561,7 +562,7 @@
             background: white;
             border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             line-height: 1.8;
             border-left: 4px solid #000080;
             margin: 0 auto;
@@ -584,13 +585,13 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .test-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .test-header {
@@ -659,7 +660,7 @@
             .nav-menu {
                 gap: 15px;
             }
-            
+
             .search-box {
                 width: 300px;
             }
@@ -669,11 +670,11 @@
             .nav-menu {
                 gap: 10px;
             }
-            
+
             .search-box {
                 width: 250px;
             }
-            
+
             .content-container {
                 width: calc(100% - 250px);
                 margin-left: 250px;
@@ -783,7 +784,7 @@
                 padding-right: 0;
                 height: 200px;
             }
-            
+
             .test-card {
                 margin-top: 20px;
             }
@@ -826,18 +827,18 @@
                 width: 200px;
                 margin-top: 20px;
             }
-            
+
             .course-details {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
-            
+
             .detail-item {
                 padding: 8px 15px;
                 font-size: 1rem;
             }
-            
+
             .test-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
@@ -885,20 +886,20 @@
                 height: 220px;
                 margin-bottom: 200px;
             }
-            
+
             .test-card {
                 width: 180px;
             }
-            
+
             .section-title {
                 font-size: 24px;
                 padding-left: 10px;
             }
-            
+
             .section-title::after {
                 left: 10px;
             }
-            
+
             .test-grid {
                 grid-template-columns: 1fr;
             }
@@ -909,15 +910,18 @@
                 height: 200px;
                 margin-bottom: 220px;
             }
-            
+
             .test-card {
                 width: 160px;
                 padding: 10px;
             }
-            
+
             .section-title {
                 font-size: 22px;
             }
+        }
+        .section-parts{
+            margin-left: 250px;
         }
     </style>
 </head>
@@ -946,7 +950,8 @@
         <div class="nav-container">
             <div class="logo">
                 <!-- Fixed Logo - Using a placeholder logo -->
-                <img src="/RTS/public/Deshbord/category/test/technical&coding/img/final_logo copy.svg" alt="RID Bharat Logo">
+                <img src="/RTS/public/Deshbord/category/test/technical&coding/img/final_logo copy.svg"
+                    alt="RID Bharat Logo">
             </div>
 
             <div class="nav-menu" id="navMenu">
@@ -997,19 +1002,25 @@
         <ul class="menu">
             <li><i class="fas fa-home home-icon"></i><a href="/RTS/public/Deshbord.html">Home</a></li>
             <li><i class="fas fa-user profile-icon"></i><a href="">My Profile</a></li>
-            <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html">Category</a></li>
-            <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/dasborde_main/my purchase/my_purchase.html">My Purchase</a></li>
-            <li><i class="fas fa-comment-dots feedback-icon"></i><a href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
-            <li><i class="fas fa-dollar-sign refund-icon"></i><a href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
-            <li><i class="fas fa-shield-alt privacy-icon"></i><a href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
-            <li><i class="fas fa-file-contract terms-icon"></i><a href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
+            <li><i class="fas fa-star category-icon"></i><a
+                    href="/RTS/public/Deshbord/category/category.html">Category</a></li>
+            <li><i class="fas fa-shopping-cart purchase-icon"></i><a
+                    href="/dasborde_main/my purchase/my_purchase.html">My Purchase</a></li>
+            <li><i class="fas fa-comment-dots feedback-icon"></i><a
+                    href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
+            <li><i class="fas fa-dollar-sign refund-icon"></i><a
+                    href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
+            <li><i class="fas fa-shield-alt privacy-icon"></i><a
+                    href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
+            <li><i class="fas fa-file-contract terms-icon"></i><a
+                    href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
             <li><i class="fas fa-star-half-alt rate-icon"></i><a href="#">Rate Us</a></li>
             <li><i class="fas fa-sign-out-alt logout-icon"></i><a href="#">Logout</a></li>
         </ul>
     </aside>
 
     <!-- Purchase Section -->
-   <div class="content-container">
+    <div class="content-container">
         <div class="header-banner" role="banner">
             <div class="test-card" aria-label="Course Information Card">
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070" alt="HTML Course">
@@ -1019,9 +1030,9 @@
                 <button class="buy-button" aria-label="Buy HTML Course">Buy now</button>
             </div>
         </div>
-      
+
         <main>
-            
+
             <div class="course-details">
                 <div class="detail-item">
                     Validity: 3 months
@@ -1030,36 +1041,18 @@
                     Language: English
                 </div>
             </div>
-            
+
             <div class="divider" aria-hidden="true"></div>
-            
-            <section class="description-section" aria-labelledby="description-title">
-                <h2 class="section-title" id="description-title">Description</h2>
-                <div class="description-box">
-                    <p>
-                        Reading is an essential skill that helps improve our knowledge, language, and imagination. It allows us
-                        to explore different worlds, understand diverse perspectives, and learn new ideas. When we read, we not
-                        only learn facts but also improve our vocabulary and comprehension skills. <br> <br>
 
-                        Books, newspapers, and articles offer a wide range of information, from history and science to current
-                        events. Reading regularly helps us stay informed and aware of what is happening around the world. It
-                        also enhances our critical thinking skills because we learn to analyze and evaluate the information
-                        presented. <br> <br>
 
-                        In addition, reading is a great way to relax and reduce stress. It provides an escape from daily
-                        routines and offers a peaceful break. Whether it's a novel, a magazine, or even a blog post, reading can
-                        be both entertaining and educational.
-                    </p>
-                </div>
-            </section>
-            
+
             <section class="description-section" aria-labelledby="tests-title">
                 <h2 class="section-title" id="tests-title">ALL TEST's</h2>
                 <div class="test-grid">
                     <!-- Test Item 1 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 1</h3>
+                            <h3>Test : 1</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1083,11 +1076,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 2 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 2</h3>
+                            <h3>Test : 2</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1111,11 +1104,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 3 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 3</h3>
+                            <h3>Test : 3</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1139,11 +1132,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 4 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 4</h3>
+                            <h3>Test : 4</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1167,11 +1160,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 5 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 5</h3>
+                            <h3>Test : 5</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1195,11 +1188,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 6 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 6</h3>
+                            <h3>Test : 6</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1223,11 +1216,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 7 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 7</h3>
+                            <h3>Test : 7</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1251,11 +1244,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Test Item 8 -->
                     <div class="test-item">
                         <div class="test-header">
-                            <h3>Test : Html 8</h3>
+                            <h3>Test : 8</h3>
                         </div>
                         <div class="test-metrics">
                             <div class="metric">
@@ -1280,669 +1273,643 @@
                         </div>
                     </div>
 
-<!-- ///////////////////////////////////////////////////////////////////
+                    <!-- ///////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////
  //////////////////////////////////////////////////////////////////////// -->
 
-   <!-- Test Item 9 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 9</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-
-   <!-- Test Item 10 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 10</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 11 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 11</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 12 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 12</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 13 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 13</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 14 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 14</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 15 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 15</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 16 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 16</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 17 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 17</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 18 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 18</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 19 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 19</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 20 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 20</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 21 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 21</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 22 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 22</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 23 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 23</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 24 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 24</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 25 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 25</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 26 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 26</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 27 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 27</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 28 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 28</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-   <!-- Test Item 29 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 29</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-   <!-- Test Item 30 -->
-   <div class="test-item">
-    <div class="test-header">
-        <h3>Test : Html 30</h3>
-    </div>
-    <div class="test-metrics">
-        <div class="metric">
-            <div class="metric-value">50</div>
-            <div class="metric-label">Questions</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">100</div>
-            <div class="metric-label">Marks</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">60</div>
-            <div class="metric-label">Minutes</div>
-        </div>
-    </div>
-    <div class="test-action">
-        <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
-            <button class="start-button">
-                <i class="fas fa-play-circle"></i> Start Test
-            </button>
-        </a>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!--////////////////////////////////////////////////////////////////////////////////////
+                    <!-- Test Item 9 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 9</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Test Item 10 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 10</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 11 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 11</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 12 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 12</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 13 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 13</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 14 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 14</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 15 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 15</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 16 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 16</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 17 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 17</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 18 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 18</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 19 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 19</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 20 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 20</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 21 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 21</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 22 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 22</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 23 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 23</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 24 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 24</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 25 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 25</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 26 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 26</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 27 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 27</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 28 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 28</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Test Item 29 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 29</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Test Item 30 -->
+                    <div class="test-item">
+                        <div class="test-header">
+                            <h3>Test : 30</h3>
+                        </div>
+                        <div class="test-metrics">
+                            <div class="metric">
+                                <div class="metric-value">50</div>
+                                <div class="metric-label">Questions</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100</div>
+                                <div class="metric-label">Marks</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">60</div>
+                                <div class="metric-label">Minutes</div>
+                            </div>
+                        </div>
+                        <div class="test-action">
+                            <a href="/RTS/public/Deshbord/category/test/technical&coding/html/htmlQ8.html">
+                                <button class="start-button">
+                                    <i class="fas fa-play-circle"></i> Start Test
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                <!--////////////////////////////////////////////////////////////////////////////////////
                     ////////////////////////////////////////////////////////////////////////////////////////
                     ////////////////////////////////////////////////////////////////////////////////////////  -->
                 </div>
@@ -1950,23 +1917,51 @@
         </main>
     </div>
 
+
+
+
+    <main class="section-parts">
+        <section class="description-section" aria-labelledby="description-title">
+            <h2 class="section-title" id="description-title">Description</h2>
+            <div class="description-box">
+                <p>
+                    Reading is an essential skill that helps improve our knowledge, language, and imagination. It allows
+                    us
+                    to explore different worlds, understand diverse perspectives, and learn new ideas. When we read, we
+                    not
+                    only learn facts but also improve our vocabulary and comprehension skills. <br> <br>
+
+                    Books, newspapers, and articles offer a wide range of information, from history and science to
+                    current
+                    events. Reading regularly helps us stay informed and aware of what is happening around the world. It
+                    also enhances our critical thinking skills because we learn to analyze and evaluate the information
+                    presented. <br> <br>
+
+                    In addition, reading is a great way to relax and reduce stress. It provides an escape from daily
+                    routines and offers a peaceful break. Whether it's a novel, a magazine, or even a blog post, reading
+                    can
+                    be both entertaining and educational.
+                </p>
+            </div>
+        </section>
+    </main>
     <script>
         // Mobile Menu Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.getElementById('menuToggle');
             const navMenu = document.getElementById('navMenu');
-            
+
             let isMenuOpen = false;
 
             function toggleMobileMenu() {
                 isMenuOpen = !isMenuOpen;
-                
+
                 navMenu.classList.toggle('active', isMenuOpen);
-                
+
                 const icon = menuToggle.querySelector('i');
                 icon.classList.toggle('fa-bars', !isMenuOpen);
                 icon.classList.toggle('fa-times', isMenuOpen);
-                
+
                 document.body.style.overflow = isMenuOpen ? 'hidden' : '';
             }
 
@@ -1980,9 +1975,9 @@
 
             // Theme Toggle
             const themeToggle = document.getElementById('themeToggle');
-            themeToggle.addEventListener('click', function() {
+            themeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
-                
+
                 const icon = themeToggle.querySelector('i');
                 if (document.body.classList.contains('dark-mode')) {
                     icon.classList.replace('fa-moon', 'fa-sun');
@@ -1992,24 +1987,24 @@
             });
 
             // Event Listeners
-            menuToggle.addEventListener('click', function(e) {
+            menuToggle.addEventListener('click', function (e) {
                 e.stopPropagation();
                 toggleMobileMenu();
             });
 
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (isMenuOpen && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                     closeMobileMenu();
                 }
             });
 
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && isMenuOpen) {
                     closeMobileMenu();
                 }
             });
 
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 if (window.innerWidth > 992) {
                     closeMobileMenu();
                 }
@@ -2050,14 +2045,15 @@
         // Add hover effect to test cards
         const testItems = document.querySelectorAll('.test-item');
         testItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
+            item.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-5px)';
             });
-            
-            item.addEventListener('mouseleave', function() {
+
+            item.addEventListener('mouseleave', function () {
                 this.style.transform = '';
             });
         });
     </script>
 </body>
+
 </html>
