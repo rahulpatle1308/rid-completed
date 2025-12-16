@@ -1,6 +1,6 @@
 const questions = [
   {
-    "num": 651,
+    "num":1,
     "question_en": "Which function dumps information about a variable with type and value?",
     "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
     "options_en": [
@@ -21,7 +21,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 652,
+    "num":2,
     "question_en": "Which construct includes a file and generates a fatal error if missing?",
     "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
     "options_en": [
@@ -42,7 +42,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 653,
+    "num":3,
     "question_en": "Which construct includes a file only once?",
     "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
     "options_en": [
@@ -63,7 +63,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 654,
+    "num":4,
     "question_en": "Which operator suppresses errors in PHP?",
     "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
     "options_en": [
@@ -84,7 +84,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 655,
+    "num":5,
     "question_en": "Which operator is the null coalescing operator introduced in PHP 7?",
     "question_hi": "PHP 7 में पेश किया गया null coalescing operator कौन-सा है?",
     "options_en": [
@@ -105,7 +105,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 656,
+    "num":6,
     "question_en": "Which operator is the spaceship operator for three-way comparison?",
     "question_hi": "तीन-तरफा तुलना के लिए spaceship operator कौन-सा है?",
     "options_en": [
@@ -126,7 +126,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 657,
+    "num":7,
     "question_en": "Which PHP function returns the length of a string? (Example: beginTransaction())",
     "question_hi": "PHP में स्ट्रिंग की लंबाई किस फ़ंक्शन से मिलती है? (beginTransaction())",
     "options_en": [
@@ -147,7 +147,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 658,
+    "num":8,
     "question_en": "Which function finds the position of the first occurrence of a substring? (Example: do-while)",
     "question_hi": "कौन-सा फ़ंक्शन किसी सबस्ट्रिंग के पहले occurrence की स्थिति देता है? (do-while)",
     "options_en": [
@@ -168,7 +168,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 659,
+    "num":9,
     "question_en": "Which function returns part of a string? (Example: password_hash())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग का हिस्सा लौटाता है? (password_hash())",
     "options_en": [
@@ -189,7 +189,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 660,
+    "num":10,
     "question_en": "Which function removes whitespace from both ends of a string? (Example: isset())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग के दोनों सिरों से whitespace हटाता है? (isset())",
     "options_en": [
@@ -210,7 +210,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 661,
+    "num":11,
     "question_en": "Which operator concatenates strings in PHP? (Example: >)",
     "question_hi": "PHP में स्ट्रिंग जोड़ने के लिए कौन-सा operator उपयोग होता है? (>)",
     "options_en": [
@@ -231,7 +231,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 662,
+    "num":12,
     "question_en": "Which superglobal stores POST data? (Example: $_POST)",
     "question_hi": "POST डेटा किस superglobal में संग्रहीत होता है? ($_POST)",
     "options_en": [
@@ -252,7 +252,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 663,
+    "num":13,
     "question_en": "Which function checks if a file exists? (Example: array_shift())",
     "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि फ़ाइल मौजूद है? (array_shift())",
     "options_en": [

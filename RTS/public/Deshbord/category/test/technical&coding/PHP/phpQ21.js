@@ -1,6 +1,6 @@
 const questions = [
  {
-    "num": 351,
+    "num":1,
     "question_en": "Which function starts a session in PHP? (Example: phpversion())",
     "question_hi": "PHP में session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (phpversion())",
     "options_en": [
@@ -21,7 +21,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 352,
+    "num":2,
     "question_en": "Which function destroys a session? (Example: __LINE__)",
     "question_hi": "कौन-सा फ़ंक्शन session को नष्ट करता है? (__LINE__)",
     "options_en": [
@@ -42,7 +42,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 353,
+    "num":3,
     "question_en": "Which function sets a cookie? (Example: password_hash())",
     "question_hi": "कौन-सा फ़ंक्शन cookie सेट करता है? (password_hash())",
     "options_en": [
@@ -63,7 +63,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 354,
+    "num":4,
     "question_en": "Which function sends a raw HTTP header? (Example: count())",
     "question_hi": "कौन-सा फ़ंक्शन raw HTTP header भेजता है? (count())",
     "options_en": [
@@ -84,7 +84,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 355,
+    "num":5,
     "question_en": "Which function connects to MySQL using mysqli extension? (Example: phpversion())",
     "question_hi": "mysqli के साथ MySQL से कनेक्ट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (phpversion())",
     "options_en": [
@@ -105,7 +105,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 356,
+    "num":6,
     "question_en": "Which PHP extension offers a database abstraction layer (PDO)?",
     "question_hi": "कौन-सा extension database abstraction layer (PDO) प्रदान करता है?",
     "options_en": [
@@ -126,7 +126,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 357,
+    "num":7,
     "question_en": "Which PDO method prepares a statement for execution?",
     "question_hi": "PDO में किस method से statement prepare किया जाता है?",
     "options_en": [
@@ -147,7 +147,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 358,
+    "num":8,
     "question_en": "Which PDO method executes a prepared statement?",
     "question_hi": "PDO में किस method से prepared statement execute किया जाता है?",
     "options_en": [
@@ -168,7 +168,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 359,
+    "num":9,
     "question_en": "Which PDO method begins a transaction?",
     "question_hi": "PDO में transaction शुरू करने के लिए कौन-सा method उपयोग होता है?",
     "options_en": [
@@ -189,7 +189,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 360,
+    "num":10,
     "question_en": "Which function securely hashes passwords?",
     "question_hi": "पासवर्ड को सुरक्षित रूप से hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
     "options_en": [
@@ -210,7 +210,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 361,
+    "num":11,
     "question_en": "Which function verifies a password against a hash?",
     "question_hi": "कौन-सा फ़ंक्शन पासवर्ड को hash के खिलाफ सत्यापित करता है?",
     "options_en": [
@@ -231,7 +231,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 362,
+    "num":12,
     "question_en": "Which function returns the type of a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल का प्रकार बताता है?",
     "options_en": [
@@ -252,7 +252,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 363,
+    "num":13,
     "question_en": "Which function prints human-readable information about a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल की human-readable जानकारी दिखाता है?",
     "options_en": [
@@ -273,7 +273,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 364,
+    "num":14,
     "question_en": "Which function dumps information about a variable with type and value?",
     "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
     "options_en": [
@@ -294,7 +294,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 365,
+    "num":15,
     "question_en": "Which construct includes a file and generates a fatal error if missing?",
     "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
     "options_en": [
@@ -315,7 +315,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 366,
+    "num":16,
     "question_en": "Which construct includes a file only once?",
     "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
     "options_en": [
@@ -336,7 +336,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 367,
+    "num":17,
     "question_en": "Which operator suppresses errors in PHP?",
     "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
     "options_en": [
@@ -357,7 +357,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 368,
+    "num":18,
     "question_en": "Which operator is the null coalescing operator introduced in PHP 7?",
     "question_hi": "PHP 7 में पेश किया गया null coalescing operator कौन-सा है?",
     "options_en": [
@@ -378,7 +378,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 369,
+    "num":19,
     "question_en": "Which operator is the spaceship operator for three-way comparison?",
     "question_hi": "तीन-तरफा तुलना के लिए spaceship operator कौन-सा है?",
     "options_en": [
@@ -399,7 +399,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 370,
+    "num":20,
     "question_en": "Which PHP function returns the length of a string? (Example: exit())",
     "question_hi": "PHP में स्ट्रिंग की लंबाई किस फ़ंक्शन से मिलती है? (exit())",
     "options_en": [
@@ -420,7 +420,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 371,
+    "num":21,
     "question_en": "Which function finds the position of the first occurrence of a substring? (Example: microtime())",
     "question_hi": "कौन-सा फ़ंक्शन किसी सबस्ट्रिंग के पहले occurrence की स्थिति देता है? (microtime())",
     "options_en": [
@@ -441,7 +441,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 372,
+    "num":22,
     "question_en": "Which function returns part of a string? (Example: json_decode())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग का हिस्सा लौटाता है? (json_decode())",
     "options_en": [
@@ -462,7 +462,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 373,
+    "num":23,
     "question_en": "Which function removes whitespace from both ends of a string? (Example: die())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग के दोनों सिरों से whitespace हटाता है? (die())",
     "options_en": [
@@ -483,7 +483,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 374,
+    "num":24,
     "question_en": "Which operator concatenates strings in PHP? (Example: !==)",
     "question_hi": "PHP में स्ट्रिंग जोड़ने के लिए कौन-सा operator उपयोग होता है? (!==)",
     "options_en": [
@@ -504,7 +504,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 375,
+    "num":25,
     "question_en": "Which superglobal stores POST data? (Example: $_FILES)",
     "question_hi": "POST डेटा किस superglobal में संग्रहीत होता है? ($_FILES)",
     "options_en": [
@@ -525,7 +525,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 376,
+    "num":26,
     "question_en": "Which function checks if a file exists? (Example: commit())",
     "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि फ़ाइल मौजूद है? (commit())",
     "options_en": [
@@ -546,7 +546,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 377,
+    "num":27,
     "question_en": "Which function reads an entire file into a string? (Example: throw)",
     "question_hi": "कौन-सा फ़ंक्शन पूरी फ़ाइल को एक स्ट्रिंग में पढ़ता है? (throw)",
     "options_en": [
@@ -567,7 +567,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 378,
+    "num":28,
     "question_en": "Which function opens a file or URL? (Example: is_null())",
     "question_hi": "कौन-सा फ़ंक्शन किसी फ़ाइल या URL को खोलता है? (is_null())",
     "options_en": [
@@ -588,7 +588,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 379,
+    "num":29,
     "question_en": "Which function closes an open file pointer? (Example: count())",
     "question_hi": "कौन-सा फ़ंक्शन खुली फ़ाइल pointer को बंद करता है? (count())",
     "options_en": [
@@ -609,7 +609,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 380,
+    "num":30,
     "question_en": "Which function writes data to a file? (Example: array_keys())",
     "question_hi": "कौन-सा फ़ंक्शन फ़ाइल में डेटा लिखता है? (array_keys())",
     "options_en": [
@@ -630,7 +630,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 381,
+    "num":31,
     "question_en": "Which function splits a string by a delimiter into an array? (Example: readdir())",
     "question_hi": "कौन-सा फ़ंक्शन किसी delimiter से स्ट्रिंग को array में बाँटता है? (readdir())",
     "options_en": [
@@ -651,7 +651,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 382,
+    "num":32,
     "question_en": "Which function joins array elements with a glue string? (Example: array_shift())",
     "question_hi": "कौन-सा फ़ंक्शन array के elements को एक string से जोड़ता है? (array_shift())",
     "options_en": [
@@ -672,7 +672,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 383,
+    "num":33,
     "question_en": "Which function adds one or more elements to the end of an array? (Example: array_map())",
     "question_hi": "कौन-सा फ़ंक्शन array के अंत में एक या अधिक तत्व जोड़ता है? (array_map())",
     "options_en": [
@@ -693,7 +693,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 384,
+    "num":34,
     "question_en": "Which function removes and returns the last element of an array? (Example: date())",
     "question_hi": "कौन-सा फ़ंक्शन array का अंतिम तत्व हटाता और लौटाता है? (date())",
     "options_en": [
@@ -714,7 +714,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 385,
+    "num":35,
     "question_en": "Which function checks if a value exists in an array? (Example: PDO::__construct())",
     "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि कोई मान array में मौजूद है? (PDO::__construct())",
     "options_en": [
@@ -735,7 +735,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 386,
+    "num":36,
     "question_en": "Which function returns the number of elements in an array? (Example: strpos())",
     "question_hi": "कौन-सा फ़ंक्शन array में तत्वों की संख्या देता है? (strpos())",
     "options_en": [
@@ -756,7 +756,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 387,
+    "num":37,
     "question_en": "Which keyword defines a function in PHP? (Example: try)",
     "question_hi": "PHP में फ़ंक्शन को परिभाषित करने के लिए कौन-सा keyword उपयोग होता है? (try)",
     "options_en": [
@@ -777,7 +777,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 388,
+    "num":38,
     "question_en": "Which keyword declares a class in PHP? (Example: namespace)",
     "question_hi": "PHP में class घोषित करने के लिए कौन-सा keyword उपयोग होता है? (namespace)",
     "options_en": [
@@ -798,7 +798,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 389,
+    "num":39,
     "question_en": "Which keyword is used to inherit from a parent class? (Example: extends)",
     "question_hi": "Parent class से inherit करने के लिए कौन-सा keyword उपयोग होता है? (extends)",
     "options_en": [
@@ -819,7 +819,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 390,
+    "num":40,
     "question_en": "Which magic constant returns the full path and filename of the current file?",
     "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल का पूरा path और filename लौटाता है?",
     "options_en": [
@@ -840,7 +840,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 391,
+    "num":41,
     "question_en": "Which magic constant returns the directory of the current file?",
     "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल की directory लौटाता है?",
     "options_en": [
@@ -861,7 +861,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 392,
+    "num":42,
     "question_en": "Which function starts a session in PHP? (Example: __construct())",
     "question_hi": "PHP में session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (__construct())",
     "options_en": [
@@ -882,7 +882,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 393,
+    "num":43,
     "question_en": "Which function destroys a session? (Example: eval())",
     "question_hi": "कौन-सा फ़ंक्शन session को नष्ट करता है? (eval())",
     "options_en": [
@@ -903,7 +903,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 394,
+    "num":44,
     "question_en": "Which function sets a cookie? (Example: htmlentities())",
     "question_hi": "कौन-सा फ़ंक्शन cookie सेट करता है? (htmlentities())",
     "options_en": [
@@ -924,7 +924,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 395,
+    "num":45,
     "question_en": "Which function sends a raw HTTP header? (Example: array_search())",
     "question_hi": "कौन-सा फ़ंक्शन raw HTTP header भेजता है? (array_search())",
     "options_en": [
@@ -945,7 +945,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 396,
+    "num":46,
     "question_en": "Which function connects to MySQL using mysqli extension? (Example: file_put_contents())",
     "question_hi": "mysqli के साथ MySQL से कनेक्ट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (file_put_contents())",
     "options_en": [
@@ -966,7 +966,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 397,
+    "num":47,
     "question_en": "Which PHP extension offers a database abstraction layer (PDO)?",
     "question_hi": "कौन-सा extension database abstraction layer (PDO) प्रदान करता है?",
     "options_en": [
@@ -987,7 +987,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 398,
+    "num":48,
     "question_en": "Which PDO method prepares a statement for execution?",
     "question_hi": "PDO में किस method से statement prepare किया जाता है?",
     "options_en": [
@@ -1008,7 +1008,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 399,
+    "num":49,
     "question_en": "Which PDO method executes a prepared statement?",
     "question_hi": "PDO में किस method से prepared statement execute किया जाता है?",
     "options_en": [
@@ -1029,7 +1029,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 400,
+    "num":50,
     "question_en": "Which PDO method begins a transaction?",
     "question_hi": "PDO में transaction शुरू करने के लिए कौन-सा method उपयोग होता है?",
     "options_en": [
@@ -1046,1056 +1046,6 @@ const questions = [
     ],
     "answer_en": "beginTransaction()",
     "answer_hi": "beginTransaction()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 401,
-    "question_en": "Which function securely hashes passwords?",
-    "question_hi": "पासवर्ड को सुरक्षित रूप से hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": [
-      "mkdir()",
-      "beginTransaction()",
-      "interface",
-      "password_hash()"
-    ],
-    "options_hi": [
-      "mkdir()",
-      "beginTransaction()",
-      "interface",
-      "password_hash()"
-    ],
-    "answer_en": "password_hash()",
-    "answer_hi": "password_hash()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 402,
-    "question_en": "Which function verifies a password against a hash?",
-    "question_hi": "कौन-सा फ़ंक्शन पासवर्ड को hash के खिलाफ सत्यापित करता है?",
-    "options_en": [
-      "$_COOKIE",
-      "password_verify()",
-      "===",
-      "define()"
-    ],
-    "options_hi": [
-      "$_COOKIE",
-      "password_verify()",
-      "===",
-      "define()"
-    ],
-    "answer_en": "password_verify()",
-    "answer_hi": "password_verify()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 403,
-    "question_en": "Which function returns the type of a variable?",
-    "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल का प्रकार बताता है?",
-    "options_en": [
-      "die()",
-      "mysqli_fetch_assoc()",
-      "gettype()",
-      "new"
-    ],
-    "options_hi": [
-      "die()",
-      "mysqli_fetch_assoc()",
-      "gettype()",
-      "new"
-    ],
-    "answer_en": "gettype()",
-    "answer_hi": "gettype()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 404,
-    "question_en": "Which function prints human-readable information about a variable?",
-    "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल की human-readable जानकारी दिखाता है?",
-    "options_en": [
-      "time()",
-      "print_r()",
-      "$_REQUEST",
-      "mysqli_connect()"
-    ],
-    "options_hi": [
-      "time()",
-      "print_r()",
-      "$_REQUEST",
-      "mysqli_connect()"
-    ],
-    "answer_en": "print_r()",
-    "answer_hi": "print_r()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 405,
-    "question_en": "Which function dumps information about a variable with type and value?",
-    "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
-    "options_en": [
-      "var_dump()",
-      "isset",
-      "$GLOBALS",
-      "password_hash()"
-    ],
-    "options_hi": [
-      "var_dump()",
-      "isset",
-      "$GLOBALS",
-      "password_hash()"
-    ],
-    "answer_en": "var_dump()",
-    "answer_hi": "var_dump()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 406,
-    "question_en": "Which construct includes a file and generates a fatal error if missing?",
-    "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
-    "options_en": [
-      "array_merge()",
-      "$_GET",
-      "rollBack()",
-      "require()"
-    ],
-    "options_hi": [
-      "array_merge()",
-      "$_GET",
-      "rollBack()",
-      "require()"
-    ],
-    "answer_en": "require()",
-    "answer_hi": "require()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 407,
-    "question_en": "Which construct includes a file only once?",
-    "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
-    "options_en": [
-      "include_once()",
-      "file_exists()",
-      "static",
-      "=="
-    ],
-    "options_hi": [
-      "include_once()",
-      "file_exists()",
-      "static",
-      "=="
-    ],
-    "answer_en": "include_once()",
-    "answer_hi": "include_once()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 408,
-    "question_en": "Which operator suppresses errors in PHP?",
-    "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
-    "options_en": [
-      "!==",
-      "do-while",
-      "exit()",
-      "@"
-    ],
-    "options_hi": [
-      "!==",
-      "do-while",
-      "exit()",
-      "@"
-    ],
-    "answer_en": "@",
-    "answer_hi": "@",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 409,
-    "question_en": "Which operator is the null coalescing operator introduced in PHP 7?",
-    "question_hi": "PHP 7 में पेश किया गया null coalescing operator कौन-सा है?",
-    "options_en": [
-      "??",
-      "continue",
-      "&&",
-      "$_COOKIE"
-    ],
-    "options_hi": [
-      "??",
-      "continue",
-      "&&",
-      "$_COOKIE"
-    ],
-    "answer_en": "??",
-    "answer_hi": "??",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 410,
-    "question_en": "Which operator is the spaceship operator for three-way comparison?",
-    "question_hi": "तीन-तरफा तुलना के लिए spaceship operator कौन-सा है?",
-    "options_en": [
-      "<=>",
-      "==",
-      ">",
-      "count()"
-    ],
-    "options_hi": [
-      "<=>",
-      "==",
-      ">",
-      "count()"
-    ],
-    "answer_en": "<=>",
-    "answer_hi": "<=>",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 411,
-    "question_en": "Which PHP function returns the length of a string? (Example: session_start())",
-    "question_hi": "PHP में स्ट्रिंग की लंबाई किस फ़ंक्शन से मिलती है? (session_start())",
-    "options_en": [
-      "sort()",
-      "session_start()",
-      "__destruct()",
-      "isset"
-    ],
-    "options_hi": [
-      "sort()",
-      "session_start()",
-      "__destruct()",
-      "isset"
-    ],
-    "answer_en": "session_start()",
-    "answer_hi": "session_start()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 412,
-    "question_en": "Which function finds the position of the first occurrence of a substring? (Example: while)",
-    "question_hi": "कौन-सा फ़ंक्शन किसी सबस्ट्रिंग के पहले occurrence की स्थिति देता है? (while)",
-    "options_en": [
-      "return",
-      "while",
-      "static",
-      "__FILE__"
-    ],
-    "options_hi": [
-      "return",
-      "while",
-      "static",
-      "__FILE__"
-    ],
-    "answer_en": "while",
-    "answer_hi": "while",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 413,
-    "question_en": "Which function returns part of a string? (Example: try)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग का हिस्सा लौटाता है? (try)",
-    "options_en": [
-      "isset",
-      "throw",
-      "try",
-      "array_shift()"
-    ],
-    "options_hi": [
-      "isset",
-      "throw",
-      "try",
-      "array_shift()"
-    ],
-    "answer_en": "try",
-    "answer_hi": "try",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 414,
-    "question_en": "Which function removes whitespace from both ends of a string? (Example: array_slice())",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग के दोनों सिरों से whitespace हटाता है? (array_slice())",
-    "options_en": [
-      "catch",
-      "array_map()",
-      "foreach",
-      "array_slice()"
-    ],
-    "options_hi": [
-      "catch",
-      "array_map()",
-      "foreach",
-      "array_slice()"
-    ],
-    "answer_en": "array_slice()",
-    "answer_hi": "array_slice()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 415,
-    "question_en": "Which operator concatenates strings in PHP? (Example: >)",
-    "question_hi": "PHP में स्ट्रिंग जोड़ने के लिए कौन-सा operator उपयोग होता है? (>)",
-    "options_en": [
-      "$_SERVER",
-      ">",
-      "%",
-      "session_destroy()"
-    ],
-    "options_hi": [
-      "$_SERVER",
-      ">",
-      "%",
-      "session_destroy()"
-    ],
-    "answer_en": ">",
-    "answer_hi": ">",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 416,
-    "question_en": "Which superglobal stores POST data? (Example: $_COOKIE)",
-    "question_hi": "POST डेटा किस superglobal में संग्रहीत होता है? ($_COOKIE)",
-    "options_en": [
-      "implode()",
-      "$_COOKIE",
-      "array_shift()",
-      "array_unique()"
-    ],
-    "options_hi": [
-      "implode()",
-      "$_COOKIE",
-      "array_shift()",
-      "array_unique()"
-    ],
-    "answer_en": "$_COOKIE",
-    "answer_hi": "$_COOKIE",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 417,
-    "question_en": "Which function checks if a file exists? (Example: readdir())",
-    "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि फ़ाइल मौजूद है? (readdir())",
-    "options_en": [
-      "readdir()",
-      "sort()",
-      "!=",
-      "is_null()"
-    ],
-    "options_hi": [
-      "readdir()",
-      "sort()",
-      "!=",
-      "is_null()"
-    ],
-    "answer_en": "readdir()",
-    "answer_hi": "readdir()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 418,
-    "question_en": "Which function reads an entire file into a string? (Example: define())",
-    "question_hi": "कौन-सा फ़ंक्शन पूरी फ़ाइल को एक स्ट्रिंग में पढ़ता है? (define())",
-    "options_en": [
-      "define()",
-      "ksort()",
-      "fopen()",
-      "mkdir()"
-    ],
-    "options_hi": [
-      "define()",
-      "ksort()",
-      "fopen()",
-      "mkdir()"
-    ],
-    "answer_en": "define()",
-    "answer_hi": "define()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 419,
-    "question_en": "Which function opens a file or URL? (Example: closedir())",
-    "question_hi": "कौन-सा फ़ंक्शन किसी फ़ाइल या URL को खोलता है? (closedir())",
-    "options_en": [
-      "try",
-      "htmlspecialchars()",
-      "closedir()",
-      "new"
-    ],
-    "options_hi": [
-      "try",
-      "htmlspecialchars()",
-      "closedir()",
-      "new"
-    ],
-    "answer_en": "closedir()",
-    "answer_hi": "closedir()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 420,
-    "question_en": "Which function closes an open file pointer? (Example: is_dir())",
-    "question_hi": "कौन-सा फ़ंक्शन खुली फ़ाइल pointer को बंद करता है? (is_dir())",
-    "options_en": [
-      "sort()",
-      "interface",
-      ">",
-      "is_dir()"
-    ],
-    "options_hi": [
-      "sort()",
-      "interface",
-      ">",
-      "is_dir()"
-    ],
-    "answer_en": "is_dir()",
-    "answer_hi": "is_dir()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 421,
-    "question_en": "Which function writes data to a file? (Example: ksort())",
-    "question_hi": "कौन-सा फ़ंक्शन फ़ाइल में डेटा लिखता है? (ksort())",
-    "options_en": [
-      "array_unshift()",
-      "ksort()",
-      "empty()",
-      "htmlspecialchars()"
-    ],
-    "options_hi": [
-      "array_unshift()",
-      "ksort()",
-      "empty()",
-      "htmlspecialchars()"
-    ],
-    "answer_en": "ksort()",
-    "answer_hi": "ksort()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 422,
-    "question_en": "Which function splits a string by a delimiter into an array? (Example: print_r())",
-    "question_hi": "कौन-सा फ़ंक्शन किसी delimiter से स्ट्रिंग को array में बाँटता है? (print_r())",
-    "options_en": [
-      "print_r()",
-      "array_shift()",
-      "<=",
-      "%"
-    ],
-    "options_hi": [
-      "print_r()",
-      "array_shift()",
-      "<=",
-      "%"
-    ],
-    "answer_en": "print_r()",
-    "answer_hi": "print_r()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 423,
-    "question_en": "Which function joins array elements with a glue string? (Example: readdir())",
-    "question_hi": "कौन-सा फ़ंक्शन array के elements को एक string से जोड़ता है? (readdir())",
-    "options_en": [
-      "foreach",
-      "readdir()",
-      "__DIR__",
-      "password_verify()"
-    ],
-    "options_hi": [
-      "foreach",
-      "readdir()",
-      "__DIR__",
-      "password_verify()"
-    ],
-    "answer_en": "readdir()",
-    "answer_hi": "readdir()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 424,
-    "question_en": "Which function adds one or more elements to the end of an array? (Example: __FILE__)",
-    "question_hi": "कौन-सा फ़ंक्शन array के अंत में एक या अधिक तत्व जोड़ता है? (__FILE__)",
-    "options_en": [
-      "header()",
-      "json_encode()",
-      "__FILE__",
-      "in_array()"
-    ],
-    "options_hi": [
-      "header()",
-      "json_encode()",
-      "__FILE__",
-      "in_array()"
-    ],
-    "answer_en": "__FILE__",
-    "answer_hi": "__FILE__",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 425,
-    "question_en": "Which function removes and returns the last element of an array? (Example: mysqli_query())",
-    "question_hi": "कौन-सा फ़ंक्शन array का अंतिम तत्व हटाता और लौटाता है? (mysqli_query())",
-    "options_en": [
-      "mysqli_query()",
-      "file_exists()",
-      "$_COOKIE",
-      ">"
-    ],
-    "options_hi": [
-      "mysqli_query()",
-      "file_exists()",
-      "$_COOKIE",
-      ">"
-    ],
-    "answer_en": "mysqli_query()",
-    "answer_hi": "mysqli_query()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 426,
-    "question_en": "Which function checks if a value exists in an array? (Example: password_verify())",
-    "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि कोई मान array में मौजूद है? (password_verify())",
-    "options_en": [
-      "password_verify()",
-      "file_exists()",
-      "define()",
-      "$_SERVER"
-    ],
-    "options_hi": [
-      "password_verify()",
-      "file_exists()",
-      "define()",
-      "$_SERVER"
-    ],
-    "answer_en": "password_verify()",
-    "answer_hi": "password_verify()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 427,
-    "question_en": "Which function returns the number of elements in an array? (Example: eval())",
-    "question_hi": "कौन-सा फ़ंक्शन array में तत्वों की संख्या देता है? (eval())",
-    "options_en": [
-      "eval()",
-      "array_unshift()",
-      "__FILE__",
-      "print"
-    ],
-    "options_hi": [
-      "eval()",
-      "array_unshift()",
-      "__FILE__",
-      "print"
-    ],
-    "answer_en": "eval()",
-    "answer_hi": "eval()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 428,
-    "question_en": "Which keyword defines a function in PHP? (Example: isset)",
-    "question_hi": "PHP में फ़ंक्शन को परिभाषित करने के लिए कौन-सा keyword उपयोग होता है? (isset)",
-    "options_en": [
-      "asort()",
-      "__construct()",
-      "isset",
-      "include_once()"
-    ],
-    "options_hi": [
-      "asort()",
-      "__construct()",
-      "isset",
-      "include_once()"
-    ],
-    "answer_en": "isset",
-    "answer_hi": "isset",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 429,
-    "question_en": "Which keyword declares a class in PHP? (Example: final)",
-    "question_hi": "PHP में class घोषित करने के लिए कौन-सा keyword उपयोग होता है? (final)",
-    "options_en": [
-      ">=",
-      "empty()",
-      "final",
-      "echo"
-    ],
-    "options_hi": [
-      ">=",
-      "empty()",
-      "final",
-      "echo"
-    ],
-    "answer_en": "final",
-    "answer_hi": "final",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 430,
-    "question_en": "Which keyword is used to inherit from a parent class? (Example: public)",
-    "question_hi": "Parent class से inherit करने के लिए कौन-सा keyword उपयोग होता है? (public)",
-    "options_en": [
-      "private",
-      "strpos()",
-      "break",
-      "public"
-    ],
-    "options_hi": [
-      "private",
-      "strpos()",
-      "break",
-      "public"
-    ],
-    "answer_en": "public",
-    "answer_hi": "public",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 431,
-    "question_en": "Which magic constant returns the full path and filename of the current file?",
-    "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल का पूरा path और filename लौटाता है?",
-    "options_en": [
-      "phpinfo()",
-      "str_replace()",
-      "__FILE__",
-      "??"
-    ],
-    "options_hi": [
-      "phpinfo()",
-      "str_replace()",
-      "__FILE__",
-      "??"
-    ],
-    "answer_en": "__FILE__",
-    "answer_hi": "__FILE__",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 432,
-    "question_en": "Which magic constant returns the directory of the current file?",
-    "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल की directory लौटाता है?",
-    "options_en": [
-      "closedir()",
-      "__DIR__",
-      "!=",
-      "const"
-    ],
-    "options_hi": [
-      "closedir()",
-      "__DIR__",
-      "!=",
-      "const"
-    ],
-    "answer_en": "__DIR__",
-    "answer_hi": "__DIR__",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 433,
-    "question_en": "Which function starts a session in PHP? (Example: file_exists())",
-    "question_hi": "PHP में session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (file_exists())",
-    "options_en": [
-      "str_replace()",
-      "fclose()",
-      "foreach",
-      "file_exists()"
-    ],
-    "options_hi": [
-      "str_replace()",
-      "fclose()",
-      "foreach",
-      "file_exists()"
-    ],
-    "answer_en": "file_exists()",
-    "answer_hi": "file_exists()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 434,
-    "question_en": "Which function destroys a session? (Example: array_shift())",
-    "question_hi": "कौन-सा फ़ंक्शन session को नष्ट करता है? (array_shift())",
-    "options_en": [
-      "finally",
-      "exit()",
-      "array_shift()",
-      "print"
-    ],
-    "options_hi": [
-      "finally",
-      "exit()",
-      "array_shift()",
-      "print"
-    ],
-    "answer_en": "array_shift()",
-    "answer_hi": "array_shift()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 435,
-    "question_en": "Which function sets a cookie? (Example: array_reduce())",
-    "question_hi": "कौन-सा फ़ंक्शन cookie सेट करता है? (array_reduce())",
-    "options_en": [
-      "define()",
-      "asort()",
-      "array_reduce()",
-      "$_ENV"
-    ],
-    "options_hi": [
-      "define()",
-      "asort()",
-      "array_reduce()",
-      "$_ENV"
-    ],
-    "answer_en": "array_reduce()",
-    "answer_hi": "array_reduce()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 436,
-    "question_en": "Which function sends a raw HTTP header? (Example: execute())",
-    "question_hi": "कौन-सा फ़ंक्शन raw HTTP header भेजता है? (execute())",
-    "options_en": [
-      "password_hash()",
-      "eval()",
-      "execute()",
-      "<=>"
-    ],
-    "options_hi": [
-      "password_hash()",
-      "eval()",
-      "execute()",
-      "<=>"
-    ],
-    "answer_en": "execute()",
-    "answer_hi": "execute()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 437,
-    "question_en": "Which function connects to MySQL using mysqli extension? (Example: session_destroy())",
-    "question_hi": "mysqli के साथ MySQL से कनेक्ट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (session_destroy())",
-    "options_en": [
-      "?:",
-      "session_destroy()",
-      "empty",
-      "try"
-    ],
-    "options_hi": [
-      "?:",
-      "session_destroy()",
-      "empty",
-      "try"
-    ],
-    "answer_en": "session_destroy()",
-    "answer_hi": "session_destroy()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 438,
-    "question_en": "Which PHP extension offers a database abstraction layer (PDO)?",
-    "question_hi": "कौन-सा extension database abstraction layer (PDO) प्रदान करता है?",
-    "options_en": [
-      "unlink()",
-      "fread()",
-      "gettype()",
-      "PDO"
-    ],
-    "options_hi": [
-      "unlink()",
-      "fread()",
-      "gettype()",
-      "PDO"
-    ],
-    "answer_en": "PDO",
-    "answer_hi": "PDO",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 439,
-    "question_en": "Which PDO method prepares a statement for execution?",
-    "question_hi": "PDO में किस method से statement prepare किया जाता है?",
-    "options_en": [
-      "prepare()",
-      "array_map()",
-      "array_unshift()",
-      "rmdir()"
-    ],
-    "options_hi": [
-      "prepare()",
-      "array_map()",
-      "array_unshift()",
-      "rmdir()"
-    ],
-    "answer_en": "prepare()",
-    "answer_hi": "prepare()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 440,
-    "question_en": "Which PDO method executes a prepared statement?",
-    "question_hi": "PDO में किस method से prepared statement execute किया जाता है?",
-    "options_en": [
-      "&&",
-      "??",
-      "sort()",
-      "execute()"
-    ],
-    "options_hi": [
-      "&&",
-      "??",
-      "sort()",
-      "execute()"
-    ],
-    "answer_en": "execute()",
-    "answer_hi": "execute()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 441,
-    "question_en": "Which PDO method begins a transaction?",
-    "question_hi": "PDO में transaction शुरू करने के लिए कौन-सा method उपयोग होता है?",
-    "options_en": [
-      "is_dir()",
-      "==",
-      "beginTransaction()",
-      "print"
-    ],
-    "options_hi": [
-      "is_dir()",
-      "==",
-      "beginTransaction()",
-      "print"
-    ],
-    "answer_en": "beginTransaction()",
-    "answer_hi": "beginTransaction()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 442,
-    "question_en": "Which function securely hashes passwords?",
-    "question_hi": "पासवर्ड को सुरक्षित रूप से hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": [
-      "beginTransaction()",
-      "var_dump()",
-      "password_hash()",
-      "in_array()"
-    ],
-    "options_hi": [
-      "beginTransaction()",
-      "var_dump()",
-      "password_hash()",
-      "in_array()"
-    ],
-    "answer_en": "password_hash()",
-    "answer_hi": "password_hash()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 443,
-    "question_en": "Which function verifies a password against a hash?",
-    "question_hi": "कौन-सा फ़ंक्शन पासवर्ड को hash के खिलाफ सत्यापित करता है?",
-    "options_en": [
-      "array_values()",
-      "prepare()",
-      "ksort()",
-      "password_verify()"
-    ],
-    "options_hi": [
-      "array_values()",
-      "prepare()",
-      "ksort()",
-      "password_verify()"
-    ],
-    "answer_en": "password_verify()",
-    "answer_hi": "password_verify()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 444,
-    "question_en": "Which function returns the type of a variable?",
-    "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल का प्रकार बताता है?",
-    "options_en": [
-      "gettype()",
-      "mysqli_query()",
-      "||",
-      "catch"
-    ],
-    "options_hi": [
-      "gettype()",
-      "mysqli_query()",
-      "||",
-      "catch"
-    ],
-    "answer_en": "gettype()",
-    "answer_hi": "gettype()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 445,
-    "question_en": "Which function prints human-readable information about a variable?",
-    "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल की human-readable जानकारी दिखाता है?",
-    "options_en": [
-      "array_unique()",
-      "__FILE__",
-      "/",
-      "print_r()"
-    ],
-    "options_hi": [
-      "array_unique()",
-      "__FILE__",
-      "/",
-      "print_r()"
-    ],
-    "answer_en": "print_r()",
-    "answer_hi": "print_r()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 446,
-    "question_en": "Which function dumps information about a variable with type and value?",
-    "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
-    "options_en": [
-      "<=",
-      ">=",
-      "mysqli_fetch_assoc()",
-      "var_dump()"
-    ],
-    "options_hi": [
-      "<=",
-      ">=",
-      "mysqli_fetch_assoc()",
-      "var_dump()"
-    ],
-    "answer_en": "var_dump()",
-    "answer_hi": "var_dump()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 447,
-    "question_en": "Which construct includes a file and generates a fatal error if missing?",
-    "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
-    "options_en": [
-      "require()",
-      "$_FILES",
-      "json_decode()",
-      "session_destroy()"
-    ],
-    "options_hi": [
-      "require()",
-      "$_FILES",
-      "json_decode()",
-      "session_destroy()"
-    ],
-    "answer_en": "require()",
-    "answer_hi": "require()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 448,
-    "question_en": "Which construct includes a file only once?",
-    "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
-    "options_en": [
-      "include_once()",
-      "for",
-      "$_SESSION",
-      "time()"
-    ],
-    "options_hi": [
-      "include_once()",
-      "for",
-      "$_SESSION",
-      "time()"
-    ],
-    "answer_en": "include_once()",
-    "answer_hi": "include_once()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 449,
-    "question_en": "Which operator suppresses errors in PHP?",
-    "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
-    "options_en": [
-      ".",
-      "class",
-      "array_slice()",
-      "@"
-    ],
-    "options_hi": [
-      ".",
-      "class",
-      "array_slice()",
-      "@"
-    ],
-    "answer_en": "@",
-    "answer_hi": "@",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 450,
-    "question_en": "Which operator is the null coalescing operator introduced in PHP 7?",
-    "question_hi": "PHP 7 में पेश किया गया null coalescing operator कौन-सा है?",
-    "options_en": [
-      "is_dir()",
-      "%",
-      "??",
-      "print"
-    ],
-    "options_hi": [
-      "is_dir()",
-      "%",
-      "??",
-      "print"
-    ],
-    "answer_en": "??",
-    "answer_hi": "??",
     "attempted": false,
     "selected": ""
   },

@@ -553,8 +553,7 @@ const questions =[
 
 
 let currentQuestion = 0; 
-let language = "en";
-// let timeLeft = 180 * 60; // 180 minutes
+let language = "en"
 let timeLeft = 60 * 60; // 60 minutes
 let timerInterval;
 

@@ -1,1055 +1,564 @@
-const questions = [
+const questions =[
   {
-    "num": 151,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 15)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 15)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
+    "num": 1,
+    "question_en": "Which symbol is used to start a single-line comment in PHP?",
+    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है?",
+    "options_en": ["//", "/* */", "##", "\\\\\\"],
+    "options_hi": ["//", "/* */", "##", "\\\\\\"],
     "answer_en": "//",
     "answer_hi": "//",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 152,
-    "question_en": "Which function outputs text in PHP? (Qset 15)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 15)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
+    "num": 2,
+    "question_en": "Which function outputs text in PHP?",
+    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["echo", "print", "write", "output"],
+    "options_hi": ["echo", "print", "write", "output"],
     "answer_en": "echo",
     "answer_hi": "echo",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 153,
-    "question_en": "What is the correct file extension for PHP files? (Qset 15)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 15)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
+    "num": 3,
+    "question_en": "What is the correct file extension for PHP files?",
+    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है?",
+    "options_en": [".php", ".ph", ".phtml", ".html"],
+    "options_hi": [".php", ".ph", ".phtml", ".html"],
     "answer_en": ".php",
     "answer_hi": ".php",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 154,
-    "question_en": "Which operator concatenates strings? (Qset 15)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 15)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
+    "num": 4,
+    "question_en": "Which operator concatenates strings in PHP?",
+    "question_hi": "PHP में कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है?",
+    "options_en": [".", "+", "&", "concat()"],
+    "options_hi": [".", "+", "&", "concat()"],
     "answer_en": ".",
     "answer_hi": ".",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 155,
-    "question_en": "How to declare a variable in PHP? (Qset 15)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 15)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
+    "num": 5,
+    "question_en": "How do you declare a variable in PHP?",
+    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं?",
+    "options_en": ["$var = 5;", "var $var = 5;", "let $var = 5;", "declare $var = 5;"],
+    "options_hi": ["$var = 5;", "var $var = 5;", "let $var = 5;", "declare $var = 5;"],
     "answer_en": "$var = 5;",
     "answer_hi": "$var = 5;",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 156,
-    "question_en": "Which function returns length of string? (Qset 15)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 15)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
+    "num": 6,
+    "question_en": "Which function returns the length of a string?",
+    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है?",
+    "options_en": ["strlen()", "length()", "size()", "strlength()"],
+    "options_hi": ["strlen()", "length()", "size()", "strlength()"],
     "answer_en": "strlen()",
     "answer_hi": "strlen()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 157,
-    "question_en": "Which superglobal holds POST data? (Qset 15)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 15)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
+    "num": 7,
+    "question_en": "Which superglobal holds POST data?",
+    "question_hi": "कौन-सा superglobal POST डेटा रखता है?",
+    "options_en": ["$_POST", "$_GET", "$_REQUEST", "$_FORM"],
+    "options_hi": ["$_POST", "$_GET", "$_REQUEST", "$_FORM"],
     "answer_en": "$_POST",
     "answer_hi": "$_POST",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 158,
-    "question_en": "Which function includes a file? (Qset 15)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 15)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
+    "num": 8,
+    "question_en": "Which function is used to include a file in PHP?",
+    "question_hi": "PHP में फ़ाइल include करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["include()", "require()", "include_once()", "require_once()"],
+    "options_hi": ["include()", "require()", "include_once()", "require_once()"],
     "answer_en": "include()",
     "answer_hi": "include()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 159,
-    "question_en": "What does PDO stand for? (Qset 15)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 15)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
+    "num": 9,
+    "question_en": "What does PDO stand for?",
+    "question_hi": "PDO का पूरा नाम क्या है?",
+    "options_en": ["PHP Data Objects", "PHP Database Objects", "Primary Data Object", "PHP Direct Objects"],
+    "options_hi": ["PHP Data Objects", "PHP Database Objects", "Primary Data Object", "PHP Direct Objects"],
     "answer_en": "PHP Data Objects",
     "answer_hi": "PHP Data Objects",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 160,
-    "question_en": "Which keyword defines a function? (Qset 15)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 15)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
+    "num": 10,
+    "question_en": "Which keyword defines a function in PHP?",
+    "question_hi": "PHP में फ़ंक्शन परिभाषित करने के लिए कौन-सा कीवर्ड उपयोग होता है?",
+    "options_en": ["function", "def", "fn", "func"],
+    "options_hi": ["function", "def", "fn", "func"],
     "answer_en": "function",
     "answer_hi": "function",
     "attempted": false,
     "selected": ""
   },
+
   {
-    "num": 161,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 16)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 16)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 11,
+    "question_en": "Which symbol is used for variables in PHP?",
+    "question_hi": "PHP में वैरिएबल के लिए कौन-सा चिन्ह उपयोग होता है?",
+    "options_en": ["$", "#", "@", "&"],
+    "options_hi": ["$", "#", "@", "&"],
+    "answer_en": "$",
+    "answer_hi": "$",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 162,
-    "question_en": "Which function outputs text in PHP? (Qset 16)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 16)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 12,
+    "question_en": "Which statement stops script execution?",
+    "question_hi": "PHP में स्क्रिप्ट को रोकने के लिए कौन-सा स्टेटमेंट उपयोग होता है?",
+    "options_en": ["exit()", "stop()", "break()", "return"],
+    "options_hi": ["exit()", "stop()", "break()", "return"],
+    "answer_en": "exit()",
+    "answer_hi": "exit()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 163,
-    "question_en": "What is the correct file extension for PHP files? (Qset 16)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 16)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 13,
+    "question_en": "Which operator is used for comparison?",
+    "question_hi": "तुलना के लिए कौन-सा ऑपरेटर उपयोग होता है?",
+    "options_en": ["==", "=", "!=", "+="],
+    "options_hi": ["==", "=", "!=", "+="],
+    "answer_en": "==",
+    "answer_hi": "==",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 164,
-    "question_en": "Which operator concatenates strings? (Qset 16)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 16)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 14,
+    "question_en": "Which function prints formatted output?",
+    "question_hi": "Formatted output के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["printf()", "echo()", "print()", "format()"],
+    "options_hi": ["printf()", "echo()", "print()", "format()"],
+    "answer_en": "printf()",
+    "answer_hi": "printf()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 165,
-    "question_en": "How to declare a variable in PHP? (Qset 16)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 16)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 15,
+    "question_en": "Which loop is guaranteed to run at least once?",
+    "question_hi": "कौन-सा loop कम से कम एक बार ज़रूर चलता है?",
+    "options_en": ["do-while", "for", "while", "foreach"],
+    "options_hi": ["do-while", "for", "while", "foreach"],
+    "answer_en": "do-while",
+    "answer_hi": "do-while",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 16,
+    "question_en": "Which function is used to count array elements?",
+    "question_hi": "Array के elements गिनने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["count()", "size()", "length()", "total()"],
+    "options_hi": ["count()", "size()", "length()", "total()"],
+    "answer_en": "count()",
+    "answer_hi": "count()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 166,
-    "question_en": "Which function returns length of string? (Qset 16)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 16)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 17,
+    "question_en": "Which keyword is used for conditional statements?",
+    "question_hi": "Conditional statements के लिए कौन-सा कीवर्ड उपयोग होता है?",
+    "options_en": ["if", "when", "case", "then"],
+    "options_hi": ["if", "when", "case", "then"],
+    "answer_en": "if",
+    "answer_hi": "if",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 167,
-    "question_en": "Which superglobal holds POST data? (Qset 16)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 16)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 18,
+    "question_en": "Which function starts a session?",
+    "question_hi": "Session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["session_start()", "session_begin()", "start_session()", "init_session()"],
+    "options_hi": ["session_start()", "session_begin()", "start_session()", "init_session()"],
+    "answer_en": "session_start()",
+    "answer_hi": "session_start()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 168,
-    "question_en": "Which function includes a file? (Qset 16)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 16)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 19,
+    "question_en": "Which symbol is used to access object properties?",
+    "question_hi": "Object properties access करने के लिए कौन-सा चिन्ह उपयोग होता है?",
+    "options_en": ["->", "::", ".", "$"],
+    "options_hi": ["->", "::", ".", "$"],
+    "answer_en": "->",
+    "answer_hi": "->",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 169,
-    "question_en": "What does PDO stand for? (Qset 16)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 16)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 20,
+    "question_en": "Which function checks variable type?",
+    "question_hi": "Variable का type check करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["gettype()", "typeof()", "vartype()", "checktype()"],
+    "options_hi": ["gettype()", "typeof()", "vartype()", "checktype()"],
+    "answer_en": "gettype()",
+    "answer_hi": "gettype()",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 21,
+    "question_en": "Which keyword is used to define constants?",
+    "question_hi": "Constants परिभाषित करने के लिए कौन-सा कीवर्ड उपयोग होता है?",
+    "options_en": ["define()", "const", "both A and B", "static"],
+    "options_hi": ["define()", "const", "both A and B", "static"],
+    "answer_en": "both A and B",
+    "answer_hi": "both A and B",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 170,
-    "question_en": "Which keyword defines a function? (Qset 16)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 16)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 22,
+    "question_en": "Which function is used to redirect page?",
+    "question_hi": "Page redirect करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["header()", "redirect()", "location()", "move()"],
+    "options_hi": ["header()", "redirect()", "location()", "move()"],
+    "answer_en": "header()",
+    "answer_hi": "header()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 171,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 17)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 17)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 23,
+    "question_en": "Which function removes whitespace?",
+    "question_hi": "Whitespace हटाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["trim()", "cut()", "remove()", "strip()"],
+    "options_hi": ["trim()", "cut()", "remove()", "strip()"],
+    "answer_en": "trim()",
+    "answer_hi": "trim()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 172,
-    "question_en": "Which function outputs text in PHP? (Qset 17)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 17)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 24,
+    "question_en": "Which function converts string to array?",
+    "question_hi": "String को array में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["explode()", "split()", "strtoarr()", "array()"],
+    "options_hi": ["explode()", "split()", "strtoarr()", "array()"],
+    "answer_en": "explode()",
+    "answer_hi": "explode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 173,
-    "question_en": "What is the correct file extension for PHP files? (Qset 17)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 17)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 25,
+    "question_en": "Which function joins array into string?",
+    "question_hi": "Array को string में जोड़ने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["implode()", "join()", "both A and B", "merge()"],
+    "options_hi": ["implode()", "join()", "both A and B", "merge()"],
+    "answer_en": "both A and B",
+    "answer_hi": "both A and B",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 26,
+    "question_en": "Which keyword is used to include files conditionally?",
+    "question_hi": "File को conditionally include करने के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["include_once()", "require()", "load()", "import()"],
+    "options_hi": ["include_once()", "require()", "load()", "import()"],
+    "answer_en": "include_once()",
+    "answer_hi": "include_once()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 174,
-    "question_en": "Which operator concatenates strings? (Qset 17)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 17)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 27,
+    "question_en": "Which function hashes passwords?",
+    "question_hi": "Password hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["password_hash()", "md5()", "sha1()", "crypt()"],
+    "options_hi": ["password_hash()", "md5()", "sha1()", "crypt()"],
+    "answer_en": "password_hash()",
+    "answer_hi": "password_hash()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 175,
-    "question_en": "How to declare a variable in PHP? (Qset 17)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 17)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 28,
+    "question_en": "Which function verifies password hash?",
+    "question_hi": "Password hash verify करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["password_verify()", "hash_verify()", "check_password()", "verify()"],
+    "options_hi": ["password_verify()", "hash_verify()", "check_password()", "verify()"],
+    "answer_en": "password_verify()",
+    "answer_hi": "password_verify()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 176,
-    "question_en": "Which function returns length of string? (Qset 17)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 17)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 29,
+    "question_en": "Which superglobal stores server info?",
+    "question_hi": "Server जानकारी कौन-सा superglobal रखता है?",
+    "options_en": ["$_SERVER", "$_ENV", "$_SESSION", "$_COOKIE"],
+    "options_hi": ["$_SERVER", "$_ENV", "$_SESSION", "$_COOKIE"],
+    "answer_en": "$_SERVER",
+    "answer_hi": "$_SERVER",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 177,
-    "question_en": "Which superglobal holds POST data? (Qset 17)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 17)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 30,
+    "question_en": "Which function sets cookies?",
+    "question_hi": "Cookie set करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["setcookie()", "createcookie()", "makecookie()", "cookie()"],
+    "options_hi": ["setcookie()", "createcookie()", "makecookie()", "cookie()"],
+    "answer_en": "setcookie()",
+    "answer_hi": "setcookie()",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 31,
+    "question_en": "Which keyword is used for inheritance?",
+    "question_hi": "Inheritance के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["extends", "implements", "inherits", "parent"],
+    "options_hi": ["extends", "implements", "inherits", "parent"],
+    "answer_en": "extends",
+    "answer_hi": "extends",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 178,
-    "question_en": "Which function includes a file? (Qset 17)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 17)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 32,
+    "question_en": "Which keyword is used for interfaces?",
+    "question_hi": "Interface के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["interface", "implements", "extends", "abstract"],
+    "options_hi": ["interface", "implements", "extends", "abstract"],
+    "answer_en": "interface",
+    "answer_hi": "interface",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 179,
-    "question_en": "What does PDO stand for? (Qset 17)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 17)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 33,
+    "question_en": "Which keyword implements an interface?",
+    "question_hi": "Interface को implement करने के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["implements", "extends", "use", "apply"],
+    "options_hi": ["implements", "extends", "use", "apply"],
+    "answer_en": "implements",
+    "answer_hi": "implements",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 180,
-    "question_en": "Which keyword defines a function? (Qset 17)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 17)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 34,
+    "question_en": "Which function sorts array in ascending order?",
+    "question_hi": "Array को ascending order में sort करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["sort()", "rsort()", "asort()", "ksort()"],
+    "options_hi": ["sort()", "rsort()", "asort()", "ksort()"],
+    "answer_en": "sort()",
+    "answer_hi": "sort()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 181,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 18)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 18)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 35,
+    "question_en": "Which function sorts array in descending order?",
+    "question_hi": "Array को descending order में sort करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["rsort()", "sort()", "asort()", "ksort()"],
+    "options_hi": ["rsort()", "sort()", "asort()", "ksort()"],
+    "answer_en": "rsort()",
+    "answer_hi": "rsort()",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 36,
+    "question_en": "Which function checks if variable exists?",
+    "question_hi": "Variable मौजूद है या नहीं check करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["isset()", "exists()", "check()", "defined()"],
+    "options_hi": ["isset()", "exists()", "check()", "defined()"],
+    "answer_en": "isset()",
+    "answer_hi": "isset()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 182,
-    "question_en": "Which function outputs text in PHP? (Qset 18)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 18)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 37,
+    "question_en": "Which function removes variable?",
+    "question_hi": "Variable हटाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["unset()", "remove()", "delete()", "clear()"],
+    "options_hi": ["unset()", "remove()", "delete()", "clear()"],
+    "answer_en": "unset()",
+    "answer_hi": "unset()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 183,
-    "question_en": "What is the correct file extension for PHP files? (Qset 18)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 18)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 38,
+    "question_en": "Which operator checks type and value?",
+    "question_hi": "Type और value दोनों check करने के लिए कौन-सा ऑपरेटर उपयोग होता है?",
+    "options_en": ["===", "==", "!=", "="],
+    "options_hi": ["===", "==", "!=", "="],
+    "answer_en": "===",
+    "answer_hi": "===",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 184,
-    "question_en": "Which operator concatenates strings? (Qset 18)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 18)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 39,
+    "question_en": "Which function converts array to JSON?",
+    "question_hi": "Array को JSON में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["json_encode()", "json_decode()", "toJSON()", "encodeJSON()"],
+    "options_hi": ["json_encode()", "json_decode()", "toJSON()", "encodeJSON()"],
+    "answer_en": "json_encode()",
+    "answer_hi": "json_encode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 185,
-    "question_en": "How to declare a variable in PHP? (Qset 18)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 18)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 40,
+    "question_en": "Which function converts JSON to array?",
+    "question_hi": "JSON को array में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["json_decode()", "json_encode()", "fromJSON()", "decodeJSON()"],
+    "options_hi": ["json_decode()", "json_encode()", "fromJSON()", "decodeJSON()"],
+    "answer_en": "json_decode()",
+    "answer_hi": "json_decode()",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 41,
+    "question_en": "Which keyword creates an object?",
+    "question_hi": "Object बनाने के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["new", "create", "object", "class"],
+    "options_hi": ["new", "create", "object", "class"],
+    "answer_en": "new",
+    "answer_hi": "new",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 186,
-    "question_en": "Which function returns length of string? (Qset 18)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 18)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 42,
+    "question_en": "Which keyword defines a class?",
+    "question_hi": "Class परिभाषित करने के लिए कौन-सा keyword उपयोग होता है?",
+    "options_en": ["class", "object", "struct", "define"],
+    "options_hi": ["class", "object", "struct", "define"],
+    "answer_en": "class",
+    "answer_hi": "class",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 187,
-    "question_en": "Which superglobal holds POST data? (Qset 18)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 18)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 43,
+    "question_en": "Which function connects MySQL using PDO?",
+    "question_hi": "PDO का उपयोग करके MySQL connect करने के लिए क्या उपयोग होता है?",
+    "options_en": ["new PDO()", "mysqli_connect()", "mysql_connect()", "db_connect()"],
+    "options_hi": ["new PDO()", "mysqli_connect()", "mysql_connect()", "db_connect()"],
+    "answer_en": "new PDO()",
+    "answer_hi": "new PDO()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 188,
-    "question_en": "Which function includes a file? (Qset 18)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 18)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 44,
+    "question_en": "Which method prepares SQL statement in PDO?",
+    "question_hi": "PDO में SQL prepare करने के लिए कौन-सा method उपयोग होता है?",
+    "options_en": ["prepare()", "query()", "execute()", "bind()"],
+    "options_hi": ["prepare()", "query()", "execute()", "bind()"],
+    "answer_en": "prepare()",
+    "answer_hi": "prepare()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 189,
-    "question_en": "What does PDO stand for? (Qset 18)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 18)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 45,
+    "question_en": "Which method executes prepared statement?",
+    "question_hi": "Prepared statement execute करने के लिए कौन-सा method उपयोग होता है?",
+    "options_en": ["execute()", "run()", "query()", "start()"],
+    "options_hi": ["execute()", "run()", "query()", "start()"],
+    "answer_en": "execute()",
+    "answer_hi": "execute()",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 46,
+    "question_en": "Which fetch mode returns associative array?",
+    "question_hi": "Associative array return करने वाला fetch mode कौन-सा है?",
+    "options_en": ["PDO::FETCH_ASSOC", "PDO::FETCH_NUM", "PDO::FETCH_OBJ", "PDO::FETCH_BOTH"],
+    "options_hi": ["PDO::FETCH_ASSOC", "PDO::FETCH_NUM", "PDO::FETCH_OBJ", "PDO::FETCH_BOTH"],
+    "answer_en": "PDO::FETCH_ASSOC",
+    "answer_hi": "PDO::FETCH_ASSOC",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 190,
-    "question_en": "Which keyword defines a function? (Qset 18)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 18)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 47,
+    "question_en": "Which function uploads files?",
+    "question_hi": "File upload के लिए कौन-सा superglobal उपयोग होता है?",
+    "options_en": ["$_FILES", "$_POST", "$_UPLOAD", "$_DATA"],
+    "options_hi": ["$_FILES", "$_POST", "$_UPLOAD", "$_DATA"],
+    "answer_en": "$_FILES",
+    "answer_hi": "$_FILES",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 191,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 19)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 19)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 48,
+    "question_en": "Which function moves uploaded file?",
+    "question_hi": "Uploaded file move करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["move_uploaded_file()", "upload_file()", "copy()", "move()"],
+    "options_hi": ["move_uploaded_file()", "upload_file()", "copy()", "move()"],
+    "answer_en": "move_uploaded_file()",
+    "answer_hi": "move_uploaded_file()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 192,
-    "question_en": "Which function outputs text in PHP? (Qset 19)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 19)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 49,
+    "question_en": "Which function gets current date?",
+    "question_hi": "Current date पाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["date()", "now()", "today()", "getdate()"],
+    "options_hi": ["date()", "now()", "today()", "getdate()"],
+    "answer_en": "date()",
+    "answer_hi": "date()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num": 193,
-    "question_en": "What is the correct file extension for PHP files? (Qset 19)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 19)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 50,
+    "question_en": "Which function gets current timestamp?",
+    "question_hi": "Current timestamp पाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
+    "options_en": ["time()", "timestamp()", "now()", "date()"],
+    "options_hi": ["time()", "timestamp()", "now()", "date()"],
+    "answer_en": "time()",
+    "answer_hi": "time()",
     "attempted": false,
     "selected": ""
-  },
-  {
-    "num": 194,
-    "question_en": "Which operator concatenates strings? (Qset 19)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 19)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 195,
-    "question_en": "How to declare a variable in PHP? (Qset 19)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 19)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 196,
-    "question_en": "Which function returns length of string? (Qset 19)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 19)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 197,
-    "question_en": "Which superglobal holds POST data? (Qset 19)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 19)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 198,
-    "question_en": "Which function includes a file? (Qset 19)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 19)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 199,
-    "question_en": "What does PDO stand for? (Qset 19)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 19)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 200,
-    "question_en": "Which keyword defines a function? (Qset 19)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 19)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
-    "attempted": false,
-    "selected": ""
-  },
-];
+  }
+]
+
 
 
 
