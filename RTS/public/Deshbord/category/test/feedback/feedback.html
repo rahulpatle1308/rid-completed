@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RID Bharat</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <link rel="stylesheet" href="/RTS/public/css/navbar.css">
-    <link rel="stylesheet" href="/RTS/public/css/category.css">
-    <link rel="stylesheet" href="/RTS/public/css/Deshbord.css">
-    <link rel="stylesheet" href="/RTS/public/Deshbord/category/test/feedback/feedback.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RID Bharat</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="/RTS/public/css/navbar.css">
+  <link rel="stylesheet" href="/RTS/public/css/category.css">
+  <link rel="stylesheet" href="/RTS/public/css/Deshbord.css">
+  <link rel="stylesheet" href="/RTS/public/Deshbord/category/test/feedback/feedback.css">
+
+  <!-- Extra validation CSS -->
+  <style>
+    .error-text {
+      color: red;
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+    .error-border {
+      border: 2px solid red !important;
+    }
+  </style>
 </head>
+
 <body>
-    <header class="main-header">
-        <!-- Top Info Bar - Now in single line -->
-        <div class="header-info">
-            <div class="info-text">
-                <p><span>RID (Research Innovation & Discovery) by TWSKAA Welfare Foundation</span></p>
-                <p><strong>Helpline:</strong> <span>+91-8307 87323</span></p>
-                <p><strong>Email:</strong> <span>supportrid5@gmail.com</span></p>
-            </div>
-            <div class="header-links">
-                <a href="#">Main Content</a>
-                <a href="#">+A</a>
-                <a href="#">A</a>
-                <a href="#">A-</a>
-                <a href="#">Feedback</a>
-                <a href="#">Support</a>
-            </div>
-        </div>
-        <!-- Main Navigation -->
-        <div class="nav-container">
-            <div class="logo">
-                <img src="/RTS/public/Deshbord/category/test/technical&coding/img/final_logo copy.svg" alt="RID Bharat Logo">
-            </div>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
-            <span class="menu-toggle material-symbols-outlined" id="menuToggle">menu</span>
-            <div class="nav-menu" id="navMenu">
-                <div class="search-box">
-                    <input type="text" placeholder="Search Anything...">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="nav-buttons">
-                    <a href="#" class="btn"><i class="fas fa-award"></i> Certificate</a>
-                    <a href="#" class="btn"><i class="fas fa-user"></i> Profile</a>
-                </div>
-            </div>
-        </div>
-        <ul class="main-nav">
-            <li><a href="/RTS/public/Deshbord.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-file-alt"></i> Research Papers</a></li>
-            <li><a href="#" id="about-link"><i class="fas fa-users"></i> About Us</a></li>
-            <li>
-                <a href="#"><i class="fas fa-building"></i> Center <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fas fa-rocket"></i> Skill Center</a></li>
-                    <li><a href="#"><i class="fas fa-flask"></i> WIT Center</a></li>
-                    <li><a href="#"><i class="fas fa-microscope"></i> RID Center</a></li>
-                </ul>
-            </li>
-            <li><a href="/project_rid/public/contact/contact.html"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
-        </ul>
-    </header>
-  <div class="feedback-box">
+
+<header class="main-header">
+  <div class="header-info">
+    <div class="info-text">
+      <p><span>RID (Research Innovation & Discovery) by TWSKAA Welfare Foundation</span></p>
+      <p><strong>Helpline:</strong> <span>+91-8307 87323</span></p>
+      <p><strong>Email:</strong> <span>supportrid5@gmail.com</span></p>
+    </div>
+    <div class="header-links">
+      <a href="#">Main Content</a>
+      <a href="#">+A</a>
+      <a href="#">A</a>
+      <a href="#">A-</a>
+      <a href="#">Feedback</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+  <div class="nav-container">
+    <div class="logo">
+      <img src="/RTS/public/Deshbord/category/test/technical&coding/img/final_logo copy.svg">
+    </div>
+    <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+    <span class="menu-toggle material-symbols-outlined">menu</span>
+    <div class="nav-menu">
+      <div class="search-box">
+        <input type="text" placeholder="Search Anything...">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="nav-buttons">
+        <a href="#" class="btn"><i class="fas fa-award"></i> Certificate</a>
+        <a href="#" class="btn"><i class="fas fa-user"></i> Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="main-nav">
+    <li><a href="/RTS/public/Deshbord.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fas fa-file-alt"></i> Research Papers</a></li>
+    <li><a href="#"><i class="fas fa-users"></i> About Us</a></li>
+    <li>
+      <a href="#"><i class="fas fa-building"></i> Center</a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="fas fa-rocket"></i> Skill Center</a></li>
+        <li><a href="#"><i class="fas fa-flask"></i> WIT Center</a></li>
+        <li><a href="#"><i class="fas fa-microscope"></i> RID Center</a></li>
+      </ul>
+    </li>
+    <li><a href="/project_rid/public/contact/contact.html"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+  </ul>
+</header>
+
+<!-- 🔹 FEEDBACK BOX -->
+<div class="feedback-box">
   <h3>Send us your Feedback!</h3>
 
   <div class="feedback-content">
@@ -75,8 +94,11 @@
       <div class="emoji">🙁</div>
       <div class="emoji">😢</div>
     </div>
-    <p>Got suggestion? We’d love to have them! <span style="color: #888">(Optional)</span></p>
-    <textarea placeholder="Write your suggestions here..."></textarea>
+
+    <p>Got suggestion? We’d love to have them!</p>
+
+    <textarea id="feedbackInput" placeholder="Write your suggestions here..."></textarea>
+    <p id="errorMsg" class="error-text">Please enter your feedback</p>
   </div>
 
   <div class="footer">
@@ -86,42 +108,62 @@
     </div>
     <div class="buttons">
       <button class="send-btn">Send Feedback</button>
-      <button class="cancel-btn">Cancel</button>
+      <button class="cancel-btn" onclick="cls()">Cancel</button>
     </div>
   </div>
 </div>
-  <script>
-    const emojis = document.querySelectorAll('.emoji');
-    const textarea = document.querySelector('textarea');
-    emojis.forEach((emoji) => {
-      emoji.addEventListener('click', () => {
-        // Insert emoji at cursor position
-        const start = textarea.selectionStart;
-        const end = textarea.selectionEnd;
-        const text = textarea.value;
-        const emojiChar = emoji.textContent;
-        // Insert emoji
-        textarea.value = text.slice(0, start) + emojiChar + text.slice(end);
-        // Move cursor after inserted emoji
-        textarea.focus();
-        textarea.selectionStart = textarea.selectionEnd = start + emojiChar.length;
-      });
-    });
 
-    // Optional send button click effect
-    const sendBtn = document.querySelector('.send-btn');
-    sendBtn.addEventListener('click', () => {
-      sendBtn.classList.add('clicked');
-      setTimeout(() => {
-        sendBtn.classList.remove('clicked');
-      }, 1000);
+<script>
+  function cls() {
+    window.location.href = '/RTS/public/Deshbord.html';
+  }
+
+  const emojis = document.querySelectorAll('.emoji');
+  const textarea = document.getElementById('feedbackInput');
+  const errorMsg = document.getElementById('errorMsg');
+  const sendBtn = document.querySelector('.send-btn');
+
+  // Emoji insert
+  emojis.forEach(emoji => {
+    emoji.addEventListener('click', () => {
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      textarea.value =
+        textarea.value.slice(0, start) +
+        emoji.textContent +
+        textarea.value.slice(end);
+      textarea.focus();
+      textarea.selectionStart = textarea.selectionEnd = start + 2;
     });
-    sendBtn.addEventListener('click', () => {
-  window.location.href = "/RTS/public/Deshbord/category/test/feedback/feedback2.html";
-});
-  </script>
+  });
+
+  // Validation
+  sendBtn.addEventListener('click', () => {
+    if (textarea.value.trim() === "") {
+      errorMsg.style.display = "block";
+      textarea.classList.add("error-border");
+      textarea.focus();
+      return;
+    }
+
+    errorMsg.style.display = "none";
+    textarea.classList.remove("error-border");
+
+    sendBtn.classList.add("clicked");
+    setTimeout(() => {
+      window.location.href =
+        "/RTS/public/Deshbord/category/test/feedback/feedback2.html";
+    }, 600);
+  });
+
+  // Remove error on typing
+  textarea.addEventListener("input", () => {
+    if (textarea.value.trim() !== "") {
+      errorMsg.style.display = "none";
+      textarea.classList.remove("error-border");
+    }
+  });
+</script>
+
 </body>
 </html>
-
-
-

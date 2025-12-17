@@ -56,8 +56,8 @@ mongoose.connect(mongoUrl, {
     console.log('✅ Created indexes for applications');
 })
 .catch(err => {
-    console.error('❌ MongoDB Atlas Connection Error:', err.message);
-    console.error('💡 Troubleshooting Steps:');
+    console.error(' MongoDB Atlas Connection Error:', err.message);
+    console.error(' Troubleshooting Steps:');
     console.error('   1. Check your MongoDB Atlas cluster is running');
     console.error('   2. Verify IP is whitelisted in Network Access');
     console.error('   3. Check username/password in connection string');
