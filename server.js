@@ -24,27 +24,47 @@ const app = express();
 const port = process.env.PORT || 9191;
 
 // ========== DATABASE CONNECTION ==========
-// Use the correct environment variable name from your .env file
-const mongoUrl = process.env.MONGO_URI || 'mongodb://localhost:27017/booklibrary';
+// MongoDB Atlas Cloud Connection
+const mongoUrl = process.env.MONGODB_URI;
 
-console.log('🔧 Attempting to connect to MongoDB...');
-console.log('🔧 Connection URL:', mongoUrl.replace(/\/\/([^:]+):([^@]+)@/, '//***:***@')); // Hide credentials
+console.log('🔗 Attempting MongoDB Atlas connection...');
 
-mongoose.connect(mongoUrl)
+mongoose.connect(mongoUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+})
 .then(async () => {
-    console.log('✅ MongoDB Connected Successfully');
+    console.log('✅ MongoDB Atlas Connected Successfully');
+    console.log('📊 Database:', mongoose.connection.name);
     
-    const User = require('./models/EbookUser');
-    await User.createDefaultAdmin();
+    // Check if 'applications' collection exists
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    const appCollectionExists = collections.some(c => c.name === 'applications');
+    
+    if (!appCollectionExists) {
+        console.log('📝 Creating applications collection...');
+        // Create collection if it doesn't exist
+        await mongoose.connection.db.createCollection('applications');
+        console.log('✅ Created applications collection');
+    }
+    
+    // Create indexes for better performance
+    const Application = require('./models/Application');
+    await Application.createIndexes();
+    console.log('✅ Created indexes for applications');
 })
 .catch(err => {
-    console.error('❌ MongoDB Connection Error Details:', err.message);
-    console.error('💡 Check if:');
-    console.error('   1. Your Atlas cluster is running (check at https://cloud.mongodb.com)');
-    console.error('   2. Your IP is whitelisted in Atlas Network Access');
-    console.error('   3. Database user credentials are correct');
+    console.error(' MongoDB Atlas Connection Error:', err.message);
+    console.error(' Troubleshooting Steps:');
+    console.error('   1. Check your MongoDB Atlas cluster is running');
+    console.error('   2. Verify IP is whitelisted in Network Access');
+    console.error('   3. Check username/password in connection string');
+    console.error('   4. Check database name in connection string');
     process.exit(1);
 });
+
 
 
 // ========== SESSION CONFIGURATION ==========

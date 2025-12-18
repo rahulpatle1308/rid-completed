@@ -1,1071 +1,572 @@
 const questions = [
   {
-    "num":1,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 55)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 55)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 1,
+    "question_en": "Which function is used to get the natural logarithm?",
+    "question_hi": "नेचुरल लॉगरिदम प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["log()", "ln()", "natural_log()", "get_log()"],
+    "options_hi": ["log()", "ln()", "natural_log()", "get_log()"],
+    "answer_en": "log()",
+    "answer_hi": "log()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":2,
-    "question_en": "Which function outputs text in PHP? (Qset 55)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 55)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 2,
+    "question_en": "What does the 'log1p()' function do?",
+    "question_hi": "'log1p()' फंक्शन क्या करता है?",
+    "options_en": ["Returns log(1 + number)", "Natural log of 1 plus number", "Both A and B", "Log1p calculation"],
+    "options_hi": ["log(1 + number) रिटर्न करता है", "1 प्लस नंबर का नेचुरल लॉग", "A और B दोनों", "Log1p कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":3,
-    "question_en": "What is the correct file extension for PHP files? (Qset 55)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 55)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 3,
+    "question_en": "Which function is used to get the maximum value?",
+    "question_hi": "मैक्सिमम वैल्यू प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["max()", "maximum()", "get_max()", "greatest()"],
+    "options_hi": ["max()", "maximum()", "get_max()", "greatest()"],
+    "answer_en": "max()",
+    "answer_hi": "max()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":4,
-    "question_en": "Which operator concatenates strings? (Qset 55)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 55)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 4,
+    "question_en": "What is the purpose of the 'octdec()' function?",
+    "question_hi": "'octdec()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts octal to decimal", "Octal to decimal conversion", "Both A and B", "Octal conversion"],
+    "options_hi": ["ऑक्टल को डेसीमल में कन्वर्ट करता है", "ऑक्टल से डेसीमल कन्वर्शन", "A और B दोनों", "ऑक्टल कन्वर्शन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":5,
-    "question_en": "How to declare a variable in PHP? (Qset 55)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 55)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 5,
+    "question_en": "Which function is used to get the minimum value?",
+    "question_hi": "मिनिमम वैल्यू प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["min()", "minimum()", "get_min()", "least()"],
+    "options_hi": ["min()", "minimum()", "get_min()", "least()"],
+    "answer_en": "min()",
+    "answer_hi": "min()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":6,
-    "question_en": "Which function returns length of string? (Qset 55)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 55)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 6,
+    "question_en": "What does the 'pi()' function return?",
+    "question_hi": "'pi()' फंक्शन क्या रिटर्न करता है?",
+    "options_en": ["Value of π", "Pi constant", "Both A and B", "Pi value"],
+    "options_hi": ["π का मान", "Pi कॉन्स्टेंट", "A और B दोनों", "Pi वैल्यू"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":7,
-    "question_en": "Which superglobal holds POST data? (Qset 55)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 55)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 7,
+    "question_en": "Which function is used to raise a number to a power?",
+    "question_hi": "नंबर को पावर तक बढ़ाने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["pow()", "power()", "exponent()", "get_power()"],
+    "options_hi": ["pow()", "power()", "exponent()", "get_power()"],
+    "answer_en": "pow()",
+    "answer_hi": "pow()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":8,
-    "question_en": "Which function includes a file? (Qset 55)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 55)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 8,
+    "question_en": "What is the purpose of the 'rad2deg()' function?",
+    "question_hi": "'rad2deg()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts radians to degrees", "Radians to degrees conversion", "Both A and B", "Radians conversion"],
+    "options_hi": ["रेडियन को डिग्री में कन्वर्ट करता है", "रेडियन से डिग्री कन्वर्शन", "A और B दोनों", "रेडियन कन्वर्शन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":9,
-    "question_en": "What does PDO stand for? (Qset 55)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 55)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 9,
+    "question_en": "Which function is used to generate a random integer?",
+    "question_hi": "रैंडम इंटीजर जनरेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["rand()", "mt_rand()", "random_int()", "All of the above"],
+    "options_hi": ["rand()", "mt_rand()", "random_int()", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":10,
-    "question_en": "Which keyword defines a function? (Qset 55)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 55)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 10,
+    "question_en": "What does the 'round()' function's third parameter do?",
+    "question_hi": "'round()' फंक्शन का तीसरा पैरामीटर क्या करता है?",
+    "options_en": ["Rounding mode", "Mode constant", "Both A and B", "Round mode"],
+    "options_hi": ["राउंडिंग मोड", "मोड कॉन्स्टेंट", "A और B दोनों", "राउंड मोड"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":11,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 56)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 56)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 11,
+    "question_en": "Which function is used to generate a random float?",
+    "question_hi": "रैंडम फ्लोट जनरेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["lcg_value()", "mt_rand() / mt_getrandmax()", "random_int(0, PHP_INT_MAX) / PHP_INT_MAX", "All of the above"],
+    "options_hi": ["lcg_value()", "mt_rand() / mt_getrandmax()", "random_int(0, PHP_INT_MAX) / PHP_INT_MAX", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":12,
-    "question_en": "Which function outputs text in PHP? (Qset 56)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 56)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 12,
+    "question_en": "What is the purpose of the 'sin()' function?",
+    "question_hi": "'sin()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Returns sine of number", "Sine function", "Both A and B", "Sine calculation"],
+    "options_hi": ["नंबर का साइन रिटर्न करता है", "साइन फंक्शन", "A और B दोनों", "साइन कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":13,
-    "question_en": "What is the correct file extension for PHP files? (Qset 56)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 56)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 13,
+    "question_en": "Which function is used to seed the random number generator?",
+    "question_hi": "रैंडम नंबर जनरेटर को seed करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["srand()", "mt_srand()", "Both srand() and mt_srand()", "random_seed()"],
+    "options_hi": ["srand()", "mt_srand()", "srand() और mt_srand() दोनों", "random_seed()"],
+    "answer_en": "Both srand() and mt_srand()",
+    "answer_hi": "srand() और mt_srand() दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":14,
-    "question_en": "Which operator concatenates strings? (Qset 56)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 56)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 14,
+    "question_en": "What does the 'sinh()' function do?",
+    "question_hi": "'sinh()' फंक्शन क्या करता है?",
+    "options_en": ["Returns hyperbolic sine", "Hyperbolic sine function", "Both A and B", "Sinh calculation"],
+    "options_hi": ["हाइपरबोलिक साइन रिटर्न करता है", "हाइपरबोलिक साइन फंक्शन", "A और B दोनों", "Sinh कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":15,
-    "question_en": "How to declare a variable in PHP? (Qset 56)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 56)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 15,
+    "question_en": "Which function is used to get the square root?",
+    "question_hi": "स्क्वायर रूट प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["sqrt()", "square_root()", "root()", "get_sqrt()"],
+    "options_hi": ["sqrt()", "square_root()", "root()", "get_sqrt()"],
+    "answer_en": "sqrt()",
+    "answer_hi": "sqrt()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":16,
-    "question_en": "Which function returns length of string? (Qset 56)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 56)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 16,
+    "question_en": "What is the purpose of the 'tan()' function?",
+    "question_hi": "'tan()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Returns tangent of number", "Tangent function", "Both A and B", "Tangent calculation"],
+    "options_hi": ["नंबर का टेंजेंट रिटर्न करता है", "टेंजेंट फंक्शन", "A और B दोनों", "टेंजेंट कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":17,
-    "question_en": "Which superglobal holds POST data? (Qset 56)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 56)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 17,
+    "question_en": "Which function is used to seed the Mersenne Twister random generator?",
+    "question_hi": "मर्सेन ट्विस्टर रैंडम जनरेटर को seed करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["mt_srand()", "srand() for MT", "Both A and B", "mt_seed()"],
+    "options_hi": ["mt_srand()", "MT के लिए srand()", "A और B दोनों", "mt_seed()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":18,
-    "question_en": "Which function includes a file? (Qset 56)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 56)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 18,
+    "question_en": "What does the 'tanh()' function do?",
+    "question_hi": "'tanh()' फंक्शन क्या करता है?",
+    "options_en": ["Returns hyperbolic tangent", "Hyperbolic tangent function", "Both A and B", "Tanh calculation"],
+    "options_hi": ["हाइपरबोलिक टेंजेंट रिटर्न करता है", "हाइपरबोलिक टेंजेंट फंक्शन", "A और B दोनों", "Tanh कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":19,
-    "question_en": "What does PDO stand for? (Qset 56)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 56)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 19,
+    "question_en": "Which function is used to convert a string to base64?",
+    "question_hi": "स्ट्रिंग को base64 में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["base64_encode()", "encode_base64()", "to_base64()", "str_to_base64()"],
+    "options_hi": ["base64_encode()", "encode_base64()", "to_base64()", "str_to_base64()"],
+    "answer_en": "base64_encode()",
+    "answer_hi": "base64_encode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":20,
-    "question_en": "Which keyword defines a function? (Qset 56)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 56)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 20,
+    "question_en": "What is the purpose of the 'bindec()' function?",
+    "question_hi": "'bindec()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts binary to decimal", "Binary to decimal conversion", "Both A and B", "Binary conversion"],
+    "options_hi": ["बाइनरी को डेसीमल में कन्वर्ट करता है", "बाइनरी से डेसीमल कन्वर्शन", "A और B दोनों", "बाइनरी कन्वर्शन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":21,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 57)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 57)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 21,
+    "question_en": "Which function is used to decode base64 string?",
+    "question_hi": "base64 स्ट्रिंग डिकोड करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["base64_decode()", "decode_base64()", "from_base64()", "str_from_base64()"],
+    "options_hi": ["base64_decode()", "decode_base64()", "from_base64()", "str_from_base64()"],
+    "answer_en": "base64_decode()",
+    "answer_hi": "base64_decode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":22,
-    "question_en": "Which function outputs text in PHP? (Qset 57)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 57)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 22,
+    "question_en": "What does the 'decbin()' function do?",
+    "question_hi": "'decbin()' फंक्शन क्या करता है?",
+    "options_en": ["Converts decimal to binary", "Decimal to binary conversion", "Both A and B", "Decimal to binary"],
+    "options_hi": ["डेसीमल को बाइनरी में कन्वर्ट करता है", "डेसीमल से बाइनरी कन्वर्शन", "A और B दोनों", "डेसीमल से बाइनरी"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":23,
-    "question_en": "What is the correct file extension for PHP files? (Qset 57)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 57)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 23,
+    "question_en": "Which function is used to convert string to hex?",
+    "question_hi": "स्ट्रिंग को hex में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["bin2hex()", "str_to_hex()", "encode_hex()", "hex_encode()"],
+    "options_hi": ["bin2hex()", "str_to_hex()", "encode_hex()", "hex_encode()"],
+    "answer_en": "bin2hex()",
+    "answer_hi": "bin2hex()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":24,
-    "question_en": "Which operator concatenates strings? (Qset 57)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 57)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 24,
+    "question_en": "What is the purpose of the 'dechex()' function?",
+    "question_hi": "'dechex()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts decimal to hexadecimal", "Decimal to hex conversion", "Both A and B", "Decimal to hex"],
+    "options_hi": ["डेसीमल को हेक्साडेसिमल में कन्वर्ट करता है", "डेसीमल से हेक्स कन्वर्शन", "A और B दोनों", "डेसीमल से हेक्स"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":25,
-    "question_en": "How to declare a variable in PHP? (Qset 57)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 57)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 25,
+    "question_en": "Which function is used to decode hex string?",
+    "question_hi": "hex स्ट्रिंग डिकोड करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["hex2bin()", "hex_decode()", "from_hex()", "str_from_hex()"],
+    "options_hi": ["hex2bin()", "hex_decode()", "from_hex()", "str_from_hex()"],
+    "answer_en": "hex2bin()",
+    "answer_hi": "hex2bin()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":26,
-    "question_en": "Which function returns length of string? (Qset 57)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 57)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 26,
+    "question_en": "What does the 'decoct()' function do?",
+    "question_hi": "'decoct()' फंक्शन क्या करता है?",
+    "options_en": ["Converts decimal to octal", "Decimal to octal conversion", "Both A and B", "Decimal to octal"],
+    "options_hi": ["डेसीमल को ऑक्टल में कन्वर्ट करता है", "डेसीमल से ऑक्टल कन्वर्शन", "A और B दोनों", "डेसीमल से ऑक्टल"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":27,
-    "question_en": "Which superglobal holds POST data? (Qset 57)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 57)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 27,
+    "question_en": "Which function is used to encode URL string?",
+    "question_hi": "URL स्ट्रिंग एन्कोड करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["urlencode()", "encode_url()", "url_encode()", "encodeuri()"],
+    "options_hi": ["urlencode()", "encode_url()", "url_encode()", "encodeuri()"],
+    "answer_en": "urlencode()",
+    "answer_hi": "urlencode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":28,
-    "question_en": "Which function includes a file? (Qset 57)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 57)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 28,
+    "question_en": "What is the purpose of the 'hexdec()' function?",
+    "question_hi": "'hexdec()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts hexadecimal to decimal", "Hex to decimal conversion", "Both A and B", "Hex to decimal"],
+    "options_hi": ["हेक्साडेसिमल को डेसीमल में कन्वर्ट करता है", "हेक्स से डेसीमल कन्वर्शन", "A और B दोनों", "हेक्स से डेसीमल"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":29,
-    "question_en": "What does PDO stand for? (Qset 57)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 57)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 29,
+    "question_en": "Which function is used to decode URL string?",
+    "question_hi": "URL स्ट्रिंग डिकोड करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["urldecode()", "decode_url()", "url_decode()", "decodeuri()"],
+    "options_hi": ["urldecode()", "decode_url()", "url_decode()", "decodeuri()"],
+    "answer_en": "urldecode()",
+    "answer_hi": "urldecode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":30,
-    "question_en": "Which keyword defines a function? (Qset 57)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 57)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 30,
+    "question_en": "What does the 'octdec()' function do?",
+    "question_hi": "'octdec()' फंक्शन क्या करता है?",
+    "options_en": ["Converts octal to decimal", "Octal to decimal conversion", "Both A and B", "Octal to decimal"],
+    "options_hi": ["ऑक्टल को डेसीमल में कन्वर्ट करता है", "ऑक्टल से डेसीमल कन्वर्शन", "A और B दोनों", "ऑक्टल से डेसीमल"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":31,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 58)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 58)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 31,
+    "question_en": "Which function is used for raw URL encoding?",
+    "question_hi": "raw URL एन्कोडिंग के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["rawurlencode()", "raw_encode_url()", "url_raw_encode()", "encode_raw_url()"],
+    "options_hi": ["rawurlencode()", "raw_encode_url()", "url_raw_encode()", "encode_raw_url()"],
+    "answer_en": "rawurlencode()",
+    "answer_hi": "rawurlencode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":32,
-    "question_en": "Which function outputs text in PHP? (Qset 58)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 58)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 32,
+    "question_en": "What is the purpose of the 'bindec()' function?",
+    "question_hi": "'bindec()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts binary string to decimal", "Binary to decimal", "Both A and B", "Binary string conversion"],
+    "options_hi": ["बाइनरी स्ट्रिंग को डेसीमल में कन्वर्ट करता है", "बाइनरी से डेसीमल", "A और B दोनों", "बाइनरी स्ट्रिंग कन्वर्शन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":33,
-    "question_en": "What is the correct file extension for PHP files? (Qset 58)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 58)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 33,
+    "question_en": "Which function is used for raw URL decoding?",
+    "question_hi": "raw URL डिकोडिंग के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["rawurldecode()", "raw_decode_url()", "url_raw_decode()", "decode_raw_url()"],
+    "options_hi": ["rawurldecode()", "raw_decode_url()", "url_raw_decode()", "decode_raw_url()"],
+    "answer_en": "rawurldecode()",
+    "answer_hi": "rawurldecode()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":34,
-    "question_en": "Which operator concatenates strings? (Qset 58)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 58)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 34,
+    "question_en": "What does the 'decbin()' function do?",
+    "question_hi": "'decbin()' फंक्शन क्या करता है?",
+    "options_en": ["Converts decimal number to binary string", "Decimal to binary", "Both A and B", "Decimal to binary string"],
+    "options_hi": ["डेसीमल नंबर को बाइनरी स्ट्रिंग में कन्वर्ट करता है", "डेसीमल से बाइनरी", "A और B दोनों", "डेसीमल से बाइनरी स्ट्रिंग"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":35,
-    "question_en": "How to declare a variable in PHP? (Qset 58)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 58)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 35,
+    "question_en": "Which function is used to get Mersenne Twister random max?",
+    "question_hi": "मर्सेन ट्विस्टर रैंडम मैक्स प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["mt_getrandmax()", "mt_max()", "get_mt_max()", "mt_random_max()"],
+    "options_hi": ["mt_getrandmax()", "mt_max()", "get_mt_max()", "mt_random_max()"],
+    "answer_en": "mt_getrandmax()",
+    "answer_hi": "mt_getrandmax()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":36,
-    "question_en": "Which function returns length of string? (Qset 58)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 58)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 36,
+    "question_en": "What is the purpose of the 'dechex()' function?",
+    "question_hi": "'dechex()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts decimal number to hexadecimal string", "Decimal to hex", "Both A and B", "Decimal to hex string"],
+    "options_hi": ["डेसीमल नंबर को हेक्साडेसिमल स्ट्रिंग में कन्वर्ट करता है", "डेसीमल से हेक्स", "A और B दोनों", "डेसीमल से हेक्स स्ट्रिंग"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":37,
-    "question_en": "Which superglobal holds POST data? (Qset 58)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 58)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 37,
+    "question_en": "Which function is used to get random number generator max?",
+    "question_hi": "रैंडम नंबर जनरेटर मैक्स प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["getrandmax()", "rand_max()", "random_max()", "get_random_max()"],
+    "options_hi": ["getrandmax()", "rand_max()", "random_max()", "get_random_max()"],
+    "answer_en": "getrandmax()",
+    "answer_hi": "getrandmax()",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":38,
-    "question_en": "Which function includes a file? (Qset 58)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 58)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 38,
+    "question_en": "What does the 'decoct()' function do?",
+    "question_hi": "'decoct()' फंक्शन क्या करता है?",
+    "options_en": ["Converts decimal number to octal string", "Decimal to octal", "Both A and B", "Decimal to octal string"],
+    "options_hi": ["डेसीमल नंबर को ऑक्टल स्ट्रिंग में कन्वर्ट करता है", "डेसीमल से ऑक्टल", "A और B दोनों", "डेसीमल से ऑक्टल स्ट्रिंग"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":39,
-    "question_en": "What does PDO stand for? (Qset 58)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 58)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 39,
+    "question_en": "Which function is used to get the value of π?",
+    "question_hi": "π का मान प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["pi()", "M_PI constant", "Both pi() and M_PI", "get_pi()"],
+    "options_hi": ["pi()", "M_PI कॉन्स्टेंट", "pi() और M_PI दोनों", "get_pi()"],
+    "answer_en": "Both pi() and M_PI",
+    "answer_hi": "pi() और M_PI दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":40,
-    "question_en": "Which keyword defines a function? (Qset 58)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 58)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 40,
+    "question_en": "What is the purpose of the 'hexdec()' function?",
+    "question_hi": "'hexdec()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Converts hexadecimal string to decimal number", "Hex to decimal", "Both A and B", "Hex string to decimal"],
+    "options_hi": ["हेक्साडेसिमल स्ट्रिंग को डेसीमल नंबर में कन्वर्ट करता है", "हेक्स से डेसीमल", "A और B दोनों", "हेक्स स्ट्रिंग से डेसीमल"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":41,
-    "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 59)",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 59)",
-    "options_en": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "options_hi": [
-      "//",
-      "/* */",
-      "##",
-      "\\\\\\"
-    ],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "num": 41,
+    "question_en": "Which function is used to get the value of e?",
+    "question_hi": "e का मान प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["exp(1)", "M_E constant", "Both exp(1) and M_E", "get_e()"],
+    "options_hi": ["exp(1)", "M_E कॉन्स्टेंट", "exp(1) और M_E दोनों", "get_e()"],
+    "answer_en": "Both exp(1) and M_E",
+    "answer_hi": "exp(1) और M_E दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":42,
-    "question_en": "Which function outputs text in PHP? (Qset 59)",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 59)",
-    "options_en": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "options_hi": [
-      "echo",
-      "print",
-      "write",
-      "output"
-    ],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "num": 42,
+    "question_en": "What does the 'octdec()' function do?",
+    "question_hi": "'octdec()' फंक्शन क्या करता है?",
+    "options_en": ["Converts octal string to decimal number", "Octal to decimal", "Both A and B", "Octal string to decimal"],
+    "options_hi": ["ऑक्टल स्ट्रिंग को डेसीमल नंबर में कन्वर्ट करता है", "ऑक्टल से डेसीमल", "A और B दोनों", "ऑक्टल स्ट्रिंग से डेसीमल"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":43,
-    "question_en": "What is the correct file extension for PHP files? (Qset 59)",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 59)",
-    "options_en": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "options_hi": [
-      ".php",
-      ".ph",
-      ".phtml",
-      ".html"
-    ],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "num": 43,
+    "question_en": "Which function is used to get the logarithm base 10?",
+    "question_hi": "लॉगरिदम बेस 10 प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["log10()", "log() with base 10", "Both A and B", "get_log10()"],
+    "options_hi": ["log10()", "बेस 10 के साथ log()", "A और B दोनों", "get_log10()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":44,
-    "question_en": "Which operator concatenates strings? (Qset 59)",
-    "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 59)",
-    "options_en": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "options_hi": [
-      ".",
-      "+",
-      "&",
-      "concat()"
-    ],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "num": 44,
+    "question_en": "What is the purpose of the 'pow()' function?",
+    "question_hi": "'pow()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Exponential expression", "Number to power", "Both A and B", "Power calculation"],
+    "options_hi": ["एक्सपोनेंशियल एक्सप्रेशन", "नंबर टू पावर", "A और B दोनों", "पावर कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":45,
-    "question_en": "How to declare a variable in PHP? (Qset 59)",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 59)",
-    "options_en": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "options_hi": [
-      "$var = 5;",
-      "var $var = 5;",
-      "let $var = 5;",
-      "declare $var = 5;"
-    ],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "num": 45,
+    "question_en": "Which function is used to get the square root of sum of squares?",
+    "question_hi": "स्क्वायर्स के योग का स्क्वायर रूट प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["hypot()", "sqrt(pow(x, 2) + pow(y, 2))", "Both A and B", "get_hypotenuse()"],
+    "options_hi": ["hypot()", "sqrt(pow(x, 2) + pow(y, 2))", "A और B दोनों", "get_hypotenuse()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":46,
-    "question_en": "Which function returns length of string? (Qset 59)",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 59)",
-    "options_en": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "options_hi": [
-      "strlen()",
-      "length()",
-      "size()",
-      "strlength()"
-    ],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "num": 46,
+    "question_en": "What does the 'sqrt()' function do?",
+    "question_hi": "'sqrt()' फंक्शन क्या करता है?",
+    "options_en": ["Square root calculation", "Returns square root", "Both A and B", "Root calculation"],
+    "options_hi": ["स्क्वायर रूट कैलकुलेशन", "स्क्वायर रूट रिटर्न करता है", "A और B दोनों", "रूट कैलकुलेशन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":47,
-    "question_en": "Which superglobal holds POST data? (Qset 59)",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 59)",
-    "options_en": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "options_hi": [
-      "$_POST",
-      "$_GET",
-      "$_REQUEST",
-      "$_FORM"
-    ],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "num": 47,
+    "question_en": "Which function is used for integer division?",
+    "question_hi": "इंटीजर डिवीजन के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["intdiv()", "(int) ($a / $b)", "Both A and B", "integer_divide()"],
+    "options_hi": ["intdiv()", "(int) ($a / $b)", "A और B दोनों", "integer_divide()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":48,
-    "question_en": "Which function includes a file? (Qset 59)",
-    "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 59)",
-    "options_en": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "options_hi": [
-      "include()",
-      "require()",
-      "include_once()",
-      "require_once()"
-    ],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "num": 48,
+    "question_en": "What is the purpose of the 'fmod()' function?",
+    "question_hi": "'fmod()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Floating point remainder", "Modulus for floats", "Both A and B", "Float modulo"],
+    "options_hi": ["फ्लोटिंग पॉइंट रिमाइंडर", "फ्लोट्स के लिए मॉड्यूलस", "A और B दोनों", "फ्लोट मॉड्यूलो"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":49,
-    "question_en": "What does PDO stand for? (Qset 59)",
-    "question_hi": "PDO का पूरा नाम क्या है? (Qset 59)",
-    "options_en": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "options_hi": [
-      "PHP Data Objects",
-      "PHP Database Objects",
-      "Primary Data Object",
-      "PHP Direct Objects"
-    ],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "num": 49,
+    "question_en": "Which function is used to round to nearest integer?",
+    "question_hi": "निकटतम इंटीजर में राउंड करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["round()", "intval() with rounding", "Both A and B", "nearest_integer()"],
+    "options_hi": ["round()", "राउंडिंग के साथ intval()", "A और B दोनों", "nearest_integer()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
-    "num":50,
-    "question_en": "Which keyword defines a function? (Qset 59)",
-    "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 59)",
-    "options_en": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "options_hi": [
-      "function",
-      "def",
-      "fn",
-      "func"
-    ],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "num": 50,
+    "question_en": "What does the 'cbrt()' function do?",
+    "question_hi": "'cbrt()' फंक्शन क्या करता है?",
+    "options_en": ["Cube root calculation", "Returns cube root", "Both A and B", "Cube root"],
+    "options_hi": ["क्यूब रूट कैलकुलेशन", "क्यूब रूट रिटर्न करता है", "A और B दोनों", "क्यूब रूट"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
-  },
-];
+  }
+]
 
 
-
-let currentQuestion = 0; 
+// --------------------------- GLOBAL VARS -----------------------------
+let currentQuestion = 0;
 let language = "en";
-// let timeLeft = 180 * 60; // 180 minutes
-let timeLeft = 60 * 60; // 60 minutes
+let timeLeft = 60 * 60;   // 60 minutes timer
 let timerInterval;
 
-// ----------------- Quiz Logic -----------------
+// --------------------------- LOAD QUESTION ----------------------------
 function loadQuestion(index) {
     const q = questions[index];
-    document.getElementById("question").textContent = `${q.num}. ${
-        language === "en" ? q.question_en : q.question_hi
-    }`;
-    document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
+
+    document.getElementById("question").textContent =
+        `${q.num}. ${language === "en" ? q.question_en : q.question_hi}`;
+
+    document.getElementById("questionCounter").textContent =
+        `Question ${index + 1} of ${questions.length}`;
 
     const optionsElement = document.getElementById("options");
     optionsElement.innerHTML = "";
@@ -1075,6 +576,7 @@ function loadQuestion(index) {
     options.forEach((option) => {
         const isSelected = q.selected === option;
         const optionDiv = document.createElement("div");
+
         optionDiv.className = "option-box";
         optionDiv.style = `
             border: 2px solid ${isSelected ? "#007bff" : "#ccc"};
@@ -1083,12 +585,11 @@ function loadQuestion(index) {
             border-radius: 8px;
             margin: 6px 0;
             cursor: pointer;
-            transition: all 0.2s;
         `;
 
         optionDiv.innerHTML = `
-            <input type="radio" name="option" value="${option}" ${isSelected ? "checked" : ""} style="margin-right:8px;">
-            ${option}
+            <input type="radio" name="option"
+            value="${option}" ${isSelected ? "checked" : ""} /> ${option}
         `;
 
         optionDiv.addEventListener("click", () => {
@@ -1102,12 +603,14 @@ function loadQuestion(index) {
     updateNavigation();
 }
 
+// --------------------------- MARK ATTEMPT ----------------------------
 function markAttempted(index, selectedAnswer) {
     questions[index].attempted = true;
     questions[index].selected = selectedAnswer;
     updateNavigation();
 }
 
+// --------------------------- NEXT / PREV -----------------------------
 function nextQuestion() {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
@@ -1122,283 +625,150 @@ function prevQuestion() {
     }
 }
 
+// --------------------------- LANGUAGE CHANGE -------------------------
 function changeLanguage() {
     language = document.getElementById("languageSelect").value;
     loadQuestion(currentQuestion);
 }
 
-function submitQuiz() {
-    clearInterval(timerInterval);
-    let attempted = 0,
-        notAttempted = 0,
-        score = 0;
-
-    questions.forEach((q) => {
-        if (q.attempted) {
-            attempted++;
-            if (q.selected === q.answer_en || q.selected === q.answer_hi) score++;
-        } else notAttempted++;
-    });
-
-    alert(
-        `Quiz submitted!\nAttempted: ${attempted}\nNot Attempted: ${notAttempted}\nScore: ${score}/${questions.length}`
-    );
-}
-
+// --------------------------- TIMER -------------------------------
 function startTimer() {
     const timerElement = document.getElementById("timer");
     clearInterval(timerInterval);
+
     timerInterval = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            alert("Time's up!");
+            alert("⏳ Time Over!");
             submitQuiz();
-        } else {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            timerElement.textContent = `Time Left: ${hours
-                .toString()
-                .padStart(2, "0")}:${minutes
-                .toString()
-                .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-            timeLeft--;
+            return;
         }
+
+        const h = Math.floor(timeLeft / 3600);
+        const m = Math.floor((timeLeft % 3600) / 60);
+        const s = timeLeft % 60;
+
+        timerElement.textContent =
+            `Time Left: ${h.toString().padStart(2, "0")}:${m
+                .toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+
+        timeLeft--;
     }, 1000);
 }
 
+// --------------------------- SUBMIT QUIZ ---------------------
+function submitQuiz() {
+    let confirmation = confirm("Are you sure you want to submit the test?");
+    if (!confirmation) return;
 
+    clearInterval(timerInterval);
 
-////////////////////////////////////////////////////////////////////////////////////////////
+    // Calculate time spent
+    const totalTimeSpent = (60 * 60) - timeLeft;
+    const mins = Math.floor(totalTimeSpent / 60);
+    const secs = totalTimeSpent % 60;
 
-// submit 
-function jumpToQuestion(index) {
-            currentQuestion = index;
-            loadQuestion(index);
+    // Save to localStorage
+    localStorage.setItem("timeTaken", `${mins} min ${secs} sec`);
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let score = 0;
+    const results = [];
+
+    questions.forEach(q => {
+        if (q.attempted) {
+            attempted++;
+            if (q.selected === q.answer_en || q.selected === q.answer_hi) {
+                score++;
+            }
+        } else {
+            notAttempted++;
         }
 
-        function submitQuiz() {
-            let confirmation = confirm("Are you sure you want to submit the test?");
-            
-            if (!confirmation) {
-                return; // अगर यूज़र 'Cancel' करता है तो आगे नहीं बढ़ेंगे
-            }
+        results.push({
+            question: language === "en" ? q.question_en : q.question_hi,
+            selected: q.selected || "Not Answered",
+            correct: language === "en" ? q.answer_en : q.answer_hi
+        });
+    });
 
-            let attempted = 0;
-            let notAttempted = 0;
-            let score = 0;
-            const results = [];
+    // Save result data
+    localStorage.setItem("attempted", attempted);
+    localStorage.setItem("notAttempted", notAttempted);
+    localStorage.setItem("score", score);
+    localStorage.setItem("results", JSON.stringify(results));
 
-            questions.forEach(q => {
-                if (q.attempted) {
-                    attempted++;
-                    if (q.selected === q.answer) {
-                        score++;
-                    }
-                } else {
-                    notAttempted++;
-                }
-                results.push({ question: q.question, selected: q.selected || "Not Answered", correct: q.answer });
-            });
+    // Stop camera stream if active
+    if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+    }
 
-            localStorage.setItem("attempted", attempted);
-            localStorage.setItem("notAttempted", notAttempted);
-            localStorage.setItem("score", score);
-            localStorage.setItem("results", JSON.stringify(results));
+    // Redirect
+    window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
+}
 
-            // रिजल्ट देखने से पहले एक और कन्फर्मेशन ले सकते हैं
-            let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
-            if (viewResult) {
-                window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
-            }
-        }
-        window.onload = () => {
-            loadQuestion(currentQuestion);
-        };
-
-
+// --------------------------- NAVIGATION ------------------------------
 function updateNavigation() {
     const nav = document.getElementById("circleContainer");
     nav.innerHTML = "";
+
     questions.forEach((q, i) => {
         let color = "gray";
         if (i === currentQuestion) color = "blue";
         else if (q.attempted) color = "green";
-        nav.innerHTML += `<div class='circle' style='background-color:${color}' onclick='loadQuestion(${i})'>${i + 1}</div>`;
+
+        const circle = document.createElement("div");
+        circle.className = "circle";
+        circle.style.background = color;
+        circle.textContent = i + 1;
+        circle.onclick = () => jumpToQuestion(i);
+        nav.appendChild(circle);
     });
 }
 
-// ----------------- Camera & Movement Logic -----------------
+function jumpToQuestion(i) {
+    currentQuestion = i;
+    loadQuestion(i);
+}
+
+// --------------------------- CAMERA ----------------------
 let videoStream;
-let movementCount = 0;
 
 function startCamera() {
     const container = document.createElement("div");
     container.id = "camera-container";
     container.style.position = "fixed";
     container.style.top = "10px";
-    container.style.left = "10px"; // ✅ Left side
+    container.style.left = "10px";
     container.style.width = "130px";
     container.style.height = "130px";
-    container.style.zIndex = "9999";
     container.style.borderRadius = "50%";
     container.style.overflow = "hidden";
-    container.style.border = "3px solid red";
-    container.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
-    container.style.cursor = "grab";
-    container.style.minWidth = "80px";
-    container.style.minHeight = "80px";
-    container.style.maxWidth = "250px";
-    container.style.maxHeight = "250px";
     container.style.background = "#000";
+    container.style.border = "3px solid red";
+    container.style.zIndex = "9999";
     document.body.appendChild(container);
 
     const video = document.createElement("video");
-    video.setAttribute("autoplay", true);
-    video.setAttribute("playsinline", true);
+    video.autoplay = true;
+    video.playsInline = true;
     video.style.width = "100%";
     video.style.height = "100%";
     video.style.objectFit = "cover";
     container.appendChild(video);
 
-    // ✅ Resize handle
-    const resizeHandle = document.createElement("div");
-    resizeHandle.style.position = "absolute";
-    resizeHandle.style.bottom = "2px";
-    resizeHandle.style.right = "2px";
-    resizeHandle.style.width = "15px";
-    resizeHandle.style.height = "15px";
-    resizeHandle.style.background = "rgba(255,255,255,0.7)";
-    resizeHandle.style.borderRadius = "4px";
-    resizeHandle.style.cursor = "se-resize";
-    container.appendChild(resizeHandle);
-
-    // ✅ Drag logic
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    container.addEventListener("mousedown", (e) => {
-        if (e.target === resizeHandle) return;
-        isDragging = true;
-        offsetX = e.clientX - container.offsetLeft;
-        offsetY = e.clientY - container.offsetTop;
-        container.style.cursor = "grabbing";
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        let x = e.clientX - offsetX;
-        let y = e.clientY - offsetY;
-        x = Math.max(0, Math.min(window.innerWidth - container.offsetWidth, x));
-        y = Math.max(0, Math.min(window.innerHeight - container.offsetHeight, y));
-        container.style.left = `${x}px`;
-        container.style.top = `${y}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-        container.style.cursor = "grab";
-    });
-
-    // ✅ Resize logic
-    let isResizing = false;
-    let startWidth, startHeight, startX, startY;
-
-    resizeHandle.addEventListener("mousedown", (e) => {
-        e.stopPropagation();
-        isResizing = true;
-        startWidth = container.offsetWidth;
-        startHeight = container.offsetHeight;
-        startX = e.clientX;
-        startY = e.clientY;
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isResizing) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        const newSize = Math.max(80, Math.min(250, Math.max(startWidth + dx, startHeight + dy)));
-        container.style.width = `${newSize}px`;
-        container.style.height = `${newSize}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isResizing = false;
-    });
-
-    // ✅ Camera stream
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
             video.srcObject = stream;
             videoStream = stream;
-            detectMovement(video);
         })
-        .catch(err => {
-            console.error("Camera error:", err);
-            alert("Camera not accessible!");
-        });
+        .catch(() => alert("Camera not accessible!"));
 }
 
-function detectMovement(video) {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    canvas.width = 160;
-    canvas.height = 160;
-    let lastImageData = null;
-
-    setInterval(() => {
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-        if (lastImageData) {
-            let diff = 0;
-            for (let i = 0; i < imageData.data.length; i += 4) {
-                diff += Math.abs(imageData.data[i] - lastImageData.data[i]);
-            }
-
-            if (diff > 1000000) {
-                movementCount++;
-                if (movementCount === 1) {
-                    alert("⚠️ Alert 1: Face is not move");
-                } else if (movementCount === 2) {
-                    alert("⚠️ Alert 2: Head is not move");
-                } else if (movementCount === 3) {
-                    alert("⚠️ Alert 3: Test series is restarting...");
-                    restartTest();
-                }
-            }
-        }
-        lastImageData = imageData;
-    }, 2000);
-}
-
-function restartTest() {
-    if (videoStream) {
-        videoStream.getTracks().forEach(track => track.stop());
-    }
-    const camContainer = document.getElementById("camera-container");
-    if (camContainer) camContainer.remove();
-
-    movementCount = 0;
-    currentQuestion = 0;
-    timeLeft = 180 * 60;
-
-    questions.forEach(q => {
-        q.attempted = false;
-        q.selected = null;
-    });
-
-    loadQuestion(currentQuestion);
-    startTimer();
-    startCamera();
-}
-
-// ----------------- Page Load -----------------
+// --------------------------- PAGE LOAD --------------------------
 window.onload = function () {
     loadQuestion(currentQuestion);
     startTimer();
-    startCamera(); // ✅ Camera starts with test
+    startCamera();
 };
-
-
-///////////////////////////////////////

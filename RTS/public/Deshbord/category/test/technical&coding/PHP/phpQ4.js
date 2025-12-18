@@ -1,580 +1,573 @@
 const questions =[
   {
     "num": 1,
-    "question_en": "Which symbol is used to start a single-line comment in PHP?",
-    "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है?",
-    "options_en": ["//", "/* */", "##", "\\\\\\"],
-    "options_hi": ["//", "/* */", "##", "\\\\\\"],
-    "answer_en": "//",
-    "answer_hi": "//",
+    "question_en": "Which function is used to convert a string to an array by splitting on newlines?",
+    "question_hi": "न्यूलाइन्स पर स्प्लिट करके स्ट्रिंग को ऐरे में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["explode(PHP_EOL, $string)", "str_split($string)", "split('\n', $string)", "preg_split('/\r\n|\r|\n/', $string)"],
+    "options_hi": ["explode(PHP_EOL, $string)", "str_split($string)", "split('\n', $string)", "preg_split('/\r\n|\r|\n/', $string)"],
+    "answer_en": "explode(PHP_EOL, $string)",
+    "answer_hi": "explode(PHP_EOL, $string)",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 2,
-    "question_en": "Which function outputs text in PHP?",
-    "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["echo", "print", "write", "output"],
-    "options_hi": ["echo", "print", "write", "output"],
-    "answer_en": "echo",
-    "answer_hi": "echo",
+    "question_en": "What does the 'array_filter()' function do without a callback?",
+    "question_hi": "कॉलबैक के बिना 'array_filter()' फंक्शन क्या करता है?",
+    "options_en": ["Removes all falsey values from array", "Filters even numbers", "Removes empty strings only", "Does nothing"],
+    "options_hi": ["ऐरे से सभी फॉल्सी वैल्यूज रिमूव करता है", "ईवन नंबर्स फिल्टर करता है", "सिर्फ एम्प्टी स्ट्रिंग्स रिमूव करता है", "कुछ नहीं करता"],
+    "answer_en": "Removes all falsey values from array",
+    "answer_hi": "ऐरे से सभी फॉल्सी वैल्यूज रिमूव करता है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 3,
-    "question_en": "What is the correct file extension for PHP files?",
-    "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है?",
-    "options_en": [".php", ".ph", ".phtml", ".html"],
-    "options_hi": [".php", ".ph", ".phtml", ".html"],
-    "answer_en": ".php",
-    "answer_hi": ".php",
+    "question_en": "Which magic method is called when accessing undefined or inaccessible properties?",
+    "question_hi": "अनडिफाइंड या इनएक्सेसिबल प्रॉपर्टीज एक्सेस करने पर कौन-सी मैजिक मेथड कॉल होती है?",
+    "options_en": ["__get()", "__set()", "__call()", "__isset()"],
+    "options_hi": ["__get()", "__set()", "__call()", "__isset()"],
+    "answer_en": "__get()",
+    "answer_hi": "__get()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 4,
-    "question_en": "Which operator concatenates strings in PHP?",
-    "question_hi": "PHP में कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है?",
-    "options_en": [".", "+", "&", "concat()"],
-    "options_hi": [".", "+", "&", "concat()"],
-    "answer_en": ".",
-    "answer_hi": ".",
+    "question_en": "What is the purpose of the 'array_reduce()' function?",
+    "question_hi": "'array_reduce()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Reduces array to single value using callback", "Reduces array size", "Removes duplicate values", "Filters array elements"],
+    "options_hi": ["कॉलबैक का उपयोग करके ऐरे को सिंगल वैल्यू में रिड्यूस करता है", "ऐरे साइज रिड्यूस करता है", "डुप्लीकेट वैल्यूज रिमूव करता है", "ऐरे एलिमेंट्स फिल्टर करता है"],
+    "answer_en": "Reduces array to single value using callback",
+    "answer_hi": "कॉलबैक का उपयोग करके ऐरे को सिंगल वैल्यू में रिड्यूस करता है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 5,
-    "question_en": "How do you declare a variable in PHP?",
-    "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं?",
-    "options_en": ["$var = 5;", "var $var = 5;", "let $var = 5;", "declare $var = 5;"],
-    "options_hi": ["$var = 5;", "var $var = 5;", "let $var = 5;", "declare $var = 5;"],
-    "answer_en": "$var = 5;",
-    "answer_hi": "$var = 5;",
+    "question_en": "Which function converts a string to a floating-point number?",
+    "question_hi": "स्ट्रिंग को फ्लोटिंग-पॉइंट नंबर में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["floatval()", "strval()", "intval()", "doubleval()"],
+    "options_hi": ["floatval()", "strval()", "intval()", "doubleval()"],
+    "answer_en": "floatval()",
+    "answer_hi": "floatval()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 6,
-    "question_en": "Which function returns the length of a string?",
-    "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है?",
-    "options_en": ["strlen()", "length()", "size()", "strlength()"],
-    "options_hi": ["strlen()", "length()", "size()", "strlength()"],
-    "answer_en": "strlen()",
-    "answer_hi": "strlen()",
+    "question_en": "What does the 'array_map()' function return?",
+    "question_hi": "'array_map()' फंक्शन क्या रिटर्न करता है?",
+    "options_en": ["New array with callback applied to each element", "Modified original array", "Single value", "Boolean result"],
+    "options_hi": ["नया ऐरे जिसमें प्रत्येक एलिमेंट पर कॉलबैक अप्लाई किया गया है", "मॉडिफाइड ओरिजिनल ऐरे", "सिंगल वैल्यू", "बूलियन रिजल्ट"],
+    "answer_en": "New array with callback applied to each element",
+    "answer_hi": "नया ऐरे जिसमें प्रत्येक एलिमेंट पर कॉलबैक अप्लाई किया गया है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 7,
-    "question_en": "Which superglobal holds POST data?",
-    "question_hi": "कौन-सा superglobal POST डेटा रखता है?",
-    "options_en": ["$_POST", "$_GET", "$_REQUEST", "$_FORM"],
-    "options_hi": ["$_POST", "$_GET", "$_REQUEST", "$_FORM"],
-    "answer_en": "$_POST",
-    "answer_hi": "$_POST",
+    "question_en": "Which function is used to get all HTTP headers sent by server?",
+    "question_hi": "सर्वर द्वारा भेजे गए सभी HTTP हेडर्स प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["getallheaders()", "headers_list()", "apache_request_headers()", "All of the above"],
+    "options_hi": ["getallheaders()", "headers_list()", "apache_request_headers()", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 8,
-    "question_en": "Which function is used to include a file in PHP?",
-    "question_hi": "PHP में फ़ाइल include करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["include()", "require()", "include_once()", "require_once()"],
-    "options_hi": ["include()", "require()", "include_once()", "require_once()"],
-    "answer_en": "include()",
-    "answer_hi": "include()",
+    "question_en": "What is the purpose of the 'array_walk()' function?",
+    "question_hi": "'array_walk()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Applies user function to each array element", "Walks through array recursively", "Creates array iterator", "Filters array elements"],
+    "options_hi": ["प्रत्येक ऐरे एलिमेंट पर यूजर फंक्शन अप्लाई करता है", "ऐरे के through recursively वॉक करता है", "ऐरे इटरेटर बनाता है", "ऐरे एलिमेंट्स फिल्टर करता है"],
+    "answer_en": "Applies user function to each array element",
+    "answer_hi": "प्रत्येक ऐरे एलिमेंट पर यूजर फंक्शन अप्लाई करता है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 9,
-    "question_en": "What does PDO stand for?",
-    "question_hi": "PDO का पूरा नाम क्या है?",
-    "options_en": ["PHP Data Objects", "PHP Database Objects", "Primary Data Object", "PHP Direct Objects"],
-    "options_hi": ["PHP Data Objects", "PHP Database Objects", "Primary Data Object", "PHP Direct Objects"],
-    "answer_en": "PHP Data Objects",
-    "answer_hi": "PHP Data Objects",
+    "question_en": "Which function returns the integer value of a variable?",
+    "question_hi": "वेरिएबल की इंटीजर वैल्यू कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["intval()", "(int)", "Both intval() and (int)", "integer()"],
+    "options_hi": ["intval()", "(int)", "intval() और (int) दोनों", "integer()"],
+    "answer_en": "Both intval() and (int)",
+    "answer_hi": "intval() और (int) दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 10,
-    "question_en": "Which keyword defines a function in PHP?",
-    "question_hi": "PHP में फ़ंक्शन परिभाषित करने के लिए कौन-सा कीवर्ड उपयोग होता है?",
-    "options_en": ["function", "def", "fn", "func"],
-    "options_hi": ["function", "def", "fn", "func"],
-    "answer_en": "function",
-    "answer_hi": "function",
+    "question_en": "What does the 'array_column()' function do?",
+    "question_hi": "'array_column()' फंक्शन क्या करता है?",
+    "options_en": ["Returns values from single column of input array", "Creates column in array", "Adds column to array", "Extracts column names"],
+    "options_hi": ["इनपुट ऐरे के सिंगल कॉलम से वैल्यूज रिटर्न करता है", "ऐरे में कॉलम बनाता है", "ऐरे में कॉलम ऐड करता है", "कॉलम नेम्स extract करता है"],
+    "answer_en": "Returns values from single column of input array",
+    "answer_hi": "इनपुट ऐरे के सिंगल कॉलम से वैल्यूज रिटर्न करता है",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 11,
-    "question_en": "Which symbol is used for variables in PHP?",
-    "question_hi": "PHP में वैरिएबल के लिए कौन-सा चिन्ह उपयोग होता है?",
-    "options_en": ["$", "#", "@", "&"],
-    "options_hi": ["$", "#", "@", "&"],
-    "answer_en": "$",
-    "answer_hi": "$",
+    "question_en": "Which function is used to calculate the SHA-1 hash of a string?",
+    "question_hi": "स्ट्रिंग का SHA-1 हैश कैलकुलेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["sha1()", "hash('sha1', $string)", "Both sha1() and hash()", "crypt()"],
+    "options_hi": ["sha1()", "hash('sha1', $string)", "sha1() और hash() दोनों", "crypt()"],
+    "answer_en": "Both sha1() and hash()",
+    "answer_hi": "sha1() और hash() दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 12,
-    "question_en": "Which statement stops script execution?",
-    "question_hi": "PHP में स्क्रिप्ट को रोकने के लिए कौन-सा स्टेटमेंट उपयोग होता है?",
-    "options_en": ["exit()", "stop()", "break()", "return"],
-    "options_hi": ["exit()", "stop()", "break()", "return"],
-    "answer_en": "exit()",
-    "answer_hi": "exit()",
+    "question_en": "What is the purpose of the 'array_chunk()' function?",
+    "question_hi": "'array_chunk()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Splits array into chunks", "Divides array into equal parts", "Creates chunks of specified size", "All of the above"],
+    "options_hi": ["ऐरे को चंक्स में स्प्लिट करता है", "ऐरे को बराबर पार्ट्स में डिवाइड करता है", "स्पेसिफाइड साइज के चंक्स बनाता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 13,
-    "question_en": "Which operator is used for comparison?",
-    "question_hi": "तुलना के लिए कौन-सा ऑपरेटर उपयोग होता है?",
-    "options_en": ["==", "=", "!=", "+="],
-    "options_hi": ["==", "=", "!=", "+="],
-    "answer_en": "==",
-    "answer_hi": "==",
+    "question_en": "Which function is used to check if a string ends with a given substring?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग दी गई सबस्ट्रिंग से एंड होती है, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["str_ends_with()", "substr_compare()", "Both str_ends_with() and substr_compare()", "ends_with()"],
+    "options_hi": ["str_ends_with()", "substr_compare()", "str_ends_with() और substr_compare() दोनों", "ends_with()"],
+    "answer_en": "Both str_ends_with() and substr_compare()",
+    "answer_hi": "str_ends_with() और substr_compare() दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 14,
-    "question_en": "Which function prints formatted output?",
-    "question_hi": "Formatted output के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["printf()", "echo()", "print()", "format()"],
-    "options_hi": ["printf()", "echo()", "print()", "format()"],
-    "answer_en": "printf()",
-    "answer_hi": "printf()",
+    "question_en": "What does the 'array_fill()' function do?",
+    "question_hi": "'array_fill()' फंक्शन क्या करता है?",
+    "options_en": ["Fills array with values", "Creates array with specified number of elements", "Both A and B", "Replaces array values"],
+    "options_hi": ["ऐरे को वैल्यूज से भरता है", "स्पेसिफाइड नंबर ऑफ एलिमेंट्स के साथ ऐरे बनाता है", "A और B दोनों", "ऐरे वैल्यूज रिप्लेस करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 15,
-    "question_en": "Which loop is guaranteed to run at least once?",
-    "question_hi": "कौन-सा loop कम से कम एक बार ज़रूर चलता है?",
-    "options_en": ["do-while", "for", "while", "foreach"],
-    "options_hi": ["do-while", "for", "while", "foreach"],
-    "answer_en": "do-while",
-    "answer_hi": "do-while",
+    "question_en": "Which function returns the next element in an array?",
+    "question_hi": "ऐरे में अगला एलिमेंट कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["next()", "current()", "prev()", "each()"],
+    "options_hi": ["next()", "current()", "prev()", "each()"],
+    "answer_en": "next()",
+    "answer_hi": "next()",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 16,
-    "question_en": "Which function is used to count array elements?",
-    "question_hi": "Array के elements गिनने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["count()", "size()", "length()", "total()"],
-    "options_hi": ["count()", "size()", "length()", "total()"],
-    "answer_en": "count()",
-    "answer_hi": "count()",
+    "question_en": "What is the purpose of the 'array_flip()' function?",
+    "question_hi": "'array_flip()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Exchanges keys with their values", "Reverses array order", "Flips array vertically", "Rotates array"],
+    "options_hi": ["कीज़ को उनकी वैल्यूज के साथ एक्सचेंज करता है", "ऐरे ऑर्डर रिवर्स करता है", "ऐरे को वर्टिकली फ्लिप करता है", "ऐरे रोटेट करता है"],
+    "answer_en": "Exchanges keys with their values",
+    "answer_hi": "कीज़ को उनकी वैल्यूज के साथ एक्सचेंज करता है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 17,
-    "question_en": "Which keyword is used for conditional statements?",
-    "question_hi": "Conditional statements के लिए कौन-सा कीवर्ड उपयोग होता है?",
-    "options_en": ["if", "when", "case", "then"],
-    "options_hi": ["if", "when", "case", "then"],
-    "answer_en": "if",
-    "answer_hi": "if",
+    "question_en": "Which function is used to create an array of a range of elements?",
+    "question_hi": "एलिमेंट्स की रेंज का ऐरे बनाने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["range()", "array_range()", "create_range()", "seq()"],
+    "options_hi": ["range()", "array_range()", "create_range()", "seq()"],
+    "answer_en": "range()",
+    "answer_hi": "range()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 18,
-    "question_en": "Which function starts a session?",
-    "question_hi": "Session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["session_start()", "session_begin()", "start_session()", "init_session()"],
-    "options_hi": ["session_start()", "session_begin()", "start_session()", "init_session()"],
-    "answer_en": "session_start()",
-    "answer_hi": "session_start()",
+    "question_en": "What does the 'array_pad()' function do?",
+    "question_hi": "'array_pad()' फंक्शन क्या करता है?",
+    "options_en": ["Pads array to specified length with value", "Adds padding to array edges", "Extends array size", "Fills empty array positions"],
+    "options_hi": ["ऐरे को वैल्यू के साथ स्पेसिफाइड लेंथ तक पैड करता है", "ऐरे एजेस में पैडिंग ऐड करता है", "ऐरे साइज एक्सटेंड करता है", "एम्प्टी ऐरे पोजीशन फिल करता है"],
+    "answer_en": "Pads array to specified length with value",
+    "answer_hi": "ऐरे को वैल्यू के साथ स्पेसिफाइड लेंथ तक पैड करता है",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 19,
-    "question_en": "Which symbol is used to access object properties?",
-    "question_hi": "Object properties access करने के लिए कौन-सा चिन्ह उपयोग होता है?",
-    "options_en": ["->", "::", ".", "$"],
-    "options_hi": ["->", "::", ".", "$"],
-    "answer_en": "->",
-    "answer_hi": "->",
+    "question_en": "Which function is used to check if a string contains only alphabetic characters?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग में सिर्फ अल्फाबेटिक करैक्टर्स हैं, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ctype_alpha()", "is_alpha()", "alpha_check()", "str_is_alpha()"],
+    "options_hi": ["ctype_alpha()", "is_alpha()", "alpha_check()", "str_is_alpha()"],
+    "answer_en": "ctype_alpha()",
+    "answer_hi": "ctype_alpha()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 20,
-    "question_en": "Which function checks variable type?",
-    "question_hi": "Variable का type check करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["gettype()", "typeof()", "vartype()", "checktype()"],
-    "options_hi": ["gettype()", "typeof()", "vartype()", "checktype()"],
-    "answer_en": "gettype()",
-    "answer_hi": "gettype()",
+    "question_en": "What is the purpose of the 'array_rand()' function?",
+    "question_hi": "'array_rand()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Picks random key(s) from array", "Shuffles array randomly", "Returns random value", "Selects random element"],
+    "options_hi": ["ऐरे से रैंडम की(ज़) पिक करता है", "ऐरे को रैंडमली शफल करता है", "रैंडम वैल्यू रिटर्न करता है", "रैंडम एलिमेंट सेलेक्ट करता है"],
+    "answer_en": "Picks random key(s) from array",
+    "answer_hi": "ऐरे से रैंडम की(ज़) पिक करता है",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 21,
-    "question_en": "Which keyword is used to define constants?",
-    "question_hi": "Constants परिभाषित करने के लिए कौन-सा कीवर्ड उपयोग होता है?",
-    "options_en": ["define()", "const", "both A and B", "static"],
-    "options_hi": ["define()", "const", "both A and B", "static"],
-    "answer_en": "both A and B",
-    "answer_hi": "both A and B",
+    "question_en": "Which function is used to calculate the Levenshtein distance between two strings?",
+    "question_hi": "दो स्ट्रिंग्स के बीच लेवेनश्टीन डिस्टेंस कैलकुलेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["levenshtein()", "str_distance()", "similar_text()", "str_diff()"],
+    "options_hi": ["levenshtein()", "str_distance()", "similar_text()", "str_diff()"],
+    "answer_en": "levenshtein()",
+    "answer_hi": "levenshtein()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 22,
-    "question_en": "Which function is used to redirect page?",
-    "question_hi": "Page redirect करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["header()", "redirect()", "location()", "move()"],
-    "options_hi": ["header()", "redirect()", "location()", "move()"],
-    "answer_en": "header()",
-    "answer_hi": "header()",
+    "question_en": "What does the 'array_replace()' function do?",
+    "question_hi": "'array_replace()' फंक्शन क्या करता है?",
+    "options_en": ["Replaces elements from passed arrays", "Merges arrays with replacement", "Both A and B", "Swaps array elements"],
+    "options_hi": ["पास किए गए ऐरे से एलिमेंट्स रिप्लेस करता है", "रिप्लेसमेंट के साथ ऐरे मर्ज करता है", "A और B दोनों", "ऐरे एलिमेंट्स स्वैप करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 23,
-    "question_en": "Which function removes whitespace?",
-    "question_hi": "Whitespace हटाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["trim()", "cut()", "remove()", "strip()"],
-    "options_hi": ["trim()", "cut()", "remove()", "strip()"],
-    "answer_en": "trim()",
-    "answer_hi": "trim()",
+    "question_en": "Which function is used to get the ASCII value of the first character of a string?",
+    "question_hi": "स्ट्रिंग के पहले करैक्टर की ASCII वैल्यू प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ord()", "chr()", "ascii()", "first_char()"],
+    "options_hi": ["ord()", "chr()", "ascii()", "first_char()"],
+    "answer_en": "ord()",
+    "answer_hi": "ord()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 24,
-    "question_en": "Which function converts string to array?",
-    "question_hi": "String को array में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["explode()", "split()", "strtoarr()", "array()"],
-    "options_hi": ["explode()", "split()", "strtoarr()", "array()"],
-    "answer_en": "explode()",
-    "answer_hi": "explode()",
+    "question_en": "What is the purpose of the 'array_sum()' function?",
+    "question_hi": "'array_sum()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Calculates sum of values in array", "Adds all array elements", "Returns total of numeric array", "All of the above"],
+    "options_hi": ["ऐरे में वैल्यूज का योग कैलकुलेट करता है", "सभी ऐरे एलिमेंट्स ऐड करता है", "न्यूमेरिक ऐरे का टोटल रिटर्न करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 25,
-    "question_en": "Which function joins array into string?",
-    "question_hi": "Array को string में जोड़ने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["implode()", "join()", "both A and B", "merge()"],
-    "options_hi": ["implode()", "join()", "both A and B", "merge()"],
-    "answer_en": "both A and B",
-    "answer_hi": "both A and B",
+    "question_en": "Which function is used to calculate the similarity between two strings?",
+    "question_hi": "दो स्ट्रिंग्स के बीच सिमिलैरिटी कैलकुलेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["similar_text()", "str_similar()", "compare_strings()", "strcmp()"],
+    "options_hi": ["similar_text()", "str_similar()", "compare_strings()", "strcmp()"],
+    "answer_en": "similar_text()",
+    "answer_hi": "similar_text()",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 26,
-    "question_en": "Which keyword is used to include files conditionally?",
-    "question_hi": "File को conditionally include करने के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["include_once()", "require()", "load()", "import()"],
-    "options_hi": ["include_once()", "require()", "load()", "import()"],
-    "answer_en": "include_once()",
-    "answer_hi": "include_once()",
+    "question_en": "What does the 'array_udiff()' function do?",
+    "question_hi": "'array_udiff()' फंक्शन क्या करता है?",
+    "options_en": ["Computes difference using callback function", "Compares arrays with user function", "Returns difference based on callback", "All of the above"],
+    "options_hi": ["कॉलबैक फंक्शन का उपयोग करके डिफरेंस कंप्यूट करता है", "यूजर फंक्शन के साथ ऐरे compare करता है", "कॉलबैक के आधार पर डिफरेंस रिटर्न करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 27,
-    "question_en": "Which function hashes passwords?",
-    "question_hi": "Password hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["password_hash()", "md5()", "sha1()", "crypt()"],
-    "options_hi": ["password_hash()", "md5()", "sha1()", "crypt()"],
-    "answer_en": "password_hash()",
-    "answer_hi": "password_hash()",
+    "question_en": "Which function is used to check if a variable is a resource?",
+    "question_hi": "चेक करने के लिए कि वेरिएबल रिसोर्स है, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["is_resource()", "resource()", "is_res()", "check_resource()"],
+    "options_hi": ["is_resource()", "resource()", "is_res()", "check_resource()"],
+    "answer_en": "is_resource()",
+    "answer_hi": "is_resource()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 28,
-    "question_en": "Which function verifies password hash?",
-    "question_hi": "Password hash verify करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["password_verify()", "hash_verify()", "check_password()", "verify()"],
-    "options_hi": ["password_verify()", "hash_verify()", "check_password()", "verify()"],
-    "answer_en": "password_verify()",
-    "answer_hi": "password_verify()",
+    "question_en": "What is the purpose of the 'array_uintersect()' function?",
+    "question_hi": "'array_uintersect()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Computes intersection using callback", "Finds common elements with user function", "Both A and B", "Merges arrays with callback"],
+    "options_hi": ["कॉलबैक का उपयोग करके इंटरसेक्शन कंप्यूट करता है", "यूजर फंक्शन के साथ कॉमन एलिमेंट्स find करता है", "A और B दोनों", "कॉलबैक के साथ ऐरे मर्ज करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 29,
-    "question_en": "Which superglobal stores server info?",
-    "question_hi": "Server जानकारी कौन-सा superglobal रखता है?",
-    "options_en": ["$_SERVER", "$_ENV", "$_SESSION", "$_COOKIE"],
-    "options_hi": ["$_SERVER", "$_ENV", "$_SESSION", "$_COOKIE"],
-    "answer_en": "$_SERVER",
-    "answer_hi": "$_SERVER",
+    "question_en": "Which function is used to get the last occurrence of a substring in a string?",
+    "question_hi": "स्ट्रिंग में सबस्ट्रिंग की लास्ट occurrence प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["strrpos()", "strripos()", "Both strrpos() and strripos()", "lastpos()"],
+    "options_hi": ["strrpos()", "strripos()", "strrpos() और strripos() दोनों", "lastpos()"],
+    "answer_en": "Both strrpos() and strripos()",
+    "answer_hi": "strrpos() और strripos() दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 30,
-    "question_en": "Which function sets cookies?",
-    "question_hi": "Cookie set करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["setcookie()", "createcookie()", "makecookie()", "cookie()"],
-    "options_hi": ["setcookie()", "createcookie()", "makecookie()", "cookie()"],
-    "answer_en": "setcookie()",
-    "answer_hi": "setcookie()",
+    "question_en": "What does the 'array_walk_recursive()' function do?",
+    "question_hi": "'array_walk_recursive()' फंक्शन क्या करता है?",
+    "options_en": ["Applies user function recursively to array", "Walks through nested arrays", "Both A and B", "Processes multi-dimensional arrays"],
+    "options_hi": ["यूजर फंक्शन को recursively ऐरे पर अप्लाई करता है", "नेस्टेड ऐरे के through वॉक करता है", "A और B दोनों", "मल्टी-डायमेंशनल ऐरे प्रोसेस करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 31,
-    "question_en": "Which keyword is used for inheritance?",
-    "question_hi": "Inheritance के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["extends", "implements", "inherits", "parent"],
-    "options_hi": ["extends", "implements", "inherits", "parent"],
-    "answer_en": "extends",
-    "answer_hi": "extends",
+    "question_en": "Which function is used to parse a CSV string into an array?",
+    "question_hi": "CSV स्ट्रिंग को ऐरे में पार्स करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["str_getcsv()", "csv_to_array()", "parse_csv()", "explode(',', $csv)"],
+    "options_hi": ["str_getcsv()", "csv_to_array()", "parse_csv()", "explode(',', $csv)"],
+    "answer_en": "str_getcsv()",
+    "answer_hi": "str_getcsv()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 32,
-    "question_en": "Which keyword is used for interfaces?",
-    "question_hi": "Interface के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["interface", "implements", "extends", "abstract"],
-    "options_hi": ["interface", "implements", "extends", "abstract"],
-    "answer_en": "interface",
-    "answer_hi": "interface",
+    "question_en": "What is the purpose of the 'array_product()' function?",
+    "question_hi": "'array_product()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Calculates product of values in array", "Multiplies all array elements", "Returns product of numeric array", "All of the above"],
+    "options_hi": ["ऐरे में वैल्यूज का प्रोडक्ट कैलकुलेट करता है", "सभी ऐरे एलिमेंट्स मल्टीप्लाई करता है", "न्यूमेरिक ऐरे का प्रोडक्ट रिटर्न करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 33,
-    "question_en": "Which keyword implements an interface?",
-    "question_hi": "Interface को implement करने के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["implements", "extends", "use", "apply"],
-    "options_hi": ["implements", "extends", "use", "apply"],
-    "answer_en": "implements",
-    "answer_hi": "implements",
+    "question_en": "Which function is used to get the current element in an array?",
+    "question_hi": "ऐरे में करंट एलिमेंट प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["current()", "pos()", "Both current() and pos()", "element()"],
+    "options_hi": ["current()", "pos()", "current() और pos() दोनों", "element()"],
+    "answer_en": "Both current() and pos()",
+    "answer_hi": "current() और pos() दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 34,
-    "question_en": "Which function sorts array in ascending order?",
-    "question_hi": "Array को ascending order में sort करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["sort()", "rsort()", "asort()", "ksort()"],
-    "options_hi": ["sort()", "rsort()", "asort()", "ksort()"],
-    "answer_en": "sort()",
-    "answer_hi": "sort()",
+    "question_en": "What does the 'array_multisort()' function do?",
+    "question_hi": "'array_multisort()' फंक्शन क्या करता है?",
+    "options_en": ["Sorts multiple arrays at once", "Sorts multi-dimensional array", "Both A and B", "Sorts array by multiple columns"],
+    "options_hi": ["एक साथ मल्टीपल ऐरे सॉर्ट करता है", "मल्टी-डायमेंशनल ऐरे सॉर्ट करता है", "A और B दोनों", "मल्टीपल कॉलम द्वारा ऐरे सॉर्ट करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 35,
-    "question_en": "Which function sorts array in descending order?",
-    "question_hi": "Array को descending order में sort करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["rsort()", "sort()", "asort()", "ksort()"],
-    "options_hi": ["rsort()", "sort()", "asort()", "ksort()"],
-    "answer_en": "rsort()",
-    "answer_hi": "rsort()",
+    "question_en": "Which function is used to split a string by a regular expression?",
+    "question_hi": "रेगुलर एक्सप्रेशन द्वारा स्ट्रिंग स्प्लिट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["preg_split()", "split()", "ereg_split()", "Both preg_split() and split()"],
+    "options_hi": ["preg_split()", "split()", "ereg_split()", "preg_split() और split() दोनों"],
+    "answer_en": "Both preg_split() and split()",
+    "answer_hi": "preg_split() और split() दोनों",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 36,
-    "question_en": "Which function checks if variable exists?",
-    "question_hi": "Variable मौजूद है या नहीं check करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["isset()", "exists()", "check()", "defined()"],
-    "options_hi": ["isset()", "exists()", "check()", "defined()"],
-    "answer_en": "isset()",
-    "answer_hi": "isset()",
+    "question_en": "What is the purpose of the 'array_intersect_key()' function?",
+    "question_hi": "'array_intersect_key()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Computes intersection using keys", "Finds common keys between arrays", "Both A and B", "Compares array keys only"],
+    "options_hi": ["कीज़ का उपयोग करके इंटरसेक्शन कंप्यूट करता है", "ऐरे के बीच कॉमन कीज़ find करता है", "A और B दोनों", "सिर्फ ऐरे कीज़ compare करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 37,
-    "question_en": "Which function removes variable?",
-    "question_hi": "Variable हटाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["unset()", "remove()", "delete()", "clear()"],
-    "options_hi": ["unset()", "remove()", "delete()", "clear()"],
-    "answer_en": "unset()",
-    "answer_hi": "unset()",
+    "question_en": "Which function is used to check if a string contains only digits?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग में सिर्फ डिजिट्स हैं, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ctype_digit()", "is_numeric()", "Both ctype_digit() and is_numeric()", "is_digit()"],
+    "options_hi": ["ctype_digit()", "is_numeric()", "ctype_digit() और is_numeric() दोनों", "is_digit()"],
+    "answer_en": "ctype_digit()",
+    "answer_hi": "ctype_digit()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 38,
-    "question_en": "Which operator checks type and value?",
-    "question_hi": "Type और value दोनों check करने के लिए कौन-सा ऑपरेटर उपयोग होता है?",
-    "options_en": ["===", "==", "!=", "="],
-    "options_hi": ["===", "==", "!=", "="],
-    "answer_en": "===",
-    "answer_hi": "===",
+    "question_en": "What does the 'array_diff_key()' function do?",
+    "question_hi": "'array_diff_key()' फंक्शन क्या करता है?",
+    "options_en": ["Computes difference using keys", "Finds keys in first array not in others", "Both A and B", "Compares keys only"],
+    "options_hi": ["कीज़ का उपयोग करके डिफरेंस कंप्यूट करता है", "पहले ऐरे में ऐसी कीज़ find करता है जो दूसरे में नहीं हैं", "A और B दोनों", "सिर्फ कीज़ compare करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 39,
-    "question_en": "Which function converts array to JSON?",
-    "question_hi": "Array को JSON में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["json_encode()", "json_decode()", "toJSON()", "encodeJSON()"],
-    "options_hi": ["json_encode()", "json_decode()", "toJSON()", "encodeJSON()"],
-    "answer_en": "json_encode()",
-    "answer_hi": "json_encode()",
+    "question_en": "Which function is used to calculate the natural logarithm of a number?",
+    "question_hi": "नंबर का नेचुरल लॉगरिदम कैलकुलेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["log()", "log10()", "ln()", "natural_log()"],
+    "options_hi": ["log()", "log10()", "ln()", "natural_log()"],
+    "answer_en": "log()",
+    "answer_hi": "log()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 40,
-    "question_en": "Which function converts JSON to array?",
-    "question_hi": "JSON को array में बदलने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["json_decode()", "json_encode()", "fromJSON()", "decodeJSON()"],
-    "options_hi": ["json_decode()", "json_encode()", "fromJSON()", "decodeJSON()"],
-    "answer_en": "json_decode()",
-    "answer_hi": "json_decode()",
+    "question_en": "What is the purpose of the 'array_intersect_ukey()' function?",
+    "question_hi": "'array_intersect_ukey()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Computes intersection with callback on keys", "Compares keys using user function", "Both A and B", "Finds intersection with key callback"],
+    "options_hi": ["कीज़ पर कॉलबैक के साथ इंटरसेक्शन कंप्यूट करता है", "यूजर फंक्शन का उपयोग करके कीज़ compare करता है", "A और B दोनों", "की कॉलबैक के साथ इंटरसेक्शन find करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 41,
-    "question_en": "Which keyword creates an object?",
-    "question_hi": "Object बनाने के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["new", "create", "object", "class"],
-    "options_hi": ["new", "create", "object", "class"],
-    "answer_en": "new",
-    "answer_hi": "new",
+    "question_en": "Which function is used to get the previous element in an array?",
+    "question_hi": "ऐरे में पिछला एलिमेंट प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["prev()", "previous()", "back()", "last()"],
+    "options_hi": ["prev()", "previous()", "back()", "last()"],
+    "answer_en": "prev()",
+    "answer_hi": "prev()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 42,
-    "question_en": "Which keyword defines a class?",
-    "question_hi": "Class परिभाषित करने के लिए कौन-सा keyword उपयोग होता है?",
-    "options_en": ["class", "object", "struct", "define"],
-    "options_hi": ["class", "object", "struct", "define"],
-    "answer_en": "class",
-    "answer_hi": "class",
+    "question_en": "What does the 'array_udiff_uassoc()' function do?",
+    "question_hi": "'array_udiff_uassoc()' फंक्शन क्या करता है?",
+    "options_en": ["Computes difference with callbacks for data and index", "Compares arrays with two user functions", "Both A and B", "Advanced array difference"],
+    "options_hi": ["डेटा और इंडेक्स के लिए कॉलबैक्स के साथ डिफरेंस कंप्यूट करता है", "दो यूजर फंक्शन के साथ ऐरे compare करता है", "A और B दोनों", "एडवांस्ड ऐरे डिफरेंस"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 43,
-    "question_en": "Which function connects MySQL using PDO?",
-    "question_hi": "PDO का उपयोग करके MySQL connect करने के लिए क्या उपयोग होता है?",
-    "options_en": ["new PDO()", "mysqli_connect()", "mysql_connect()", "db_connect()"],
-    "options_hi": ["new PDO()", "mysqli_connect()", "mysql_connect()", "db_connect()"],
-    "answer_en": "new PDO()",
-    "answer_hi": "new PDO()",
+    "question_en": "Which function is used to check if a string contains only alphanumeric characters?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग में सिर्फ अल्फान्यूमेरिक करैक्टर्स हैं, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ctype_alnum()", "is_alnum()", "alnum_check()", "str_is_alnum()"],
+    "options_hi": ["ctype_alnum()", "is_alnum()", "alnum_check()", "str_is_alnum()"],
+    "answer_en": "ctype_alnum()",
+    "answer_hi": "ctype_alnum()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 44,
-    "question_en": "Which method prepares SQL statement in PDO?",
-    "question_hi": "PDO में SQL prepare करने के लिए कौन-सा method उपयोग होता है?",
-    "options_en": ["prepare()", "query()", "execute()", "bind()"],
-    "options_hi": ["prepare()", "query()", "execute()", "bind()"],
-    "answer_en": "prepare()",
-    "answer_hi": "prepare()",
+    "question_en": "What is the purpose of the 'array_uintersect_uassoc()' function?",
+    "question_hi": "'array_uintersect_uassoc()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Computes intersection with callbacks for data and index", "Compares arrays with two user functions", "Both A and B", "Advanced array intersection"],
+    "options_hi": ["डेटा और इंडेक्स के लिए कॉलबैक्स के साथ इंटरसेक्शन कंप्यूट करता है", "दो यूजर फंक्शन के साथ ऐरे compare करता है", "A और B दोनों", "एडवांस्ड ऐरे इंटरसेक्शन"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 45,
-    "question_en": "Which method executes prepared statement?",
-    "question_hi": "Prepared statement execute करने के लिए कौन-सा method उपयोग होता है?",
-    "options_en": ["execute()", "run()", "query()", "start()"],
-    "options_hi": ["execute()", "run()", "query()", "start()"],
-    "answer_en": "execute()",
-    "answer_hi": "execute()",
+    "question_en": "Which function is used to calculate the base-10 logarithm of a number?",
+    "question_hi": "नंबर का बेस-10 लॉगरिदम कैलकुलेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["log10()", "log()", "log(10)", "base10_log()"],
+    "options_hi": ["log10()", "log()", "log(10)", "base10_log()"],
+    "answer_en": "log10()",
+    "answer_hi": "log10()",
     "attempted": false,
     "selected": ""
   },
-
   {
     "num": 46,
-    "question_en": "Which fetch mode returns associative array?",
-    "question_hi": "Associative array return करने वाला fetch mode कौन-सा है?",
-    "options_en": ["PDO::FETCH_ASSOC", "PDO::FETCH_NUM", "PDO::FETCH_OBJ", "PDO::FETCH_BOTH"],
-    "options_hi": ["PDO::FETCH_ASSOC", "PDO::FETCH_NUM", "PDO::FETCH_OBJ", "PDO::FETCH_BOTH"],
-    "answer_en": "PDO::FETCH_ASSOC",
-    "answer_hi": "PDO::FETCH_ASSOC",
+    "question_en": "What does the 'array_diff_ukey()' function do?",
+    "question_hi": "'array_diff_ukey()' फंक्शन क्या करता है?",
+    "options_en": ["Computes difference with callback on keys", "Compares keys using user function", "Both A and B", "Finds difference with key callback"],
+    "options_hi": ["कीज़ पर कॉलबैक के साथ डिफरेंस कंप्यूट करता है", "यूजर फंक्शन का उपयोग करके कीज़ compare करता है", "A और B दोनों", "की कॉलबैक के साथ डिफरेंस find करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 47,
-    "question_en": "Which function uploads files?",
-    "question_hi": "File upload के लिए कौन-सा superglobal उपयोग होता है?",
-    "options_en": ["$_FILES", "$_POST", "$_UPLOAD", "$_DATA"],
-    "options_hi": ["$_FILES", "$_POST", "$_UPLOAD", "$_DATA"],
-    "answer_en": "$_FILES",
-    "answer_hi": "$_FILES",
+    "question_en": "Which function is used to check if a string contains only printable characters?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग में सिर्फ प्रिंटेबल करैक्टर्स हैं, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ctype_print()", "is_printable()", "print_check()", "str_is_print()"],
+    "options_hi": ["ctype_print()", "is_printable()", "print_check()", "str_is_print()"],
+    "answer_en": "ctype_print()",
+    "answer_hi": "ctype_print()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 48,
-    "question_en": "Which function moves uploaded file?",
-    "question_hi": "Uploaded file move करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["move_uploaded_file()", "upload_file()", "copy()", "move()"],
-    "options_hi": ["move_uploaded_file()", "upload_file()", "copy()", "move()"],
-    "answer_en": "move_uploaded_file()",
-    "answer_hi": "move_uploaded_file()",
+    "question_en": "What is the purpose of the 'array_intersect_uassoc()' function?",
+    "question_hi": "'array_intersect_uassoc()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Computes intersection with callback on index", "Compares indices using user function", "Both A and B", "Finds intersection with index callback"],
+    "options_hi": ["इंडेक्स पर कॉलबैक के साथ इंटरसेक्शन कंप्यूट करता है", "यूजर फंक्शन का उपयोग करके इंडिसेज compare करता है", "A और B दोनों", "इंडेक्स कॉलबैक के साथ इंटरसेक्शन find करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 49,
-    "question_en": "Which function gets current date?",
-    "question_hi": "Current date पाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["date()", "now()", "today()", "getdate()"],
-    "options_hi": ["date()", "now()", "today()", "getdate()"],
-    "answer_en": "date()",
-    "answer_hi": "date()",
+    "question_en": "Which function is used to check if a string contains only lowercase letters?",
+    "question_hi": "चेक करने के लिए कि स्ट्रिंग में सिर्फ लोअरकेस लेटर्स हैं, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ctype_lower()", "is_lower()", "lower_check()", "str_is_lower()"],
+    "options_hi": ["ctype_lower()", "is_lower()", "lower_check()", "str_is_lower()"],
+    "answer_en": "ctype_lower()",
+    "answer_hi": "ctype_lower()",
     "attempted": false,
     "selected": ""
   },
   {
     "num": 50,
-    "question_en": "Which function gets current timestamp?",
-    "question_hi": "Current timestamp पाने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
-    "options_en": ["time()", "timestamp()", "now()", "date()"],
-    "options_hi": ["time()", "timestamp()", "now()", "date()"],
-    "answer_en": "time()",
-    "answer_hi": "time()",
+    "question_en": "What does the 'array_diff_uassoc()' function do?",
+    "question_hi": "'array_diff_uassoc()' फंक्शन क्या करता है?",
+    "options_en": ["Computes difference with callback on index", "Compares indices using user function", "Both A and B", "Finds difference with index callback"],
+    "options_hi": ["इंडेक्स पर कॉलबैक के साथ डिफरेंस कंप्यूट करता है", "यूजर फंक्शन का उपयोग करके इंडिसेज compare करता है", "A और B दोनों", "इंडेक्स कॉलबैक के साथ डिफरेंस find करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
     "attempted": false,
     "selected": ""
   }
-]
+];
 
 
 
-
-let currentQuestion = 0; 
+// --------------------------- GLOBAL VARS -----------------------------
+let currentQuestion = 0;
 let language = "en";
-// let timeLeft = 180 * 60; // 180 minutes
-let timeLeft = 60 * 60; // 60 minutes
+let timeLeft = 60 * 60;   // 60 minutes timer
 let timerInterval;
 
-// ----------------- Quiz Logic -----------------
+// --------------------------- LOAD QUESTION ----------------------------
 function loadQuestion(index) {
     const q = questions[index];
-    document.getElementById("question").textContent = `${q.num}. ${
-        language === "en" ? q.question_en : q.question_hi
-    }`;
-    document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
+
+    document.getElementById("question").textContent =
+        `${q.num}. ${language === "en" ? q.question_en : q.question_hi}`;
+
+    document.getElementById("questionCounter").textContent =
+        `Question ${index + 1} of ${questions.length}`;
 
     const optionsElement = document.getElementById("options");
     optionsElement.innerHTML = "";
@@ -584,6 +577,7 @@ function loadQuestion(index) {
     options.forEach((option) => {
         const isSelected = q.selected === option;
         const optionDiv = document.createElement("div");
+
         optionDiv.className = "option-box";
         optionDiv.style = `
             border: 2px solid ${isSelected ? "#007bff" : "#ccc"};
@@ -592,12 +586,11 @@ function loadQuestion(index) {
             border-radius: 8px;
             margin: 6px 0;
             cursor: pointer;
-            transition: all 0.2s;
         `;
 
         optionDiv.innerHTML = `
-            <input type="radio" name="option" value="${option}" ${isSelected ? "checked" : ""} style="margin-right:8px;">
-            ${option}
+            <input type="radio" name="option"
+            value="${option}" ${isSelected ? "checked" : ""} /> ${option}
         `;
 
         optionDiv.addEventListener("click", () => {
@@ -611,12 +604,14 @@ function loadQuestion(index) {
     updateNavigation();
 }
 
+// --------------------------- MARK ATTEMPT ----------------------------
 function markAttempted(index, selectedAnswer) {
     questions[index].attempted = true;
     questions[index].selected = selectedAnswer;
     updateNavigation();
 }
 
+// --------------------------- NEXT / PREV -----------------------------
 function nextQuestion() {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
@@ -631,283 +626,150 @@ function prevQuestion() {
     }
 }
 
+// --------------------------- LANGUAGE CHANGE -------------------------
 function changeLanguage() {
     language = document.getElementById("languageSelect").value;
     loadQuestion(currentQuestion);
 }
 
-function submitQuiz() {
-    clearInterval(timerInterval);
-    let attempted = 0,
-        notAttempted = 0,
-        score = 0;
-
-    questions.forEach((q) => {
-        if (q.attempted) {
-            attempted++;
-            if (q.selected === q.answer_en || q.selected === q.answer_hi) score++;
-        } else notAttempted++;
-    });
-
-    alert(
-        `Quiz submitted!\nAttempted: ${attempted}\nNot Attempted: ${notAttempted}\nScore: ${score}/${questions.length}`
-    );
-}
-
+// --------------------------- TIMER -------------------------------
 function startTimer() {
     const timerElement = document.getElementById("timer");
     clearInterval(timerInterval);
+
     timerInterval = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            alert("Time's up!");
+            alert("⏳ Time Over!");
             submitQuiz();
-        } else {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            timerElement.textContent = `Time Left: ${hours
-                .toString()
-                .padStart(2, "0")}:${minutes
-                .toString()
-                .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-            timeLeft--;
+            return;
         }
+
+        const h = Math.floor(timeLeft / 3600);
+        const m = Math.floor((timeLeft % 3600) / 60);
+        const s = timeLeft % 60;
+
+        timerElement.textContent =
+            `Time Left: ${h.toString().padStart(2, "0")}:${m
+                .toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+
+        timeLeft--;
     }, 1000);
 }
 
+// --------------------------- SUBMIT QUIZ ---------------------
+function submitQuiz() {
+    let confirmation = confirm("Are you sure you want to submit the test?");
+    if (!confirmation) return;
 
+    clearInterval(timerInterval);
 
-////////////////////////////////////////////////////////////////////////////////////////////
+    // Calculate time spent
+    const totalTimeSpent = (60 * 60) - timeLeft;
+    const mins = Math.floor(totalTimeSpent / 60);
+    const secs = totalTimeSpent % 60;
 
-// submit 
-function jumpToQuestion(index) {
-            currentQuestion = index;
-            loadQuestion(index);
+    // Save to localStorage
+    localStorage.setItem("timeTaken", `${mins} min ${secs} sec`);
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let score = 0;
+    const results = [];
+
+    questions.forEach(q => {
+        if (q.attempted) {
+            attempted++;
+            if (q.selected === q.answer_en || q.selected === q.answer_hi) {
+                score++;
+            }
+        } else {
+            notAttempted++;
         }
 
-        function submitQuiz() {
-            let confirmation = confirm("Are you sure you want to submit the test?");
-            
-            if (!confirmation) {
-                return; // अगर यूज़र 'Cancel' करता है तो आगे नहीं बढ़ेंगे
-            }
+        results.push({
+            question: language === "en" ? q.question_en : q.question_hi,
+            selected: q.selected || "Not Answered",
+            correct: language === "en" ? q.answer_en : q.answer_hi
+        });
+    });
 
-            let attempted = 0;
-            let notAttempted = 0;
-            let score = 0;
-            const results = [];
+    // Save result data
+    localStorage.setItem("attempted", attempted);
+    localStorage.setItem("notAttempted", notAttempted);
+    localStorage.setItem("score", score);
+    localStorage.setItem("results", JSON.stringify(results));
 
-            questions.forEach(q => {
-                if (q.attempted) {
-                    attempted++;
-                    if (q.selected === q.answer) {
-                        score++;
-                    }
-                } else {
-                    notAttempted++;
-                }
-                results.push({ question: q.question, selected: q.selected || "Not Answered", correct: q.answer });
-            });
+    // Stop camera stream if active
+    if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+    }
 
-            localStorage.setItem("attempted", attempted);
-            localStorage.setItem("notAttempted", notAttempted);
-            localStorage.setItem("score", score);
-            localStorage.setItem("results", JSON.stringify(results));
+    // Redirect
+    window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
+}
 
-            // रिजल्ट देखने से पहले एक और कन्फर्मेशन ले सकते हैं
-            let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
-            if (viewResult) {
-                window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
-            }
-        }
-        window.onload = () => {
-            loadQuestion(currentQuestion);
-        };
-
-
+// --------------------------- NAVIGATION ------------------------------
 function updateNavigation() {
     const nav = document.getElementById("circleContainer");
     nav.innerHTML = "";
+
     questions.forEach((q, i) => {
         let color = "gray";
         if (i === currentQuestion) color = "blue";
         else if (q.attempted) color = "green";
-        nav.innerHTML += `<div class='circle' style='background-color:${color}' onclick='loadQuestion(${i})'>${i + 1}</div>`;
+
+        const circle = document.createElement("div");
+        circle.className = "circle";
+        circle.style.background = color;
+        circle.textContent = i + 1;
+        circle.onclick = () => jumpToQuestion(i);
+        nav.appendChild(circle);
     });
 }
 
-// ----------------- Camera & Movement Logic -----------------
+function jumpToQuestion(i) {
+    currentQuestion = i;
+    loadQuestion(i);
+}
+
+// --------------------------- CAMERA ----------------------
 let videoStream;
-let movementCount = 0;
 
 function startCamera() {
     const container = document.createElement("div");
     container.id = "camera-container";
     container.style.position = "fixed";
     container.style.top = "10px";
-    container.style.left = "10px"; // ✅ Left side
+    container.style.left = "10px";
     container.style.width = "130px";
     container.style.height = "130px";
-    container.style.zIndex = "9999";
     container.style.borderRadius = "50%";
     container.style.overflow = "hidden";
-    container.style.border = "3px solid red";
-    container.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
-    container.style.cursor = "grab";
-    container.style.minWidth = "80px";
-    container.style.minHeight = "80px";
-    container.style.maxWidth = "250px";
-    container.style.maxHeight = "250px";
     container.style.background = "#000";
+    container.style.border = "3px solid red";
+    container.style.zIndex = "9999";
     document.body.appendChild(container);
 
     const video = document.createElement("video");
-    video.setAttribute("autoplay", true);
-    video.setAttribute("playsinline", true);
+    video.autoplay = true;
+    video.playsInline = true;
     video.style.width = "100%";
     video.style.height = "100%";
     video.style.objectFit = "cover";
     container.appendChild(video);
 
-    // ✅ Resize handle
-    const resizeHandle = document.createElement("div");
-    resizeHandle.style.position = "absolute";
-    resizeHandle.style.bottom = "2px";
-    resizeHandle.style.right = "2px";
-    resizeHandle.style.width = "15px";
-    resizeHandle.style.height = "15px";
-    resizeHandle.style.background = "rgba(255,255,255,0.7)";
-    resizeHandle.style.borderRadius = "4px";
-    resizeHandle.style.cursor = "se-resize";
-    container.appendChild(resizeHandle);
-
-    // ✅ Drag logic
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    container.addEventListener("mousedown", (e) => {
-        if (e.target === resizeHandle) return;
-        isDragging = true;
-        offsetX = e.clientX - container.offsetLeft;
-        offsetY = e.clientY - container.offsetTop;
-        container.style.cursor = "grabbing";
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        let x = e.clientX - offsetX;
-        let y = e.clientY - offsetY;
-        x = Math.max(0, Math.min(window.innerWidth - container.offsetWidth, x));
-        y = Math.max(0, Math.min(window.innerHeight - container.offsetHeight, y));
-        container.style.left = `${x}px`;
-        container.style.top = `${y}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-        container.style.cursor = "grab";
-    });
-
-    // ✅ Resize logic
-    let isResizing = false;
-    let startWidth, startHeight, startX, startY;
-
-    resizeHandle.addEventListener("mousedown", (e) => {
-        e.stopPropagation();
-        isResizing = true;
-        startWidth = container.offsetWidth;
-        startHeight = container.offsetHeight;
-        startX = e.clientX;
-        startY = e.clientY;
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isResizing) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        const newSize = Math.max(80, Math.min(250, Math.max(startWidth + dx, startHeight + dy)));
-        container.style.width = `${newSize}px`;
-        container.style.height = `${newSize}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isResizing = false;
-    });
-
-    // ✅ Camera stream
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
             video.srcObject = stream;
             videoStream = stream;
-            detectMovement(video);
         })
-        .catch(err => {
-            console.error("Camera error:", err);
-            alert("Camera not accessible!");
-        });
+        .catch(() => alert("Camera not accessible!"));
 }
 
-function detectMovement(video) {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    canvas.width = 160;
-    canvas.height = 160;
-    let lastImageData = null;
-
-    setInterval(() => {
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-        if (lastImageData) {
-            let diff = 0;
-            for (let i = 0; i < imageData.data.length; i += 4) {
-                diff += Math.abs(imageData.data[i] - lastImageData.data[i]);
-            }
-
-            if (diff > 1000000) {
-                movementCount++;
-                if (movementCount === 1) {
-                    alert("⚠️ Alert 1: Face is not move");
-                } else if (movementCount === 2) {
-                    alert("⚠️ Alert 2: Head is not move");
-                } else if (movementCount === 3) {
-                    alert("⚠️ Alert 3: Test series is restarting...");
-                    restartTest();
-                }
-            }
-        }
-        lastImageData = imageData;
-    }, 2000);
-}
-
-function restartTest() {
-    if (videoStream) {
-        videoStream.getTracks().forEach(track => track.stop());
-    }
-    const camContainer = document.getElementById("camera-container");
-    if (camContainer) camContainer.remove();
-
-    movementCount = 0;
-    currentQuestion = 0;
-    timeLeft = 180 * 60;
-
-    questions.forEach(q => {
-        q.attempted = false;
-        q.selected = null;
-    });
-
-    loadQuestion(currentQuestion);
-    startTimer();
-    startCamera();
-}
-
-// ----------------- Page Load -----------------
+// --------------------------- PAGE LOAD --------------------------
 window.onload = function () {
     loadQuestion(currentQuestion);
     startTimer();
-    startCamera(); // ✅ Camera starts with test
+    startCamera();
 };
-
-
-///////////////////////////////////////
