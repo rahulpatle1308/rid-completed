@@ -1,80 +1,573 @@
 const questions = 
-  [
-  { "num": 1, "question_en": "Which symbol is used to start a single-line comment in PHP?", "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है?", "options_en": ["//","/* */","##","\\\\\\"], "options_hi": ["//","/* */","##","\\\\\\"], "answer_en": "//", "answer_hi": "//", "attempted": false, "selected": "" },
-  { "num": 2, "question_en": "Which function outputs text in PHP?", "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?", "options_en": ["echo","print","write","output"], "options_hi": ["echo","print","write","output"], "answer_en": "echo", "answer_hi": "echo", "attempted": false, "selected": "" },
-  { "num": 3, "question_en": "What is the correct file extension for PHP files?", "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है?", "options_en": [".php",".ph",".phtml",".html"], "options_hi": [".php",".ph",".phtml",".html"], "answer_en": ".php", "answer_hi": ".php", "attempted": false, "selected": "" },
-  { "num": 4, "question_en": "Which operator concatenates strings in PHP?", "question_hi": "PHP में कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है?", "options_en": [".","+","&","concat()"], "options_hi": [".","+","&","concat()"], "answer_en": ".", "answer_hi": ".", "attempted": false, "selected": "" },
-  { "num": 5, "question_en": "How to declare a variable in PHP?", "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं?", "options_en": ["$var = 5;","var $var = 5;","let $var = 5;","declare $var = 5;"], "options_hi": ["$var = 5;","var $var = 5;","let $var = 5;","declare $var = 5;"], "answer_en": "$var = 5;", "answer_hi": "$var = 5;", "attempted": false, "selected": "" },
-  { "num": 6, "question_en": "Which function returns the length of a string?", "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है?", "options_en": ["strlen()","length()","size()","strlength()"], "options_hi": ["strlen()","length()","size()","strlength()"], "answer_en": "strlen()", "answer_hi": "strlen()", "attempted": false, "selected": "" },
-  { "num": 7, "question_en": "Which superglobal holds POST data?", "question_hi": "कौन-सा superglobal POST डेटा रखता है?", "options_en": ["$_POST","$_GET","$_REQUEST","$_FORM"], "options_hi": ["$_POST","$_GET","$_REQUEST","$_FORM"], "answer_en": "$_POST", "answer_hi": "$_POST", "attempted": false, "selected": "" },
-  { "num": 8, "question_en": "Which function is used to include a file?", "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है?", "options_en": ["include()","require()","include_once()","require_once()"], "options_hi": ["include()","require()","include_once()","require_once()"], "answer_en": "include()", "answer_hi": "include()", "attempted": false, "selected": "" },
-  { "num": 9, "question_en": "What does PDO stand for?", "question_hi": "PDO का पूरा नाम क्या है?", "options_en": ["PHP Data Objects","PHP Database Objects","Primary Data Object","PHP Direct Objects"], "options_hi": ["PHP Data Objects","PHP Database Objects","Primary Data Object","PHP Direct Objects"], "answer_en": "PHP Data Objects", "answer_hi": "PHP Data Objects", "attempted": false, "selected": "" },
-  { "num": 10, "question_en": "Which keyword defines a function in PHP?", "question_hi": "PHP में फ़ंक्शन परिभाषित करने के लिए कौन-सा कीवर्ड उपयोग होता है?", "options_en": ["function","def","fn","func"], "options_hi": ["function","def","fn","func"], "answer_en": "function", "answer_hi": "function", "attempted": false, "selected": "" },
-
-  { "num": 11, "question_en": "Which symbol is used for variables in PHP?", "question_hi": "PHP में वैरिएबल के लिए कौन-सा चिन्ह उपयोग होता है?", "options_en": ["$","#","@","&"], "options_hi": ["$","#","@","&"], "answer_en": "$", "answer_hi": "$", "attempted": false, "selected": "" },
-  { "num": 12, "question_en": "Which statement stops script execution?", "question_hi": "कौन-सा स्टेटमेंट स्क्रिप्ट को रोकता है?", "options_en": ["exit()","stop()","break()","return"], "options_hi": ["exit()","stop()","break()","return"], "answer_en": "exit()", "answer_hi": "exit()", "attempted": false, "selected": "" },
-  { "num": 13, "question_en": "Which loop is used when number of iterations is known?", "question_hi": "जब iterations की संख्या पता हो तो कौन-सा loop उपयोग होता है?", "options_en": ["for","while","do-while","foreach"], "options_hi": ["for","while","do-while","foreach"], "answer_en": "for", "answer_hi": "for", "attempted": false, "selected": "" },
-  { "num": 14, "question_en": "Which array function sorts values in ascending order?", "question_hi": "कौन-सा array function ascending order में sort करता है?", "options_en": ["sort()","rsort()","asort()","ksort()"], "options_hi": ["sort()","rsort()","asort()","ksort()"], "answer_en": "sort()", "answer_hi": "sort()", "attempted": false, "selected": "" },
-  { "num": 15, "question_en": "Which operator is used for comparison?", "question_hi": "Comparison के लिए कौन-सा ऑपरेटर उपयोग होता है?", "options_en": ["==","=","===","!="], "options_hi": ["==","=","===","!="], "answer_en": "==", "answer_hi": "==", "attempted": false, "selected": "" },
-
-  { "num": 16, "question_en": "Which function counts array elements?", "question_hi": "कौन-सा फ़ंक्शन array elements की गिनती करता है?", "options_en": ["count()","size()","length()","total()"], "options_hi": ["count()","size()","length()","total()"], "answer_en": "count()", "answer_hi": "count()", "attempted": false, "selected": "" },
-  { "num": 17, "question_en": "Which method is used to send data securely?", "question_hi": "डेटा सुरक्षित भेजने के लिए कौन-सा method उपयोग होता है?", "options_en": ["POST","GET","REQUEST","SEND"], "options_hi": ["POST","GET","REQUEST","SEND"], "answer_en": "POST", "answer_hi": "POST", "attempted": false, "selected": "" },
-  { "num": 18, "question_en": "Which function is used to start a session?", "question_hi": "Session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?", "options_en": ["session_start()","start_session()","begin_session()","session()"], "options_hi": ["session_start()","start_session()","begin_session()","session()"], "answer_en": "session_start()", "answer_hi": "session_start()", "attempted": false, "selected": "" },
-  { "num": 19, "question_en": "Which tag is used to embed PHP code?", "question_hi": "PHP कोड embed करने के लिए कौन-सा टैग उपयोग होता है?", "options_en": ["<?php ?>","<php>","<script>","<? ?>"], "options_hi": ["<?php ?>","<php>","<script>","<? ?>"], "answer_en": "<?php ?>", "answer_hi": "<?php ?>", "attempted": false, "selected": "" },
-  { "num": 20, "question_en": "Which function removes whitespace from both ends?", "question_hi": "कौन-सा फ़ंक्शन दोनों सिरों से whitespace हटाता है?", "options_en": ["trim()","ltrim()","rtrim()","strip()"], "options_hi": ["trim()","ltrim()","rtrim()","strip()"], "answer_en": "trim()", "answer_hi": "trim()", "attempted": false, "selected": "" },
-
-  { "num": 21, "question_en": "Which loop executes at least once?", "question_hi": "कौन-सा loop कम से कम एक बार चलता है?", "options_en": ["do-while","for","while","foreach"], "options_hi": ["do-while","for","while","foreach"], "answer_en": "do-while", "answer_hi": "do-while", "attempted": false, "selected": "" },
-  { "num": 22, "question_en": "Which function converts string to lowercase?", "question_hi": "कौन-सा फ़ंक्शन string को lowercase में बदलता है?", "options_en": ["strtolower()","tolower()","lower()","lc()"], "options_hi": ["strtolower()","tolower()","lower()","lc()"], "answer_en": "strtolower()", "answer_hi": "strtolower()", "attempted": false, "selected": "" },
-  { "num": 23, "question_en": "Which array stores key-value pairs?", "question_hi": "कौन-सा array key-value pairs store करता है?", "options_en": ["Associative","Indexed","Multidimensional","Numeric"], "options_hi": ["Associative","Indexed","Multidimensional","Numeric"], "answer_en": "Associative", "answer_hi": "Associative", "attempted": false, "selected": "" },
-  { "num": 24, "question_en": "Which function checks variable type?", "question_hi": "कौन-सा फ़ंक्शन variable का type check करता है?", "options_en": ["gettype()","typeof()","vartype()","checktype()"], "options_hi": ["gettype()","typeof()","vartype()","checktype()"], "answer_en": "gettype()", "answer_hi": "gettype()", "attempted": false, "selected": "" },
-  { "num": 25, "question_en": "Which operator increments value by one?", "question_hi": "कौन-सा ऑपरेटर value को 1 बढ़ाता है?", "options_en": ["++","--","+=","="], "options_hi": ["++","--","+=","="], "answer_en": "++", "answer_hi": "++", "attempted": false, "selected": "" },
-
-  { "num": 26, "question_en": "Which function sends output to browser?", "question_hi": "कौन-सा फ़ंक्शन browser को output भेजता है?", "options_en": ["echo","print","printf","all"], "options_hi": ["echo","print","printf","all"], "answer_en": "all", "answer_hi": "all", "attempted": false, "selected": "" },
-  { "num": 27, "question_en": "Which keyword is used for constants?", "question_hi": "Constants के लिए कौन-सा keyword उपयोग होता है?", "options_en": ["define","const","constant","final"], "options_hi": ["define","const","constant","final"], "answer_en": "define", "answer_hi": "define", "attempted": false, "selected": "" },
-  { "num": 28, "question_en": "Which function checks if variable is set?", "question_hi": "कौन-सा फ़ंक्शन check करता है कि variable set है या नहीं?", "options_en": ["isset()","empty()","set()","check()"], "options_hi": ["isset()","empty()","set()","check()"], "answer_en": "isset()", "answer_hi": "isset()", "attempted": false, "selected": "" },
-  { "num": 29, "question_en": "Which function deletes a file?", "question_hi": "कौन-सा फ़ंक्शन file delete करता है?", "options_en": ["unlink()","delete()","remove()","erase()"], "options_hi": ["unlink()","delete()","remove()","erase()"], "answer_en": "unlink()", "answer_hi": "unlink()", "attempted": false, "selected": "" },
-  { "num": 30, "question_en": "Which function starts output buffering?", "question_hi": "कौन-सा फ़ंक्शन output buffering शुरू करता है?", "options_en": ["ob_start()","buffer_start()","start_buffer()","out_buffer()"], "options_hi": ["ob_start()","buffer_start()","start_buffer()","out_buffer()"], "answer_en": "ob_start()", "answer_hi": "ob_start()", "attempted": false, "selected": "" },
-
-  { "num": 31, "question_en": "Which function ends output buffering?", "question_hi": "कौन-सा फ़ंक्शन output buffering बंद करता है?", "options_en": ["ob_end_flush()","ob_stop()","buffer_end()","end_buffer()"], "options_hi": ["ob_end_flush()","ob_stop()","buffer_end()","end_buffer()"], "answer_en": "ob_end_flush()", "answer_hi": "ob_end_flush()", "attempted": false, "selected": "" },
-  { "num": 32, "question_en": "Which function encodes JSON?", "question_hi": "कौन-सा फ़ंक्शन JSON encode करता है?", "options_en": ["json_encode()","json_decode()","encode_json()","toJSON()"], "options_hi": ["json_encode()","json_decode()","encode_json()","toJSON()"], "answer_en": "json_encode()", "answer_hi": "json_encode()", "attempted": false, "selected": "" },
-  { "num": 33, "question_en": "Which function decodes JSON?", "question_hi": "कौन-सा फ़ंक्शन JSON decode करता है?", "options_en": ["json_decode()","json_encode()","decode_json()","fromJSON()"], "options_hi": ["json_decode()","json_encode()","decode_json()","fromJSON()"], "answer_en": "json_decode()", "answer_hi": "json_decode()", "attempted": false, "selected": "" },
-  { "num": 34, "question_en": "Which function gets current date?", "question_hi": "कौन-सा फ़ंक्शन current date देता है?", "options_en": ["date()","now()","today()","getdate()"], "options_hi": ["date()","now()","today()","getdate()"], "answer_en": "date()", "answer_hi": "date()", "attempted": false, "selected": "" },
-  { "num": 35, "question_en": "Which operator is used for logical AND?", "question_hi": "Logical AND के लिए कौन-सा ऑपरेटर उपयोग होता है?", "options_en": ["&&","||","!","and"], "options_hi": ["&&","||","!","and"], "answer_en": "&&", "answer_hi": "&&", "attempted": false, "selected": "" },
-
-  { "num": 36, "question_en": "Which function generates random number?", "question_hi": "कौन-सा फ़ंक्शन random number generate करता है?", "options_en": ["rand()","random()","mt_rand()","both a and c"], "options_hi": ["rand()","random()","mt_rand()","both a and c"], "answer_en": "both a and c", "answer_hi": "both a and c", "attempted": false, "selected": "" },
-  { "num": 37, "question_en": "Which function checks empty variable?", "question_hi": "कौन-सा फ़ंक्शन empty variable check करता है?", "options_en": ["empty()","isset()","null()","check()"], "options_hi": ["empty()","isset()","null()","check()"], "answer_en": "empty()", "answer_hi": "empty()", "attempted": false, "selected": "" },
-  { "num": 38, "question_en": "Which keyword exits loop?", "question_hi": "कौन-सा keyword loop से बाहर निकलता है?", "options_en": ["break","exit","stop","end"], "options_hi": ["break","exit","stop","end"], "answer_en": "break", "answer_hi": "break", "attempted": false, "selected": "" },
-  { "num": 39, "question_en": "Which keyword skips current loop iteration?", "question_hi": "कौन-सा keyword current iteration skip करता है?", "options_en": ["continue","skip","pass","next"], "options_hi": ["continue","skip","pass","next"], "answer_en": "continue", "answer_hi": "continue", "attempted": false, "selected": "" },
-  { "num": 40, "question_en": "Which function returns PHP version?", "question_hi": "कौन-सा फ़ंक्शन PHP version लौटाता है?", "options_en": ["phpversion()","version()","php_info()","getversion()"], "options_hi": ["phpversion()","version()","php_info()","getversion()"], "answer_en": "phpversion()", "answer_hi": "phpversion()", "attempted": false, "selected": "" },
-
-  { "num": 41, "question_en": "Which function outputs array structure?", "question_hi": "कौन-सा फ़ंक्शन array structure दिखाता है?", "options_en": ["print_r()","echo","var_dump()","both a and c"], "options_hi": ["print_r()","echo","var_dump()","both a and c"], "answer_en": "both a and c", "answer_hi": "both a and c", "attempted": false, "selected": "" },
-  { "num": 42, "question_en": "Which function stops script and prints message?", "question_hi": "कौन-सा फ़ंक्शन script रोककर message print करता है?", "options_en": ["die()","exit()","stop()","end()"], "options_hi": ["die()","exit()","stop()","end()"], "answer_en": "die()", "answer_hi": "die()", "attempted": false, "selected": "" },
-  { "num": 43, "question_en": "Which function uploads files?", "question_hi": "File upload के लिए कौन-सा superglobal उपयोग होता है?", "options_en": ["$_FILES","$_POST","$_UPLOAD","$_FILE"], "options_hi": ["$_FILES","$_POST","$_UPLOAD","$_FILE"], "answer_en": "$_FILES", "answer_hi": "$_FILES", "attempted": false, "selected": "" },
-  { "num": 44, "question_en": "Which function escapes HTML characters?", "question_hi": "कौन-सा फ़ंक्शन HTML characters escape करता है?", "options_en": ["htmlspecialchars()","htmlentities()","escapeHTML()","both a and b"], "options_hi": ["htmlspecialchars()","htmlentities()","escapeHTML()","both a and b"], "answer_en": "both a and b", "answer_hi": "both a and b", "attempted": false, "selected": "" },
-  { "num": 45, "question_en": "Which operator checks value and type?", "question_hi": "कौन-सा ऑपरेटर value और type दोनों check करता है?", "options_en": ["===","==","!=","="], "options_hi": ["===","==","!=","="], "answer_en": "===", "answer_hi": "===", "attempted": false, "selected": "" },
-
-  { "num": 46, "question_en": "Which function returns current timestamp?", "question_hi": "कौन-सा फ़ंक्शन current timestamp देता है?", "options_en": ["time()","now()","timestamp()","date()"], "options_hi": ["time()","now()","timestamp()","date()"], "answer_en": "time()", "answer_hi": "time()", "attempted": false, "selected": "" },
-  { "num": 47, "question_en": "Which function converts array to string?", "question_hi": "कौन-सा फ़ंक्शन array को string में बदलता है?", "options_en": ["implode()","explode()","join()","both a and c"], "options_hi": ["implode()","explode()","join()","both a and c"], "answer_en": "both a and c", "answer_hi": "both a and c", "attempted": false, "selected": "" },
-  { "num": 48, "question_en": "Which function converts string to array?", "question_hi": "कौन-सा फ़ंक्शन string को array में बदलता है?", "options_en": ["explode()","implode()","split()","join()"], "options_hi": ["explode()","implode()","split()","join()"], "answer_en": "explode()", "answer_hi": "explode()", "attempted": false, "selected": "" },
-  { "num": 49, "question_en": "Which function checks file existence?", "question_hi": "कौन-सा फ़ंक्शन file existence check करता है?", "options_en": ["file_exists()","is_file()","checkfile()","exists()"], "options_hi": ["file_exists()","is_file()","checkfile()","exists()"], "answer_en": "file_exists()", "answer_hi": "file_exists()", "attempted": false, "selected": "" },
-  { "num": 50, "question_en": "Which function gives information about PHP?", "question_hi": "कौन-सा फ़ंक्शन PHP की जानकारी देता है?", "options_en": ["phpinfo()","info()","php_data()","getinfo()"], "options_hi": ["phpinfo()","info()","php_data()","getinfo()"], "answer_en": "phpinfo()", "answer_hi": "phpinfo()", "attempted": false, "selected": "" }
+ [
+  {
+    "num": 1,
+    "question_en": "Which function is used to get the current memory usage of the script?",
+    "question_hi": "स्क्रिप्ट की करंट मेमोरी यूसेज प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["memory_get_usage()", "memory_get_peak_usage()", "mem_usage()", "php_memory()"],
+    "options_hi": ["memory_get_usage()", "memory_get_peak_usage()", "mem_usage()", "php_memory()"],
+    "answer_en": "memory_get_usage()",
+    "answer_hi": "memory_get_usage()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "What does the 'str_pad()' function do in PHP?",
+    "question_hi": "PHP में 'str_pad()' फंक्शन क्या करता है?",
+    "options_en": ["Pads a string to a certain length with another string", "Adds padding to array", "Creates padded string for output", "Extends string length"],
+    "options_hi": ["स्ट्रिंग को दूसरी स्ट्रिंग के साथ निश्चित लंबाई तक पैड करता है", "ऐरे में पैडिंग जोड़ता है", "आउटपुट के लिए पैडेड स्ट्रिंग बनाता है", "स्ट्रिंग लंबाई बढ़ाता है"],
+    "answer_en": "Pads a string to a certain length with another string",
+    "answer_hi": "स्ट्रिंग को दूसरी स्ट्रिंग के साथ निश्चित लंबाई तक पैड करता है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "Which function converts a string to title case?",
+    "question_hi": "स्ट्रिंग को टाइटल केस में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ucwords()", "strtoupper()", "ucfirst()", "title_case()"],
+    "options_hi": ["ucwords()", "strtoupper()", "ucfirst()", "title_case()"],
+    "answer_en": "ucwords()",
+    "answer_hi": "ucwords()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "What is the purpose of the 'get_declared_classes()' function?",
+    "question_hi": "'get_declared_classes()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Returns array of all declared classes", "Lists defined classes", "Shows available classes", "All of the above"],
+    "options_hi": ["सभी डिक्लेयर्ड क्लासेज का ऐरे रिटर्न करता है", "डिफाइंड क्लासेज लिस्ट करता है", "उपलब्ध क्लासेज दिखाता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "Which function is used to create a temporary file?",
+    "question_hi": "टेम्पररी फाइल बनाने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["tmpfile()", "tempnam()", "Both tmpfile() and tempnam()", "create_temp()"],
+    "options_hi": ["tmpfile()", "tempnam()", "tmpfile() और tempnam() दोनों", "create_temp()"],
+    "answer_en": "Both tmpfile() and tempnam()",
+    "answer_hi": "tmpfile() और tempnam() दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "What does the 'str_repeat()' function do?",
+    "question_hi": "'str_repeat()' फंक्शन क्या करता है?",
+    "options_en": ["Repeats a string specified number of times", "Duplicates string", "Copies string multiple times", "Creates repeated pattern"],
+    "options_hi": ["स्ट्रिंग को निर्दिष्ट संख्या में दोहराता है", "स्ट्रिंग डुप्लिकेट करता है", "स्ट्रिंग को कई बार कॉपी करता है", "दोहराया पैटर्न बनाता है"],
+    "answer_en": "Repeats a string specified number of times",
+    "answer_hi": "स्ट्रिंग को निर्दिष्ट संख्या में दोहराता है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Which function returns the peak memory usage of the script?",
+    "question_hi": "स्क्रिप्ट की पीक मेमोरी यूसेज कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["memory_get_peak_usage()", "peak_memory()", "max_memory()", "memory_peak()"],
+    "options_hi": ["memory_get_peak_usage()", "peak_memory()", "max_memory()", "memory_peak()"],
+    "answer_en": "memory_get_peak_usage()",
+    "answer_hi": "memory_get_peak_usage()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "What is the purpose of the 'get_called_class()' function?",
+    "question_hi": "'get_called_class()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Gets name of the class the static method is called in", "Returns calling class", "Gets class from static context", "All of the above"],
+    "options_hi": ["स्टैटिक मेथड जिस क्लास में कॉल की जाती है उसका नाम प्राप्त करता है", "कॉलिंग क्लास रिटर्न करता है", "स्टैटिक कॉन्टेक्स्ट से क्लास प्राप्त करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "Which function is used to convert special characters to HTML entities?",
+    "question_hi": "स्पेशल करैक्टर्स को HTML एंटिटीज में कन्वर्ट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["htmlentities()", "htmlspecialchars()", "Both are correct", "convert_entities()"],
+    "options_hi": ["htmlentities()", "htmlspecialchars()", "दोनों सही हैं", "convert_entities()"],
+    "answer_en": "Both are correct",
+    "answer_hi": "दोनों सही हैं",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "What does the 'get_object_vars()' function return?",
+    "question_hi": "'get_object_vars()' फंक्शन क्या रिटर्न करता है?",
+    "options_en": ["Array of accessible non-static properties of object", "Object variables", "All object properties", "Public properties only"],
+    "options_hi": ["ऑब्जेक्ट की एक्सेसिबल नॉन-स्टैटिक प्रॉपर्टीज का ऐरे", "ऑब्जेक्ट वेरिएबल्स", "सभी ऑब्जेक्ट प्रॉपर्टीज", "सिर्फ पब्लिक प्रॉपर्टीज"],
+    "answer_en": "Array of accessible non-static properties of object",
+    "answer_hi": "ऑब्जेक्ट की एक्सेसिबल नॉन-स्टैटिक प्रॉपर्टीज का ऐरे",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "Which function is used to get the value of a configuration option?",
+    "question_hi": "कॉन्फ़िगरेशन ऑप्शन की वैल्यू प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ini_get()", "get_cfg_var()", "Both ini_get() and get_cfg_var()", "config_get()"],
+    "options_hi": ["ini_get()", "get_cfg_var()", "ini_get() और get_cfg_var() दोनों", "config_get()"],
+    "answer_en": "Both ini_get() and get_cfg_var()",
+    "answer_hi": "ini_get() और get_cfg_var() दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "What is the purpose of the 'str_word_count()' function?",
+    "question_hi": "'str_word_count()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Counts number of words in string", "Returns information about words", "Both A and B", "Splits string into words"],
+    "options_hi": ["स्ट्रिंग में शब्दों की संख्या गिनता है", "शब्दों के बारे में जानकारी रिटर्न करता है", "A और B दोनों", "स्ट्रिंग को शब्दों में विभाजित करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "Which function returns an array with information about the specified path?",
+    "question_hi": "निर्दिष्ट पाथ के बारे में जानकारी के साथ ऐरे कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["pathinfo()", "stat()", "fileinfo()", "get_path_info()"],
+    "options_hi": ["pathinfo()", "stat()", "fileinfo()", "get_path_info()"],
+    "answer_en": "pathinfo()",
+    "answer_hi": "pathinfo()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "What does the 'parse_url()' function return?",
+    "question_hi": "'parse_url()' फंक्शन क्या रिटर्न करता है?",
+    "options_en": ["Array of URL components", "Parsed URL information", "Both A and B", "URL object"],
+    "options_hi": ["URL कंपोनेंट्स का ऐरे", "पार्स्ड URL जानकारी", "A और B दोनों", "URL ऑब्जेक्ट"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "Which function is used to set a configuration option value?",
+    "question_hi": "कॉन्फ़िगरेशन ऑप्शन वैल्यू सेट करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["ini_set()", "set_ini()", "config_set()", "php_set()"],
+    "options_hi": ["ini_set()", "set_ini()", "config_set()", "php_set()"],
+    "answer_en": "ini_set()",
+    "answer_hi": "ini_set()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "What is the purpose of the 'str_getcsv()' function?",
+    "question_hi": "'str_getcsv()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Parses CSV string into array", "Reads CSV from string", "Converts string to CSV format", "Extracts CSV data"],
+    "options_hi": ["CSV स्ट्रिंग को ऐरे में पार्स करता है", "स्ट्रिंग से CSV पढ़ता है", "स्ट्रिंग को CSV फॉर्मेट में कन्वर्ट करता है", "CSV डेटा एक्सट्रेक्ट करता है"],
+    "answer_en": "Parses CSV string into array",
+    "answer_hi": "CSV स्ट्रिंग को ऐरे में पार्स करता है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Which function returns an array with names of all defined variables?",
+    "question_hi": "सभी डिफाइंड वेरिएबल्स के नामों के साथ ऐरे कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["get_defined_vars()", "defined_vars()", "all_vars()", "var_list()"],
+    "options_hi": ["get_defined_vars()", "defined_vars()", "all_vars()", "var_list()"],
+    "answer_en": "get_defined_vars()",
+    "answer_hi": "get_defined_vars()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "What does the 'strtr()' function do?",
+    "question_hi": "'strtr()' फंक्शन क्या करता है?",
+    "options_en": ["Translates characters or replaces substrings", "Transforms string", "Replaces characters", "All of the above"],
+    "options_hi": ["करैक्टर्स ट्रांसलेट करता है या सबस्ट्रिंग्स रिप्लेस करता है", "स्ट्रिंग ट्रांसफॉर्म करता है", "करैक्टर्स रिप्लेस करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "Which function is used to check if a variable is countable?",
+    "question_hi": "चेक करने के लिए कि वेरिएबल काउंटेबल है, किस फंक्शन का उपयोग होता है?",
+    "options_en": ["is_countable()", "countable()", "can_count()", "is_iterable()"],
+    "options_hi": ["is_countable()", "countable()", "can_count()", "is_iterable()"],
+    "answer_en": "is_countable()",
+    "answer_hi": "is_countable()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "What is the purpose of the 'get_headers()' function?",
+    "question_hi": "'get_headers()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Fetches headers from URL", "Gets HTTP headers", "Retrieves header information", "All of the above"],
+    "options_hi": ["URL से हेडर्स फेच करता है", "HTTP हेडर्स प्राप्त करता है", "हेडर जानकारी रिट्रीव करता है", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "Which function returns the parent interfaces of a class?",
+    "question_hi": "क्लास के पैरेंट इंटरफेसेस कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["class_implements()", "get_parent_interfaces()", "interface_parents()", "parent_interfaces()"],
+    "options_hi": ["class_implements()", "get_parent_interfaces()", "interface_parents()", "parent_interfaces()"],
+    "answer_en": "class_implements()",
+    "answer_hi": "class_implements()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "What does the 'str_ireplace()' function do?",
+    "question_hi": "'str_ireplace()' फंक्शन क्या करता है?",
+    "options_en": ["Case-insensitive version of str_replace()", "Replaces string ignoring case", "Both A and B", "Replaces with case sensitivity"],
+    "options_hi": ["str_replace() का केस-इनसेंसिटिव वर्जन", "केस को इग्नोर करके स्ट्रिंग रिप्लेस करता है", "A और B दोनों", "केस सेंसिटिविटी के साथ रिप्लेस करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "Which function is used to get the current include path?",
+    "question_hi": "करंट इन्क्लूड पाथ प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["get_include_path()", "include_path()", "get_includes()", "current_include_path()"],
+    "options_hi": ["get_include_path()", "include_path()", "get_includes()", "current_include_path()"],
+    "answer_en": "get_include_path()",
+    "answer_hi": "get_include_path()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "What is the purpose of the 'strspn()' function?",
+    "question_hi": "'strspn()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Finds length of initial segment matching mask", "Counts matching characters", "Both A and B", "Searches for character set"],
+    "options_hi": ["मास्क से मेल खाने वाले इनिशियल सेगमेंट की लंबाई ढूंढता है", "मेल खाने वाले करैक्टर्स गिनता है", "A और B दोनों", "करैक्टर सेट खोजता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "Which function returns the classes defined in a file?",
+    "question_hi": "फाइल में डिफाइंड क्लासेज कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["get_declared_classes() after include", "No direct function", "class_list()", "file_classes()"],
+    "options_hi": ["इन्क्लूड के बाद get_declared_classes()", "कोई डायरेक्ट फंक्शन नहीं", "class_list()", "file_classes()"],
+    "answer_en": "get_declared_classes() after include",
+    "answer_hi": "इन्क्लूड के बाद get_declared_classes()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "What does the 'strcspn()' function do?",
+    "question_hi": "'strcspn()' फंक्शन क्या करता है?",
+    "options_en": ["Finds length of initial segment not matching mask", "Counts non-matching characters", "Both A and B", "Searches for excluded characters"],
+    "options_hi": ["मास्क से न मेल खाने वाले इनिशियल सेगमेंट की लंबाई ढूंढता है", "नॉन-मैचिंग करैक्टर्स गिनता है", "A और B दोनों", "एक्सक्लूडेड करैक्टर्स खोजता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "Which function is used to get the current working directory?",
+    "question_hi": "करंट वर्किंग डायरेक्टरी प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["getcwd()", "pwd()", "current_dir()", "working_directory()"],
+    "options_hi": ["getcwd()", "pwd()", "current_dir()", "working_directory()"],
+    "answer_en": "getcwd()",
+    "answer_hi": "getcwd()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "What is the purpose of the 'strtok()' function?",
+    "question_hi": "'strtok()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Tokenizes string", "Splits string into tokens", "Both A and B", "Parses string"],
+    "options_hi": ["स्ट्रिंग को टोकनाइज करता है", "स्ट्रिंग को टोकन्स में विभाजित करता है", "A और B दोनों", "स्ट्रिंग पार्स करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "Which function returns information about the PHP installation?",
+    "question_hi": "PHP इंस्टॉलेशन के बारे में जानकारी कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["phpinfo()", "phpversion()", "php_sapi_name()", "All of the above"],
+    "options_hi": ["phpinfo()", "phpversion()", "php_sapi_name()", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "What does the 'substr_compare()' function do?",
+    "question_hi": "'substr_compare()' फंक्शन क्या करता है?",
+    "options_en": ["Binary safe comparison of two strings from offset", "Compares substrings", "Both A and B", "Checks string equality"],
+    "options_hi": ["ऑफसेट से दो स्ट्रिंग्स की बाइनरी सेफ तुलना करता है", "सबस्ट्रिंग्स की तुलना करता है", "A और B दोनों", "स्ट्रिंग समानता जांचता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "Which function is used to get the current script name?",
+    "question_hi": "करंट स्क्रिप्ट नाम प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["$_SERVER['PHP_SELF']", "basename(__FILE__)", "Both A and B", "script_name()"],
+    "options_hi": ["$_SERVER['PHP_SELF']", "basename(__FILE__)", "A और B दोनों", "script_name()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "What is the purpose of the 'strcoll()' function?",
+    "question_hi": "'strcoll()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Locale based string comparison", "Collates strings", "Both A and B", "Compares with locale settings"],
+    "options_hi": ["लोकेल आधारित स्ट्रिंग तुलना", "स्ट्रिंग्स को कॉलेट करता है", "A और B दोनों", "लोकेल सेटिंग्स के साथ तुलना करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "Which function returns the available magic methods?",
+    "question_hi": "उपलब्ध मैजिक मेथड्स कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["No specific function", "get_class_methods() on any object", "__methods()", "magic_methods()"],
+    "options_hi": ["कोई विशिष्ट फंक्शन नहीं", "किसी भी ऑब्जेक्ट पर get_class_methods()", "__methods()", "magic_methods()"],
+    "answer_en": "get_class_methods() on any object",
+    "answer_hi": "किसी भी ऑब्जेक्ट पर get_class_methods()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "What does the 'substr_count()' function do?",
+    "question_hi": "'substr_count()' फंक्शन क्या करता है?",
+    "options_en": ["Counts number of substring occurrences", "Finds how many times substring appears", "Both A and B", "Searches for substring count"],
+    "options_hi": ["सबस्ट्रिंग occurrences की संख्या गिनता है", "ढूंढता है कि सबस्ट्रिंग कितनी बार आती है", "A और B दोनों", "सबस्ट्रिंग काउंट खोजता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "Which function is used to get the current request method?",
+    "question_hi": "करंट रिक्वेस्ट मेथड प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["$_SERVER['REQUEST_METHOD']", "get_request_method()", "request_method()", "http_method()"],
+    "options_hi": ["$_SERVER['REQUEST_METHOD']", "get_request_method()", "request_method()", "http_method()"],
+    "answer_en": "$_SERVER['REQUEST_METHOD']",
+    "answer_hi": "$_SERVER['REQUEST_METHOD']",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "What is the purpose of the 'strnatcmp()' function?",
+    "question_hi": "'strnatcmp()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Natural order string comparison", "Compares strings naturally", "Both A and B", "Case-sensitive natural comparison"],
+    "options_hi": ["नेचुरल ऑर्डर स्ट्रिंग तुलना", "स्ट्रिंग्स की प्राकृतिक तुलना करता है", "A और B दोनों", "केस-सेंसिटिव प्राकृतिक तुलना"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "Which function returns the interface(s) implemented by a class?",
+    "question_hi": "क्लास द्वारा इम्प्लीमेंटेड इंटरफेस(एस) कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["class_implements()", "get_class_interfaces()", "implements()", "interface_list()"],
+    "options_hi": ["class_implements()", "get_class_interfaces()", "implements()", "interface_list()"],
+    "answer_en": "class_implements()",
+    "answer_hi": "class_implements()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "What does the 'strnatcasecmp()' function do?",
+    "question_hi": "'strnatcasecmp()' फंक्शन क्या करता है?",
+    "options_en": ["Case-insensitive natural order comparison", "Natural comparison ignoring case", "Both A and B", "Case-insensitive string compare"],
+    "options_hi": ["केस-इनसेंसिटिव नेचुरल ऑर्डर तुलना", "केस को नजरअंदाज करते हुए प्राकृतिक तुलना", "A और B दोनों", "केस-इनसेंसिटिव स्ट्रिंग तुलना"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "Which function is used to get the current user's home directory?",
+    "question_hi": "करंट यूजर का होम डायरेक्टरी प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["getenv('HOME')", "$_SERVER['HOME']", "Both A and B", "home_directory()"],
+    "options_hi": ["getenv('HOME')", "$_SERVER['HOME']", "A और B दोनों", "home_directory()"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "What is the purpose of the 'strncasecmp()' function?",
+    "question_hi": "'strncasecmp()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Case-insensitive comparison of first n characters", "Compares first n chars ignoring case", "Both A and B", "Limited case-insensitive compare"],
+    "options_hi": ["पहले n करैक्टर्स की केस-इनसेंसिटिव तुलना", "केस को नजरअंदाज करते हुए पहले n chars की तुलना", "A और B दोनों", "सीमित केस-इनसेंसिटिव तुलना"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "Which function returns the trait(s) used by a class?",
+    "question_hi": "क्लास द्वारा यूज किए गए ट्रेट(एस) कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["class_uses()", "get_class_traits()", "trait_list()", "uses_traits()"],
+    "options_hi": ["class_uses()", "get_class_traits()", "trait_list()", "uses_traits()"],
+    "answer_en": "class_uses()",
+    "answer_hi": "class_uses()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "What does the 'strncmp()' function do?",
+    "question_hi": "'strncmp()' फंक्शन क्या करता है?",
+    "options_en": ["Binary safe comparison of first n characters", "Compares first n chars", "Both A and B", "Limited string comparison"],
+    "options_hi": ["पहले n करैक्टर्स की बाइनरी सेफ तुलना", "पहले n chars की तुलना", "A और B दोनों", "सीमित स्ट्रिंग तुलना"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "Which function is used to get the current process ID?",
+    "question_hi": "करंट प्रोसेस ID प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["getmypid()", "posix_getpid()", "Both getmypid() and posix_getpid()", "process_id()"],
+    "options_hi": ["getmypid()", "posix_getpid()", "getmypid() और posix_getpid() दोनों", "process_id()"],
+    "answer_en": "Both getmypid() and posix_getpid()",
+    "answer_hi": "getmypid() और posix_getpid() दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "What is the purpose of the 'strpbrk()' function?",
+    "question_hi": "'strpbrk()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Searches string for any of set of characters", "Finds first occurrence of any char", "Both A and B", "Character set search"],
+    "options_hi": ["करैक्टर्स के सेट में से किसी के लिए स्ट्रिंग खोजता है", "किसी भी char की पहली occurrence ढूंढता है", "A और B दोनों", "करैक्टर सेट खोज"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "Which function returns the available SAPI (Server API) name?",
+    "question_hi": "उपलब्ध SAPI (सर्वर API) नाम कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["php_sapi_name()", "sapi_name()", "get_sapi()", "server_api()"],
+    "options_hi": ["php_sapi_name()", "sapi_name()", "get_sapi()", "server_api()"],
+    "answer_en": "php_sapi_name()",
+    "answer_hi": "php_sapi_name()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "What does the 'strripos()' function do?",
+    "question_hi": "'strripos()' फंक्शन क्या करता है?",
+    "options_en": ["Case-insensitive strrpos()", "Finds last occurrence ignoring case", "Both A and B", "Reverse case-insensitive search"],
+    "options_hi": ["केस-इनसेंसिटिव strrpos()", "केस को नजरअंदाज करते हुए आखिरी occurrence ढूंढता है", "A और B दोनों", "रिवर्स केस-इनसेंसिटिव खोज"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "Which function is used to get the current system load?",
+    "question_hi": "करंट सिस्टम लोड प्राप्त करने के लिए किस फंक्शन का उपयोग होता है?",
+    "options_en": ["sys_getloadavg()", "getloadavg()", "system_load()", "load_average()"],
+    "options_hi": ["sys_getloadavg()", "getloadavg()", "system_load()", "load_average()"],
+    "answer_en": "sys_getloadavg()",
+    "answer_hi": "sys_getloadavg()",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "What is the purpose of the 'strrchr()' function?",
+    "question_hi": "'strrchr()' फंक्शन का उद्देश्य क्या है?",
+    "options_en": ["Finds last occurrence of character", "Returns portion from last occurrence to end", "Both A and B", "Reverse character search"],
+    "options_hi": ["करैक्टर की आखिरी occurrence ढूंढता है", "आखिरी occurrence से अंत तक का भाग रिटर्न करता है", "A और B दोनों", "रिवर्स करैक्टर खोज"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "Which function returns the current Unix timestamp?",
+    "question_hi": "करंट Unix टाइमस्टैम्प कौन-सा फंक्शन रिटर्न करता है?",
+    "options_en": ["time()", "strtotime('now')", "Both time() and strtotime('now')", "unix_timestamp()"],
+    "options_hi": ["time()", "strtotime('now')", "time() और strtotime('now') दोनों", "unix_timestamp()"],
+    "answer_en": "Both time() and strtotime('now')",
+    "answer_hi": "time() और strtotime('now') दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "What does the 'strrev()' function do?",
+    "question_hi": "'strrev()' फंक्शन क्या करता है?",
+    "options_en": ["Reverses a string", "Returns reversed string", "Both A and B", "Flips string order"],
+    "options_hi": ["स्ट्रिंग को उलट देता है", "उलटी हुई स्ट्रिंग रिटर्न करता है", "A और B दोनों", "स्ट्रिंग ऑर्डर फ्लिप करता है"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  }
 ]
 
 
-
-let currentQuestion = 0; 
+// --------------------------- GLOBAL VARS -----------------------------
+let currentQuestion = 0;
 let language = "en";
-// let timeLeft = 180 * 60; // 180 minutes
-let timeLeft = 60 * 60; // 60 minutes
+let timeLeft = 60 * 60;   // 60 minutes timer
 let timerInterval;
 
-// ----------------- Quiz Logic -----------------
+// --------------------------- LOAD QUESTION ----------------------------
 function loadQuestion(index) {
     const q = questions[index];
-    document.getElementById("question").textContent = `${q.num}. ${
-        language === "en" ? q.question_en : q.question_hi
-    }`;
-    document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
+
+    document.getElementById("question").textContent =
+        `${q.num}. ${language === "en" ? q.question_en : q.question_hi}`;
+
+    document.getElementById("questionCounter").textContent =
+        `Question ${index + 1} of ${questions.length}`;
 
     const optionsElement = document.getElementById("options");
     optionsElement.innerHTML = "";
@@ -84,6 +577,7 @@ function loadQuestion(index) {
     options.forEach((option) => {
         const isSelected = q.selected === option;
         const optionDiv = document.createElement("div");
+
         optionDiv.className = "option-box";
         optionDiv.style = `
             border: 2px solid ${isSelected ? "#007bff" : "#ccc"};
@@ -92,12 +586,11 @@ function loadQuestion(index) {
             border-radius: 8px;
             margin: 6px 0;
             cursor: pointer;
-            transition: all 0.2s;
         `;
 
         optionDiv.innerHTML = `
-            <input type="radio" name="option" value="${option}" ${isSelected ? "checked" : ""} style="margin-right:8px;">
-            ${option}
+            <input type="radio" name="option"
+            value="${option}" ${isSelected ? "checked" : ""} /> ${option}
         `;
 
         optionDiv.addEventListener("click", () => {
@@ -111,12 +604,14 @@ function loadQuestion(index) {
     updateNavigation();
 }
 
+// --------------------------- MARK ATTEMPT ----------------------------
 function markAttempted(index, selectedAnswer) {
     questions[index].attempted = true;
     questions[index].selected = selectedAnswer;
     updateNavigation();
 }
 
+// --------------------------- NEXT / PREV -----------------------------
 function nextQuestion() {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
@@ -131,283 +626,150 @@ function prevQuestion() {
     }
 }
 
+// --------------------------- LANGUAGE CHANGE -------------------------
 function changeLanguage() {
     language = document.getElementById("languageSelect").value;
     loadQuestion(currentQuestion);
 }
 
-function submitQuiz() {
-    clearInterval(timerInterval);
-    let attempted = 0,
-        notAttempted = 0,
-        score = 0;
-
-    questions.forEach((q) => {
-        if (q.attempted) {
-            attempted++;
-            if (q.selected === q.answer_en || q.selected === q.answer_hi) score++;
-        } else notAttempted++;
-    });
-
-    alert(
-        `Quiz submitted!\nAttempted: ${attempted}\nNot Attempted: ${notAttempted}\nScore: ${score}/${questions.length}`
-    );
-}
-
+// --------------------------- TIMER -------------------------------
 function startTimer() {
     const timerElement = document.getElementById("timer");
     clearInterval(timerInterval);
+
     timerInterval = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            alert("Time's up!");
+            alert("⏳ Time Over!");
             submitQuiz();
-        } else {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            timerElement.textContent = `Time Left: ${hours
-                .toString()
-                .padStart(2, "0")}:${minutes
-                .toString()
-                .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-            timeLeft--;
+            return;
         }
+
+        const h = Math.floor(timeLeft / 3600);
+        const m = Math.floor((timeLeft % 3600) / 60);
+        const s = timeLeft % 60;
+
+        timerElement.textContent =
+            `Time Left: ${h.toString().padStart(2, "0")}:${m
+                .toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+
+        timeLeft--;
     }, 1000);
 }
 
+// --------------------------- SUBMIT QUIZ ---------------------
+function submitQuiz() {
+    let confirmation = confirm("Are you sure you want to submit the test?");
+    if (!confirmation) return;
 
+    clearInterval(timerInterval);
 
-////////////////////////////////////////////////////////////////////////////////////////////
+    // Calculate time spent
+    const totalTimeSpent = (60 * 60) - timeLeft;
+    const mins = Math.floor(totalTimeSpent / 60);
+    const secs = totalTimeSpent % 60;
 
-// submit 
-function jumpToQuestion(index) {
-            currentQuestion = index;
-            loadQuestion(index);
+    // Save to localStorage
+    localStorage.setItem("timeTaken", `${mins} min ${secs} sec`);
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let score = 0;
+    const results = [];
+
+    questions.forEach(q => {
+        if (q.attempted) {
+            attempted++;
+            if (q.selected === q.answer_en || q.selected === q.answer_hi) {
+                score++;
+            }
+        } else {
+            notAttempted++;
         }
 
-        function submitQuiz() {
-            let confirmation = confirm("Are you sure you want to submit the test?");
-            
-            if (!confirmation) {
-                return; // अगर यूज़र 'Cancel' करता है तो आगे नहीं बढ़ेंगे
-            }
+        results.push({
+            question: language === "en" ? q.question_en : q.question_hi,
+            selected: q.selected || "Not Answered",
+            correct: language === "en" ? q.answer_en : q.answer_hi
+        });
+    });
 
-            let attempted = 0;
-            let notAttempted = 0;
-            let score = 0;
-            const results = [];
+    // Save result data
+    localStorage.setItem("attempted", attempted);
+    localStorage.setItem("notAttempted", notAttempted);
+    localStorage.setItem("score", score);
+    localStorage.setItem("results", JSON.stringify(results));
 
-            questions.forEach(q => {
-                if (q.attempted) {
-                    attempted++;
-                    if (q.selected === q.answer) {
-                        score++;
-                    }
-                } else {
-                    notAttempted++;
-                }
-                results.push({ question: q.question, selected: q.selected || "Not Answered", correct: q.answer });
-            });
+    // Stop camera stream if active
+    if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+    }
 
-            localStorage.setItem("attempted", attempted);
-            localStorage.setItem("notAttempted", notAttempted);
-            localStorage.setItem("score", score);
-            localStorage.setItem("results", JSON.stringify(results));
+    // Redirect
+    window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
+}
 
-            // रिजल्ट देखने से पहले एक और कन्फर्मेशन ले सकते हैं
-            let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
-            if (viewResult) {
-                window.location.href = "/RTS/public/Deshbord/category/test/submit-test.html";
-            }
-        }
-        window.onload = () => {
-            loadQuestion(currentQuestion);
-        };
-
-
+// --------------------------- NAVIGATION ------------------------------
 function updateNavigation() {
     const nav = document.getElementById("circleContainer");
     nav.innerHTML = "";
+
     questions.forEach((q, i) => {
         let color = "gray";
         if (i === currentQuestion) color = "blue";
         else if (q.attempted) color = "green";
-        nav.innerHTML += `<div class='circle' style='background-color:${color}' onclick='loadQuestion(${i})'>${i + 1}</div>`;
+
+        const circle = document.createElement("div");
+        circle.className = "circle";
+        circle.style.background = color;
+        circle.textContent = i + 1;
+        circle.onclick = () => jumpToQuestion(i);
+        nav.appendChild(circle);
     });
 }
 
-// ----------------- Camera & Movement Logic -----------------
+function jumpToQuestion(i) {
+    currentQuestion = i;
+    loadQuestion(i);
+}
+
+// --------------------------- CAMERA ----------------------
 let videoStream;
-let movementCount = 0;
 
 function startCamera() {
     const container = document.createElement("div");
     container.id = "camera-container";
     container.style.position = "fixed";
     container.style.top = "10px";
-    container.style.left = "10px"; // ✅ Left side
+    container.style.left = "10px";
     container.style.width = "130px";
     container.style.height = "130px";
-    container.style.zIndex = "9999";
     container.style.borderRadius = "50%";
     container.style.overflow = "hidden";
-    container.style.border = "3px solid red";
-    container.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
-    container.style.cursor = "grab";
-    container.style.minWidth = "80px";
-    container.style.minHeight = "80px";
-    container.style.maxWidth = "250px";
-    container.style.maxHeight = "250px";
     container.style.background = "#000";
+    container.style.border = "3px solid red";
+    container.style.zIndex = "9999";
     document.body.appendChild(container);
 
     const video = document.createElement("video");
-    video.setAttribute("autoplay", true);
-    video.setAttribute("playsinline", true);
+    video.autoplay = true;
+    video.playsInline = true;
     video.style.width = "100%";
     video.style.height = "100%";
     video.style.objectFit = "cover";
     container.appendChild(video);
 
-    // ✅ Resize handle
-    const resizeHandle = document.createElement("div");
-    resizeHandle.style.position = "absolute";
-    resizeHandle.style.bottom = "2px";
-    resizeHandle.style.right = "2px";
-    resizeHandle.style.width = "15px";
-    resizeHandle.style.height = "15px";
-    resizeHandle.style.background = "rgba(255,255,255,0.7)";
-    resizeHandle.style.borderRadius = "4px";
-    resizeHandle.style.cursor = "se-resize";
-    container.appendChild(resizeHandle);
-
-    // ✅ Drag logic
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    container.addEventListener("mousedown", (e) => {
-        if (e.target === resizeHandle) return;
-        isDragging = true;
-        offsetX = e.clientX - container.offsetLeft;
-        offsetY = e.clientY - container.offsetTop;
-        container.style.cursor = "grabbing";
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        let x = e.clientX - offsetX;
-        let y = e.clientY - offsetY;
-        x = Math.max(0, Math.min(window.innerWidth - container.offsetWidth, x));
-        y = Math.max(0, Math.min(window.innerHeight - container.offsetHeight, y));
-        container.style.left = `${x}px`;
-        container.style.top = `${y}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-        container.style.cursor = "grab";
-    });
-
-    // ✅ Resize logic
-    let isResizing = false;
-    let startWidth, startHeight, startX, startY;
-
-    resizeHandle.addEventListener("mousedown", (e) => {
-        e.stopPropagation();
-        isResizing = true;
-        startWidth = container.offsetWidth;
-        startHeight = container.offsetHeight;
-        startX = e.clientX;
-        startY = e.clientY;
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isResizing) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        const newSize = Math.max(80, Math.min(250, Math.max(startWidth + dx, startHeight + dy)));
-        container.style.width = `${newSize}px`;
-        container.style.height = `${newSize}px`;
-    });
-
-    document.addEventListener("mouseup", () => {
-        isResizing = false;
-    });
-
-    // ✅ Camera stream
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
             video.srcObject = stream;
             videoStream = stream;
-            detectMovement(video);
         })
-        .catch(err => {
-            console.error("Camera error:", err);
-            alert("Camera not accessible!");
-        });
+        .catch(() => alert("Camera not accessible!"));
 }
 
-function detectMovement(video) {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    canvas.width = 160;
-    canvas.height = 160;
-    let lastImageData = null;
-
-    setInterval(() => {
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-        if (lastImageData) {
-            let diff = 0;
-            for (let i = 0; i < imageData.data.length; i += 4) {
-                diff += Math.abs(imageData.data[i] - lastImageData.data[i]);
-            }
-
-            if (diff > 1000000) {
-                movementCount++;
-                if (movementCount === 1) {
-                    alert("⚠️ Alert 1: Face is not move");
-                } else if (movementCount === 2) {
-                    alert("⚠️ Alert 2: Head is not move");
-                } else if (movementCount === 3) {
-                    alert("⚠️ Alert 3: Test series is restarting...");
-                    restartTest();
-                }
-            }
-        }
-        lastImageData = imageData;
-    }, 2000);
-}
-
-function restartTest() {
-    if (videoStream) {
-        videoStream.getTracks().forEach(track => track.stop());
-    }
-    const camContainer = document.getElementById("camera-container");
-    if (camContainer) camContainer.remove();
-
-    movementCount = 0;
-    currentQuestion = 0;
-    timeLeft = 180 * 60;
-
-    questions.forEach(q => {
-        q.attempted = false;
-        q.selected = null;
-    });
-
-    loadQuestion(currentQuestion);
-    startTimer();
-    startCamera();
-}
-
-// ----------------- Page Load -----------------
+// --------------------------- PAGE LOAD --------------------------
 window.onload = function () {
     loadQuestion(currentQuestion);
     startTimer();
-    startCamera(); // ✅ Camera starts with test
+    startCamera();
 };
-
-
-///////////////////////////////////////
