@@ -1,6 +1,6 @@
 const questions = [
   {
-    "num": 851,
+    "num":1,
     "question_en": "Which PDO method begins a transaction?",
     "question_hi": "PDO में transaction शुरू करने के लिए कौन-सा method उपयोग होता है?",
     "options_en": [
@@ -21,7 +21,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 852,
+    "num":2,
     "question_en": "Which function securely hashes passwords?",
     "question_hi": "पासवर्ड को सुरक्षित रूप से hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
     "options_en": [
@@ -42,7 +42,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 853,
+    "num":3,
     "question_en": "Which function verifies a password against a hash?",
     "question_hi": "कौन-सा फ़ंक्शन पासवर्ड को hash के खिलाफ सत्यापित करता है?",
     "options_en": [
@@ -63,7 +63,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 854,
+    "num":4,
     "question_en": "Which function returns the type of a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल का प्रकार बताता है?",
     "options_en": [
@@ -84,7 +84,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 855,
+    "num":5,
     "question_en": "Which function prints human-readable information about a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल की human-readable जानकारी दिखाता है?",
     "options_en": [
@@ -105,7 +105,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 856,
+    "num":6,
     "question_en": "Which function dumps information about a variable with type and value?",
     "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
     "options_en": [
@@ -126,7 +126,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 857,
+    "num":7,
     "question_en": "Which construct includes a file and generates a fatal error if missing?",
     "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
     "options_en": [
@@ -147,7 +147,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 858,
+    "num":8,
     "question_en": "Which construct includes a file only once?",
     "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
     "options_en": [
@@ -168,7 +168,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 859,
+    "num":9,
     "question_en": "Which operator suppresses errors in PHP?",
     "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
     "options_en": [
@@ -189,7 +189,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 860,
+    "num":10,
     "question_en": "Which operator is the null coalescing operator introduced in PHP 7?",
     "question_hi": "PHP 7 में पेश किया गया null coalescing operator कौन-सा है?",
     "options_en": [
@@ -210,7 +210,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 861,
+    "num":11,
     "question_en": "Which operator is the spaceship operator for three-way comparison?",
     "question_hi": "तीन-तरफा तुलना के लिए spaceship operator कौन-सा है?",
     "options_en": [
@@ -231,7 +231,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 862,
+    "num":12,
     "question_en": "Which PHP function returns the length of a string? (Example: define())",
     "question_hi": "PHP में स्ट्रिंग की लंबाई किस फ़ंक्शन से मिलती है? (define())",
     "options_en": [
@@ -252,7 +252,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 863,
+    "num":13,
     "question_en": "Which function finds the position of the first occurrence of a substring? (Example: catch)",
     "question_hi": "कौन-सा फ़ंक्शन किसी सबस्ट्रिंग के पहले occurrence की स्थिति देता है? (catch)",
     "options_en": [
@@ -273,7 +273,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 864,
+    "num":14,
     "question_en": "Which function returns part of a string? (Example: in_array())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग का हिस्सा लौटाता है? (in_array())",
     "options_en": [
@@ -294,7 +294,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 865,
+    "num":15,
     "question_en": "Which function removes whitespace from both ends of a string? (Example: unlink())",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग के दोनों सिरों से whitespace हटाता है? (unlink())",
     "options_en": [
@@ -315,7 +315,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 866,
+    "num":16,
     "question_en": "Which operator concatenates strings in PHP? (Example: ===)",
     "question_hi": "PHP में स्ट्रिंग जोड़ने के लिए कौन-सा operator उपयोग होता है? (===)",
     "options_en": [
@@ -336,7 +336,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 867,
+    "num":17,
     "question_en": "Which superglobal stores POST data? (Example: $_SESSION)",
     "question_hi": "POST डेटा किस superglobal में संग्रहीत होता है? ($_SESSION)",
     "options_en": [
@@ -357,7 +357,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 868,
+    "num":18,
     "question_en": "Which function checks if a file exists? (Example: include_once())",
     "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि फ़ाइल मौजूद है? (include_once())",
     "options_en": [
@@ -378,7 +378,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 869,
+    "num":19,
     "question_en": "Which function reads an entire file into a string? (Example: strpos())",
     "question_hi": "कौन-सा फ़ंक्शन पूरी फ़ाइल को एक स्ट्रिंग में पढ़ता है? (strpos())",
     "options_en": [
@@ -399,7 +399,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 870,
+    "num":20,
     "question_en": "Which function opens a file or URL? (Example: mysqli_connect())",
     "question_hi": "कौन-सा फ़ंक्शन किसी फ़ाइल या URL को खोलता है? (mysqli_connect())",
     "options_en": [
@@ -420,7 +420,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 871,
+    "num":21,
     "question_en": "Which function closes an open file pointer? (Example: array_unique())",
     "question_hi": "कौन-सा फ़ंक्शन खुली फ़ाइल pointer को बंद करता है? (array_unique())",
     "options_en": [
@@ -441,7 +441,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 872,
+    "num":22,
     "question_en": "Which function writes data to a file? (Example: readdir())",
     "question_hi": "कौन-सा फ़ंक्शन फ़ाइल में डेटा लिखता है? (readdir())",
     "options_en": [
@@ -462,7 +462,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 873,
+    "num":23,
     "question_en": "Which function splits a string by a delimiter into an array? (Example: mysqli_real_escape_string())",
     "question_hi": "कौन-सा फ़ंक्शन किसी delimiter से स्ट्रिंग को array में बाँटता है? (mysqli_real_escape_string())",
     "options_en": [
@@ -483,7 +483,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 874,
+    "num":24,
     "question_en": "Which function joins array elements with a glue string? (Example: substr())",
     "question_hi": "कौन-सा फ़ंक्शन array के elements को एक string से जोड़ता है? (substr())",
     "options_en": [
@@ -504,7 +504,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 875,
+    "num":25,
     "question_en": "Which function adds one or more elements to the end of an array? (Example: file_exists())",
     "question_hi": "कौन-सा फ़ंक्शन array के अंत में एक या अधिक तत्व जोड़ता है? (file_exists())",
     "options_en": [
@@ -525,7 +525,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 876,
+    "num":26,
     "question_en": "Which function removes and returns the last element of an array? (Example: define())",
     "question_hi": "कौन-सा फ़ंक्शन array का अंतिम तत्व हटाता और लौटाता है? (define())",
     "options_en": [
@@ -546,7 +546,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 877,
+    "num":27,
     "question_en": "Which function checks if a value exists in an array? (Example: array_reduce())",
     "question_hi": "कौन-सा फ़ंक्शन जाँचता है कि कोई मान array में मौजूद है? (array_reduce())",
     "options_en": [
@@ -567,7 +567,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 878,
+    "num":28,
     "question_en": "Which function returns the number of elements in an array? (Example: explode())",
     "question_hi": "कौन-सा फ़ंक्शन array में तत्वों की संख्या देता है? (explode())",
     "options_en": [
@@ -588,7 +588,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 879,
+    "num":29,
     "question_en": "Which keyword defines a function in PHP? (Example: return)",
     "question_hi": "PHP में फ़ंक्शन को परिभाषित करने के लिए कौन-सा keyword उपयोग होता है? (return)",
     "options_en": [
@@ -609,7 +609,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 880,
+    "num":30,
     "question_en": "Which keyword declares a class in PHP? (Example: global)",
     "question_hi": "PHP में class घोषित करने के लिए कौन-सा keyword उपयोग होता है? (global)",
     "options_en": [
@@ -630,7 +630,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 881,
+    "num":31,
     "question_en": "Which keyword is used to inherit from a parent class? (Example: finally)",
     "question_hi": "Parent class से inherit करने के लिए कौन-सा keyword उपयोग होता है? (finally)",
     "options_en": [
@@ -651,7 +651,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 882,
+    "num":32,
     "question_en": "Which magic constant returns the full path and filename of the current file?",
     "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल का पूरा path और filename लौटाता है?",
     "options_en": [
@@ -672,7 +672,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 883,
+    "num":33,
     "question_en": "Which magic constant returns the directory of the current file?",
     "question_hi": "कौन-सा magic constant वर्तमान फ़ाइल की directory लौटाता है?",
     "options_en": [
@@ -693,7 +693,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 884,
+    "num":34,
     "question_en": "Which function starts a session in PHP? (Example: explode())",
     "question_hi": "PHP में session शुरू करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (explode())",
     "options_en": [
@@ -714,7 +714,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 885,
+    "num":35,
     "question_en": "Which function destroys a session? (Example: trim())",
     "question_hi": "कौन-सा फ़ंक्शन session को नष्ट करता है? (trim())",
     "options_en": [
@@ -735,7 +735,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 886,
+    "num":36,
     "question_en": "Which function sets a cookie? (Example: define())",
     "question_hi": "कौन-सा फ़ंक्शन cookie सेट करता है? (define())",
     "options_en": [
@@ -756,7 +756,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 887,
+    "num":37,
     "question_en": "Which function sends a raw HTTP header? (Example: array_search())",
     "question_hi": "कौन-सा फ़ंक्शन raw HTTP header भेजता है? (array_search())",
     "options_en": [
@@ -777,7 +777,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 888,
+    "num":38,
     "question_en": "Which function connects to MySQL using mysqli extension? (Example: date())",
     "question_hi": "mysqli के साथ MySQL से कनेक्ट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (date())",
     "options_en": [
@@ -798,7 +798,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 889,
+    "num":39,
     "question_en": "Which PHP extension offers a database abstraction layer (PDO)?",
     "question_hi": "कौन-सा extension database abstraction layer (PDO) प्रदान करता है?",
     "options_en": [
@@ -819,7 +819,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 890,
+    "num":40,
     "question_en": "Which PDO method prepares a statement for execution?",
     "question_hi": "PDO में किस method से statement prepare किया जाता है?",
     "options_en": [
@@ -840,7 +840,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 891,
+    "num":41,
     "question_en": "Which PDO method executes a prepared statement?",
     "question_hi": "PDO में किस method से prepared statement execute किया जाता है?",
     "options_en": [
@@ -861,7 +861,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 892,
+    "num":42,
     "question_en": "Which PDO method begins a transaction?",
     "question_hi": "PDO में transaction शुरू करने के लिए कौन-सा method उपयोग होता है?",
     "options_en": [
@@ -882,7 +882,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 893,
+    "num":43,
     "question_en": "Which function securely hashes passwords?",
     "question_hi": "पासवर्ड को सुरक्षित रूप से hash करने के लिए कौन-सा फ़ंक्शन उपयोग होता है?",
     "options_en": [
@@ -903,7 +903,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 894,
+    "num":44,
     "question_en": "Which function verifies a password against a hash?",
     "question_hi": "कौन-सा फ़ंक्शन पासवर्ड को hash के खिलाफ सत्यापित करता है?",
     "options_en": [
@@ -924,7 +924,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 895,
+    "num":45,
     "question_en": "Which function returns the type of a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल का प्रकार बताता है?",
     "options_en": [
@@ -945,7 +945,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 896,
+    "num":46,
     "question_en": "Which function prints human-readable information about a variable?",
     "question_hi": "कौन-सा फ़ंक्शन किसी वैरिएबल की human-readable जानकारी दिखाता है?",
     "options_en": [
@@ -966,7 +966,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 897,
+    "num":47,
     "question_en": "Which function dumps information about a variable with type and value?",
     "question_hi": "कौन-सा फ़ंक्शन वैरिएबल के प्रकार और मान सहित जानकारी दिखाता है?",
     "options_en": [
@@ -987,7 +987,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 898,
+    "num":48,
     "question_en": "Which construct includes a file and generates a fatal error if missing?",
     "question_hi": "कौन-सा construct फ़ाइल शामिल करता है और यदि फ़ाइल गायब हो तो fatal error देता है?",
     "options_en": [
@@ -1008,7 +1008,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 899,
+    "num":49,
     "question_en": "Which construct includes a file only once?",
     "question_hi": "कौन-सा construct फ़ाइल को केवल एक बार include करता है?",
     "options_en": [
@@ -1029,7 +1029,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 900,
+    "num":50,
     "question_en": "Which operator suppresses errors in PHP?",
     "question_hi": "PHP में errors suppress करने के लिए कौन-सा operator उपयोग होता है?",
     "options_en": [

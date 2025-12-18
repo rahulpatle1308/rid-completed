@@ -1,6 +1,6 @@
 const questions = [
   {
-    "num": 301,
+    "num":1,
     "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 30)",
     "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 30)",
     "options_en": [
@@ -21,7 +21,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 302,
+    "num":2,
     "question_en": "Which function outputs text in PHP? (Qset 30)",
     "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 30)",
     "options_en": [
@@ -42,7 +42,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 303,
+    "num":3,
     "question_en": "What is the correct file extension for PHP files? (Qset 30)",
     "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 30)",
     "options_en": [
@@ -63,7 +63,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 304,
+    "num":4,
     "question_en": "Which operator concatenates strings? (Qset 30)",
     "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 30)",
     "options_en": [
@@ -84,7 +84,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 305,
+    "num":5,
     "question_en": "How to declare a variable in PHP? (Qset 30)",
     "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 30)",
     "options_en": [
@@ -105,7 +105,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 306,
+    "num":6,
     "question_en": "Which function returns length of string? (Qset 30)",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 30)",
     "options_en": [
@@ -126,7 +126,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 307,
+    "num":7,
     "question_en": "Which superglobal holds POST data? (Qset 30)",
     "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 30)",
     "options_en": [
@@ -147,7 +147,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 308,
+    "num":8,
     "question_en": "Which function includes a file? (Qset 30)",
     "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 30)",
     "options_en": [
@@ -168,7 +168,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 309,
+    "num":9,
     "question_en": "What does PDO stand for? (Qset 30)",
     "question_hi": "PDO का पूरा नाम क्या है? (Qset 30)",
     "options_en": [
@@ -189,7 +189,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 310,
+    "num":10,
     "question_en": "Which keyword defines a function? (Qset 30)",
     "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 30)",
     "options_en": [
@@ -210,7 +210,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 311,
+    "num":11,
     "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 31)",
     "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 31)",
     "options_en": [
@@ -231,7 +231,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 312,
+    "num":12,
     "question_en": "Which function outputs text in PHP? (Qset 31)",
     "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 31)",
     "options_en": [
@@ -252,7 +252,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 313,
+    "num":13,
     "question_en": "What is the correct file extension for PHP files? (Qset 31)",
     "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 31)",
     "options_en": [
@@ -273,7 +273,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 314,
+    "num":14,
     "question_en": "Which operator concatenates strings? (Qset 31)",
     "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 31)",
     "options_en": [
@@ -294,7 +294,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 315,
+    "num":15,
     "question_en": "How to declare a variable in PHP? (Qset 31)",
     "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 31)",
     "options_en": [
@@ -315,7 +315,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 316,
+    "num":16,
     "question_en": "Which function returns length of string? (Qset 31)",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 31)",
     "options_en": [
@@ -336,7 +336,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 317,
+    "num":17,
     "question_en": "Which superglobal holds POST data? (Qset 31)",
     "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 31)",
     "options_en": [
@@ -357,7 +357,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 318,
+    "num":18,
     "question_en": "Which function includes a file? (Qset 31)",
     "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 31)",
     "options_en": [
@@ -378,7 +378,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 319,
+    "num":19,
     "question_en": "What does PDO stand for? (Qset 31)",
     "question_hi": "PDO का पूरा नाम क्या है? (Qset 31)",
     "options_en": [
@@ -399,7 +399,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 320,
+    "num":20,
     "question_en": "Which keyword defines a function? (Qset 31)",
     "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 31)",
     "options_en": [
@@ -420,7 +420,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 321,
+    "num":21,
     "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 32)",
     "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 32)",
     "options_en": [
@@ -441,7 +441,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 322,
+    "num":22,
     "question_en": "Which function outputs text in PHP? (Qset 32)",
     "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 32)",
     "options_en": [
@@ -462,7 +462,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 323,
+    "num":23,
     "question_en": "What is the correct file extension for PHP files? (Qset 32)",
     "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 32)",
     "options_en": [
@@ -483,7 +483,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 324,
+    "num":24,
     "question_en": "Which operator concatenates strings? (Qset 32)",
     "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 32)",
     "options_en": [
@@ -504,7 +504,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 325,
+    "num":25,
     "question_en": "How to declare a variable in PHP? (Qset 32)",
     "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 32)",
     "options_en": [
@@ -525,7 +525,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 326,
+    "num":26,
     "question_en": "Which function returns length of string? (Qset 32)",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 32)",
     "options_en": [
@@ -546,7 +546,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 327,
+    "num":27,
     "question_en": "Which superglobal holds POST data? (Qset 32)",
     "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 32)",
     "options_en": [
@@ -567,7 +567,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 328,
+    "num":28,
     "question_en": "Which function includes a file? (Qset 32)",
     "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 32)",
     "options_en": [
@@ -588,7 +588,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 329,
+    "num":29,
     "question_en": "What does PDO stand for? (Qset 32)",
     "question_hi": "PDO का पूरा नाम क्या है? (Qset 32)",
     "options_en": [
@@ -609,7 +609,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 330,
+    "num":30,
     "question_en": "Which keyword defines a function? (Qset 32)",
     "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 32)",
     "options_en": [
@@ -630,7 +630,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 331,
+    "num":31,
     "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 33)",
     "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 33)",
     "options_en": [
@@ -651,7 +651,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 332,
+    "num":32,
     "question_en": "Which function outputs text in PHP? (Qset 33)",
     "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 33)",
     "options_en": [
@@ -672,7 +672,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 333,
+    "num":33,
     "question_en": "What is the correct file extension for PHP files? (Qset 33)",
     "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 33)",
     "options_en": [
@@ -693,7 +693,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 334,
+    "num":34,
     "question_en": "Which operator concatenates strings? (Qset 33)",
     "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 33)",
     "options_en": [
@@ -714,7 +714,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 335,
+    "num":35,
     "question_en": "How to declare a variable in PHP? (Qset 33)",
     "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 33)",
     "options_en": [
@@ -735,7 +735,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 336,
+    "num":36,
     "question_en": "Which function returns length of string? (Qset 33)",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 33)",
     "options_en": [
@@ -756,7 +756,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 337,
+    "num":37,
     "question_en": "Which superglobal holds POST data? (Qset 33)",
     "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 33)",
     "options_en": [
@@ -777,7 +777,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 338,
+    "num":38,
     "question_en": "Which function includes a file? (Qset 33)",
     "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 33)",
     "options_en": [
@@ -798,7 +798,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 339,
+    "num":39,
     "question_en": "What does PDO stand for? (Qset 33)",
     "question_hi": "PDO का पूरा नाम क्या है? (Qset 33)",
     "options_en": [
@@ -819,7 +819,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 340,
+    "num":40,
     "question_en": "Which keyword defines a function? (Qset 33)",
     "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 33)",
     "options_en": [
@@ -840,7 +840,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 341,
+    "num":41,
     "question_en": "Which symbol is used to start a single-line comment in PHP? (Qset 34)",
     "question_hi": "PHP में single-line टिप्पणी शुरू करने के लिए कौन-सा चिन्ह उपयोग होता है? (Qset 34)",
     "options_en": [
@@ -861,7 +861,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 342,
+    "num":42,
     "question_en": "Which function outputs text in PHP? (Qset 34)",
     "question_hi": "PHP में टेक्स्ट आउटपुट करने के लिए कौन-सा फ़ंक्शन उपयोग होता है? (Qset 34)",
     "options_en": [
@@ -882,7 +882,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 343,
+    "num":43,
     "question_en": "What is the correct file extension for PHP files? (Qset 34)",
     "question_hi": "PHP फाइल्स के लिए सही एक्सटेंशन क्या है? (Qset 34)",
     "options_en": [
@@ -903,7 +903,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 344,
+    "num":44,
     "question_en": "Which operator concatenates strings? (Qset 34)",
     "question_hi": "कौन-सा ऑपरेटर स्ट्रिंग्स को जोड़ता है? (Qset 34)",
     "options_en": [
@@ -924,7 +924,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 345,
+    "num":45,
     "question_en": "How to declare a variable in PHP? (Qset 34)",
     "question_hi": "PHP में वैरिएबल कैसे घोषित करते हैं? (Qset 34)",
     "options_en": [
@@ -945,7 +945,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 346,
+    "num":46,
     "question_en": "Which function returns length of string? (Qset 34)",
     "question_hi": "कौन-सा फ़ंक्शन स्ट्रिंग की लंबाई लौटाता है? (Qset 34)",
     "options_en": [
@@ -966,7 +966,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 347,
+    "num":47,
     "question_en": "Which superglobal holds POST data? (Qset 34)",
     "question_hi": "कौन-सा superglobal POST डेटा रखता है? (Qset 34)",
     "options_en": [
@@ -987,7 +987,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 348,
+    "num":49,
     "question_en": "Which function includes a file? (Qset 34)",
     "question_hi": "किस फ़ंक्शन से फ़ाइल include की जाती है? (Qset 34)",
     "options_en": [
@@ -1008,7 +1008,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 349,
+    "num":50,
     "question_en": "What does PDO stand for? (Qset 34)",
     "question_hi": "PDO का पूरा नाम क्या है? (Qset 34)",
     "options_en": [
@@ -1029,7 +1029,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 350,
+    "num":50,
     "question_en": "Which keyword defines a function? (Qset 34)",
     "question_hi": "कौन-सा कीवर्ड फ़ंक्शन परिभाषित करता है? (Qset 34)",
     "options_en": [
