@@ -506,7 +506,7 @@ async function generateCompletionCertificatePDF(app, filePath) {
 
       // ================= SIGNATURE =================
       const signatureY = 600;
-      const names = ["Er. Rajesh Prasad", "Er. Deepak Kumar"];
+      const names = ["Er. Rajesh Prasad"];
       const randomName = names[Math.floor(Math.random() * names.length)];
 
       if (fs.existsSync(signatureImagePath)) {

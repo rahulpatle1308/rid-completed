@@ -9,7 +9,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
 const helmet = require('helmet');
-const MongoStore = require('connect-mongo'); // Only require, no session parameter
+const MongoStore = require('connect-mongo');
 const cors = require("cors");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
@@ -23,8 +23,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 9191;
 
-// ========== DATABASE CONNECTION ==========
-// MongoDB Atlas Cloud Connection
+
 const mongoUrl = process.env.MONGODB_URI;
 
 console.log('🔗 Attempting MongoDB Atlas connection...');
@@ -37,7 +36,7 @@ mongoose.connect(mongoUrl, {
 })
 .then(async () => {
     console.log('✅ MongoDB Atlas Connected Successfully');
-    console.log('📊 Database:', mongoose.connection.name);
+   
     
     // Check if 'applications' collection exists
     const collections = await mongoose.connection.db.listCollections().toArray();
@@ -53,7 +52,7 @@ mongoose.connect(mongoUrl, {
     // Create indexes for better performance
     const Application = require('./models/Application');
     await Application.createIndexes();
-    console.log('✅ Created indexes for applications');
+    
 })
 .catch(err => {
     console.error(' MongoDB Atlas Connection Error:', err.message);
@@ -64,8 +63,6 @@ mongoose.connect(mongoUrl, {
     console.error('   4. Check database name in connection string');
     process.exit(1);
 });
-
-
 
 // ========== SESSION CONFIGURATION ==========
 app.use(session({
@@ -155,6 +152,10 @@ app.locals.pdfTokens = new Map();
 // ========== EBOOK ROUTES ==========
 app.use('/ebook', require('./routes/pdfRoutes'));
 app.use('/ebook', require('./routes/authebookRoutes'));
+
+// ========== WORKSHOP ROUTES (MOVE HERE) ==========
+const workshopRoutes = require('./routes/workshopRoutes');
+app.use('/api/workshop', workshopRoutes);
 
 // ========== MAIN APPLICATION ROUTES ==========
 const configureRoutes = () => {
@@ -289,9 +290,15 @@ const configureRoutes = () => {
     res.sendFile(path.join(__dirname, "public", "Certificate-Verification/verify.html"));
   });
 
+  // ========== WORKSHOP FORM PAGE ==========
+  app.get("/workshop-form", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "workshop/form.html"));
+  });
+
   app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
   });
+
 
   app.get("/searchResult", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "searchResult.html"));

@@ -185,8 +185,7 @@
     </div>
   </div>
 
-  <script>
-
+<script>
 // verify.html के JavaScript में यह फंक्शन अपडेट करें
 async function verify() {
   const appId = document.getElementById("appIdInput").value.trim();
@@ -196,6 +195,100 @@ async function verify() {
     return;
   }
 
+  // Check if it's a workshop/training certificate (new system)
+  if (appId.startsWith('RID-WS') || appId.startsWith('RID-TR')) {
+    await verifyWorkshopCertificate(appId);
+  } else {
+    // Original verification for old certificates
+    await verifyOldCertificate(appId);
+  }
+}
+
+// Function to verify workshop/training certificates
+async function verifyWorkshopCertificate(appId) {
+  try {
+    console.log("Verifying workshop certificate:", appId);
+    const response = await fetch(`/api/workshop/verify/${appId}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+
+    if (data.success) {
+      const app = data.application;
+      
+      if (app.status === "VERIFIED") {
+        // Show download button
+        const downloadBtn = document.getElementById("detailCertificatePath");
+        downloadBtn.href = `/api/workshop/download/${appId}`;
+        downloadBtn.style.display = "inline-flex";
+        downloadBtn.innerHTML = '<span class="material-symbols-outlined">download</span>Download Certificate';
+        
+        // Show success message
+        document.getElementById("result").innerHTML = `
+          <div style="color: #16a34a; padding: 15px; background: #f0fdf4; border-radius: 8px; margin-top: 20px;">
+            <strong style="font-size: 18px;">✅ Certificate Verified Successfully!</strong>
+            <p style="margin: 10px 0 0 0;">Your certificate is ready to download.</p>
+          </div>
+        `;
+        document.getElementById("result").style.display = "block";
+        
+        // Show certificate details
+        document.getElementById("certificateDetails").style.display = "block";
+        document.getElementById("detailCertificateId").textContent = app.appId;
+        document.getElementById("detailInternName").textContent = app.fullName;
+        document.getElementById("detailIssueDate").textContent = new Date(app.createdAt).toLocaleDateString();
+        document.getElementById("detailDescription").textContent = `${app.certificateType.toUpperCase()} Certificate - Duration: ${app.duration} ${app.durationUnit}`;
+        
+      } else if (app.status === "PENDING") {
+        document.getElementById("result").innerHTML = `
+          <div style="color: #d97706; padding: 15px; background: #fffbeb; border-radius: 8px; margin-top: 20px;">
+            <strong style="font-size: 18px;">⏳ Certificate Pending Verification</strong>
+            <p style="margin: 10px 0 0 0;">Your certificate is under review. You'll receive an email when verified.</p>
+          </div>
+        `;
+        document.getElementById("result").style.display = "block";
+        
+        document.getElementById("certificateDetails").style.display = "block";
+        document.getElementById("detailCertificateId").textContent = app.appId;
+        document.getElementById("detailInternName").textContent = app.fullName;
+        document.getElementById("detailIssueDate").textContent = new Date(app.createdAt).toLocaleDateString();
+        document.getElementById("detailDescription").textContent = "Certificate is pending verification";
+        
+      } else {
+        document.getElementById("result").innerHTML = `
+          <div style="color: #dc2626; padding: 15px; background: #fef2f2; border-radius: 8px; margin-top: 20px;">
+            <strong style="font-size: 18px;">❌ Certificate Rejected</strong>
+            <p style="margin: 10px 0 0 0;">This certificate application has been rejected. Please contact support.</p>
+          </div>
+        `;
+        document.getElementById("result").style.display = "block";
+      }
+    } else {
+      document.getElementById("result").innerHTML = `
+        <div style="color: #dc2626; padding: 15px; background: #fef2f2; border-radius: 8px; margin-top: 20px;">
+          <strong style="font-size: 18px;">❌ Invalid Application ID</strong>
+          <p style="margin: 10px 0 0 0;">Please check your Application ID and try again.</p>
+        </div>
+      `;
+      document.getElementById("result").style.display = "block";
+    }
+  } catch (error) {
+    console.error("Verification error:", error);
+    document.getElementById("result").innerHTML = `
+      <div style="color: #dc2626; padding: 15px; background: #fef2f2; border-radius: 8px; margin-top: 20px;">
+        <strong style="font-size: 18px;">⚠️ Error Verifying Certificate</strong>
+        <p style="margin: 10px 0 0 0;">Please try again or contact support if the problem persists.</p>
+      </div>
+    `;
+    document.getElementById("result").style.display = "block";
+  }
+}
+
+// Function to verify old certificates (existing system)
+async function verifyOldCertificate(appId) {
   try {
     const response = await fetch(`/api/verify/${appId}`);
     const data = await response.json();
@@ -253,6 +346,14 @@ async function verify() {
     alert("Error verifying certificate. Please try again.");
   }
 }
+
+// Enter key support
+document.getElementById("appIdInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    verify();
+  }
+});
 </script>
 </body>
 
