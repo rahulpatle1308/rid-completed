@@ -1236,6 +1236,7 @@
       height: 70px;
       margin-bottom: 10px;
       width: 260px;
+      background-color: #ffffff;
     }
 
     .footer-logo p {
@@ -2336,7 +2337,7 @@
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  animation: marqueeScroll 18s linear infinite;
+  animation: marqueeScroll 30s linear infinite;
   padding-left: 100%;
   padding-right: 120px; /* 🔥 LIVE badge safe space */
 }
@@ -2490,6 +2491,7 @@ footer {
     max-width: 100%;
     width: 100%;
     justify-content: center;
+    margin-top: 10px;
   }
 }
 

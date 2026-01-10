@@ -421,7 +421,7 @@ async function generateCompletionCertificatePDF(app, filePath) {
       doc.fillColor(secondaryColor).fontSize(10)
         .text('Registration Number: 048884', safeLeft, 60);
 
-      doc.text('Website: www.ridbharat.com', 0, 60, { align: 'right' });
+      doc.text('Website: www.ridtech.in', 0, 60, { align: 'right' });
 
       doc.fillColor(accentColor).fontSize(22).font('Helvetica-Bold')
         .text('Research, Innovation & Discovery Bharat', 0, 90, { align: 'center' });
@@ -595,8 +595,6 @@ async function generateCompletionCertificatePDF(app, filePath) {
     }
   });
 }
-
-
 
 
 // Generate Experience Letter PDF - User entered duration as is

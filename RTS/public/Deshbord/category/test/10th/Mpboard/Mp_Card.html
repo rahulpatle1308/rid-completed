@@ -254,7 +254,6 @@
       // Optional: Prevent scrolling when sidebar is open
       document.body.classList.toggle('no-scroll');
     }
-
     // Close sidebar when clicking on a link (for mobile)
     document.querySelectorAll('.menu a').forEach(link => {
       link.addEventListener('click', function () {
@@ -264,7 +263,6 @@
         }
       });
     });
-
     // Close sidebar when clicking outside (for mobile)
     document.addEventListener('click', function (event) {
       const sidebar = document.querySelector('.sidebar');
