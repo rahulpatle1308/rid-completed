@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
 </head>
 <body>
+
+    <!-- LIVE CANDIDATES BADGE -->
+    <div class="online-users"
+         style="position:fixed;
+                top:45px;
+                left:35%;
+                font-weight:bold;
+                color:green;
+                z-index:9999;">
+        👥 Live Candidates: <span id="onlineUsersCount">0</span>
+    </div>
+
     <div class="main-container">
         <div class="quiz-container">
             <div class="question-header">
@@ -15,7 +27,7 @@
             </div>
             <select id="languageSelect" onchange="changeLanguage()" class="language-select">
                 <option value="en">English</option>
-                   <option value="hi">Hindi</option>
+                <option value="hi">Hindi</option>
             </select>
             <p id="questionCounter"></p>
             <div id="question"></div>
@@ -25,8 +37,10 @@
                 <button class="btn" onclick="prevQuestion()">Previous</button>
                 <button class="btn btn-next" onclick="nextQuestion()">Next</button>
             </div>
+
             <button class="btn btn-service" onclick="backToTestService()">Back to Test Service</button>
         </div>
+
         <div class="sidebar">
             <div class="sidebar-content">
                 <div class="status-indicator">
@@ -41,16 +55,22 @@
         </div>
     </div>
 
-        <script>
-    
-      
+    <script>
         function backToTestService() {
             alert('Redirecting to Test Service...');
-            // In a real implementation, this would redirect to the test service page
             window.location.href = '/RTS/public/Deshbord/category/test/technical&coding/jsQ/parches.html';
         }
-      
     </script>
+
+    <!-- SOCKET.IO FOR LIVE CANDIDATES -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io("http://localhost:9191");
+        socket.on("onlineUsers", (count) => {
+            document.getElementById("onlineUsersCount").innerText = count;
+        });
+    </script>
+
     <script src="/RTS/public/Deshbord/category/test/technical&coding/jsQ/jsQ26.js"></script>
 </body>
 </html>

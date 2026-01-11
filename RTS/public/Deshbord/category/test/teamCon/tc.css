@@ -29,18 +29,17 @@ body {
 .content p {
   margin-bottom: 12px;
 }
-
 .content strong {
-  display: block;
+  /* display: block; */
   margin-top: 15px;
   color: #1d4e89;
   font-weight: 500;
 }
 
 /* Ordered List */
-ol {
+/* ol {
   padding-left: 20px;
-}
+} */
 
 ol li {
   margin-bottom: 10px;
@@ -49,10 +48,11 @@ ol li {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .container {
     margin: 100px 20px;
     padding: 20px;
+    width: 150px;
   }
 
   .page-title {
