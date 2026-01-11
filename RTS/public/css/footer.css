@@ -360,3 +360,43 @@
         gap: 40px;
       }
     }
+    @media (max-width: 992px) {
+
+  /* ===== HIDE BANNER ON MOBILE ===== */
+  .banner,
+  .banner-main,
+  .banner-container,
+  .banner-slider,
+  .hero-banner {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  /* Search bar fixed/sticky under menu */
+  .mobile-search-container {
+    position: fixed;  /* ya sticky */
+    top: 120px;       /* menu ke just niche */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1000;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  /* Cards container ko search bar ke niche push karo */
+  main {
+    margin-top: 110px;  /* 👈 search bar height + thoda gap */
+  }
+
+}

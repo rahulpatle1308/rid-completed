@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js TEST</title>
-   <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
+    <title>Node.js TEST 19</title>
+    <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
 </head>
 <body>
+
+    <!-- LIVE CANDIDATES BADGE -->
+    <div class="online-users"
+         style="position:fixed;
+                top:45px;
+                left:35%;
+                font-weight:bold;
+                color:green;
+                z-index:9999;">
+        👥 Live Candidates: <span id="onlineUsersCount">0</span>
+    </div>
+
     <div class="main-container">
         <div class="quiz-container">
             <div class="question-header">
-                <h2> Test 19</h2>
+                <h2>Test 19</h2>
                 <div class="timer"> <span id="timer"></span> </div>
             </div>
             <select id="languageSelect" onchange="changeLanguage()" class="language-select">
                 <option value="en">English</option>
-                <option value="hi"> Hindi</option>
+                <option value="hi">Hindi</option>
             </select>
             <p id="questionCounter"></p>
             <div id="question"></div>
@@ -41,16 +53,24 @@
             </div>
         </div>
     </div>
-    
+
     <script>
-      
         function backToTestService() {
             alert('Redirecting to Test Service...');
-            // In a real implementation, this would redirect to the test service page
             window.location.href = '/RTS/public/Deshbord/category/test/technical&coding/node.js/parches.html';
         }
-      
     </script>
- <script src="/RTS/public/Deshbord/category/test/technical&coding/node.js/nodeQ18.js"></script>
+
+    <!-- SOCKET.IO FOR LIVE CANDIDATES -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io("http://localhost:9191");
+        socket.on("onlineUsers", (count) => {
+            document.getElementById("onlineUsersCount").innerText = count;
+        });
+    </script>
+
+    <!-- Test-specific JS file -->
+    <script src="/RTS/public/Deshbord/category/test/technical&coding/node.js/nodeQ18.js"></script>
 </body>
 </html>

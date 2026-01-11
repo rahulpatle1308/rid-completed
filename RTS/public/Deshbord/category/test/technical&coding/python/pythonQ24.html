@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>python  TEST</title>
+    <title>Python Test 24</title>
     <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
 </head>
 <body>
+
+    <!-- LIVE CANDIDATES BADGE -->
+    <div class="online-users" style="position:fixed; top:45px; left:35%; font-weight:bold; color:green; z-index:9999;">
+        👥 Live Candidates: <span id="onlineUsersCount">0</span>
+    </div>
+
     <div class="main-container">
         <div class="quiz-container">
             <div class="question-header">
-                <h2>python  3</h2>
+                <h2>Python Test 24</h2>
                 <div class="timer"> <span id="timer"></span> </div>
             </div>
+
             <select id="languageSelect" onchange="changeLanguage()" class="language-select">
                 <option value="en">English</option>
                 <option value="hi">हिंदी</option>
             </select>
+
             <p id="questionCounter"></p>
             <div id="question"></div>
             <ul class="options" id="options"></ul>
@@ -27,6 +35,7 @@
             </div>
             <button class="btn btn-service" onclick="backToTestService()">Back to Test Service</button>
         </div>
+
         <div class="sidebar">
             <div class="sidebar-content">
                 <div class="status-indicator">
@@ -40,15 +49,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Back to Test Service Script -->
     <script>
-      
         function backToTestService() {
             alert('Redirecting to Test Service...');
-            // In a real implementation, this would redirect to the test service page
             window.location.href = '/RTS/public/Deshbord/category/test/technical&coding/python/parches.html';
         }
-      
     </script>
+
+    <!-- SOCKET.IO FOR LIVE CANDIDATES -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io("http://localhost:9191");
+        socket.on("onlineUsers", (count) => {
+            document.getElementById("onlineUsersCount").innerText = count;
+        });
+    </script>
+
+    <!-- Quiz Questions JS -->
     <script src="/RTS/public/Deshbord/category/test/technical&coding/python/pythonQ24.js"></script>
+
 </body>
 </html>

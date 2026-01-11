@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TEST</title>
-   <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
+    <link rel="stylesheet" href="/RTS/public/css/jee/jee.css">
 </head>
 <body>
+
+    <!-- LIVE CANDIDATES -->
+    <div class="online-users"
+         style="position:fixed;
+                 top:45px;
+                left:35%;
+                font-weight:bold;
+                color:green;
+                z-index:9999;
+                background: rgba(255,255,255,0.85);
+                padding:5px 12px;
+                border-radius:8px;
+                box-shadow: 0 0 5px rgba(0,0,0,0.2);">
+        👥 Live Candidates: <span id="onlineUsersCount">0</span>
+    </div>
+
     <div class="main-container">
         <div class="quiz-container">
             <div class="question-header">
@@ -42,14 +58,22 @@
     </div>
     
     <script>
-      
         function backToTestService() {
             alert('Redirecting to Test Service...');
-            // In a real implementation, this would redirect to the test service page
             window.location.href = '/RTS/public/Deshbord/category/test/technical&coding/css/parches.html';
         }
-      
     </script>
-<script src="/RTS/public/Deshbord/category/test/technical&coding/css/cssQ28.js"></script>
+
+    <!-- SOCKET.IO -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io("http://localhost:9191");
+
+        socket.on("onlineUsers", (count) => {
+            document.getElementById("onlineUsersCount").innerText = count;
+        });
+    </script>
+
+    <script src="/RTS/public/Deshbord/category/test/technical&coding/css/cssQ28.js"></script>
 </body>
 </html>
