@@ -393,8 +393,26 @@ const forgotPasswordRoutes = require("./RTS/routes/forgotPasswordRoutes.js");
 app.use("/api", signupRoutes);
 app.use("/api", loginRoutes);
 app.use("/api", forgotPasswordRoutes);
+
+//=============test routers
 const teacherRoutes = require("./routes/teacherRoutes");
 app.use("/", teacherRoutes);
+const studentRoutes = require("./routes/studentRoutes");
+app.use("/", studentRoutes);
+// student ranks system ==============
+const authenticateJWT = require("./middleware/authMiddleware");
+const teacherAnalyticsRoutes = require("./routes/teacherAnalytics");
+
+// 🔥 AUTH REQUIRED FOR ANALYTICS
+app.use(
+  "/api/teacher/analytics",
+  authenticateJWT,
+  teacherAnalyticsRoutes
+);
+
+// pdf downloads 
+const teacherAnalyticsRoutess = require("./routes/teacherAnalyticsRoutes");
+app.use(teacherAnalyticsRoutess);
 
 
 

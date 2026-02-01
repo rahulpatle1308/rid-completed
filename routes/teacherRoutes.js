@@ -9,9 +9,13 @@ const Message = require("../models/Message");
 const sendMail = require("../utils/sendMail");
 const Test = require("../models/Test");       // ✅ ALSO ADD
 const Question = require("../models/Question"); // ✅ ALSO ADD
+const ClassModel = require("../models/Class");
+
 
 // ================= DASHBOARD =================
-router.get("/teacher-dashboard", async (req, res) => {
+
+router.get("/teacher-dashboard", ensureTeacher, async (req, res) => {
+
   try {
     const token = req.cookies.token;
     if (!token) return res.redirect("/login");
@@ -80,15 +84,20 @@ router.delete("/teacher/delete-student/:id", async (req, res) => {
 // ================= UPDATE STUDENT =================
 router.put("/teacher/update-student/:id", async (req, res) => {
   try {
-    const token = req.cookies.token;
-    jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
 
-    await Student.findByIdAndUpdate(req.params.id, req.body);
-    res.json({ success: true });
+    const updated = await Student.findOneAndUpdate(
+      { _id: req.params.id, teacherId: decoded.userId },
+      req.body
+    );
+
+    if(!updated) return res.json({ success:false });
+
+    res.json({ success:true });
 
   } catch (err) {
     console.log("Update Student Error:", err);
-    res.json({ success: false });
+    res.json({ success:false });
   }
 });
 
@@ -148,17 +157,17 @@ router.get("/teacher/messages/:studentId", async (req, res) => {
 
 // ===== GET CONVERSATION LIST =====
 // ===== GET Conversation List =====
-router.get("/teacher/conversations", async (req,res)=>{
-  try{
+router.get("/teacher/conversations", async (req, res) => {
+  try {
     const token = req.cookies.token;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // last message per student
     const conversations = await Message.aggregate([
-      { $match: { teacherId: new mongoose.Types.ObjectId(decoded.userId) }},
-      { $sort: { createdAt: -1 }},
+      { $match: { teacherId: new mongoose.Types.ObjectId(decoded.userId) } },
+      { $sort: { createdAt: -1 } },
       {
-        $group:{
+        $group: {
           _id: "$studentId",
           lastMessage: { $first: "$text" },
           lastTime: { $first: "$createdAt" }
@@ -167,14 +176,14 @@ router.get("/teacher/conversations", async (req,res)=>{
     ]);
 
     // attach student info
-    const populated = await Student.populate(conversations,{
-      path:"_id",
-      select:"name"
+    const populated = await Student.populate(conversations, {
+      path: "_id",
+      select: "name"
     });
 
     res.json(populated);
-  }catch(err){
-    console.log("Conversation Load Error:",err);
+  } catch (err) {
+    console.log("Conversation Load Error:", err);
     res.json([]);
   }
 });
@@ -183,51 +192,271 @@ router.get("/teacher/conversations", async (req,res)=>{
 // Send Test Logic
 // Send Test Page Route
 // ================= SEND TEST PAGE =================
-router.get("/teacher/send-test-page/:testId", async (req,res)=>{
-   try {
-      const test = await Test.findById(req.params.testId);
-      if (!test) return res.send("Test Not Found");
-      res.render("tracher_deshboard/sendTest", { test });
-   } catch(err){
-      console.log(err);
-      res.send("Server Error");
-   }
+router.get("/teacher/send-test-link/:testId", ensureTeacher, async (req, res) => {
+  const test = await Test.findById(req.params.testId);
+  const publicLink = `${req.protocol}://${req.get("host")}/student/start-test/${test._id}`;
+  res.json({ success:true, link: publicLink });
 });
 
+// ================= SEND TEST PAGE =================
+router.get("/teacher/send-test-page/:testId", ensureTeacher, async (req,res)=>{
+  const test = await Test.findById(req.params.testId);
+  if(!test) return res.send("Test Not Found");
 
+  // ✅ Correct public link
+  const publicLink = `${req.protocol}://${req.get("host")}/student/start-test/${test._id}`;
 
-router.get("/teacher/my-tests", ensureTeacher, async (req,res)=>{
-  const tests = await Test.find({ teacherId: req.user._id });
-  res.json(tests);
+  res.render("tracher_deshboard/sendTestPage", {
+     test,
+     publicLink
+  });
 });
-// ================= CREATE TEST =================
-router.post("/teacher/create-test", ensureTeacher, async (req,res)=>{
+router.get("/teacher/my-tests", ensureTeacher, async (req, res) => {
   try {
-    const test = await Test.create({
-      teacherId: req.user._id,
-      title: req.body.title,
-      subject: req.body.subject,
-      className: req.body.className,
-      duration: req.body.duration,
-      totalMarks: req.body.totalMarks,
-      instructions: req.body.instructions
+    const tests = await Test.find({
+      $or: [
+        { teacherId: req.user._id },
+        { teacherId: { $exists: false } } // fallback for old tests
+      ]
+    }).sort({ createdAt: -1 });
+
+    const fullTests = await Promise.all(
+      tests.map(async (test) => {
+        const questions = await Question.find({ testId: test._id });
+        const attemptCount = await require("../models/TestAttempt")
+          .countDocuments({ testId: test._id });
+
+        return {
+          ...test.toObject(),
+          questions,
+          submissions: attemptCount,
+          startDate: test.startDate,
+          endDate: test.endDate
+        };
+      })
+    );
+
+    res.json(fullTests);
+
+  } catch (err) {
+    console.log("Load Tests Error:", err);
+    res.json([]);
+  }
+});
+
+router.get("/teacher/fix-test/:testId", async (req,res)=>{
+  const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+
+  await Test.findByIdAndUpdate(req.params.testId, {
+    teacherId: decoded.userId
+  });
+
+  res.send("Test fixed successfully");
+});
+
+// ================= CREATE TEST =================
+router.post("/teacher/create-test", ensureTeacher, async (req, res) => {
+  try {
+    const { title, subject, className, duration, totalMarks, instructions, startDate, endDate, questions } = req.body;
+
+
+    // 1️⃣ Save Test
+    const newTest = new Test({
+  title,
+  subject,
+  className,
+  duration,
+  totalMarks,
+  instructions,
+  startDate,
+  endDate,
+  teacherId: req.user._id   // ✅ यही MAIN FIX था
+});
+
+
+
+    await newTest.save();
+
+    // 2️⃣ Save all Questions
+    const questionDocs = questions.map(q => ({
+      testId: newTest._id,
+      type: q.type,
+      text: q.text,
+      options: q.options || [],
+      correctAnswer: q.correctAnswer || 0,
+      points: q.points || 1
+    }));
+
+    await Question.insertMany(questionDocs);
+
+    res.json({ success: true });
+
+  } catch (err) {
+    console.log("Create Test Error:", err);
+    res.json({ success: false });
+  }
+});
+
+
+// ================= VIEW TEST (Teacher Preview) =================
+router.get("/teacher/view-test/:testId", ensureTeacher, async (req, res) => {
+  try {
+    const test = await Test.findById(req.params.testId);
+    if (!test) return res.send("Test Not Found");
+
+    // Load questions from Question collection
+    const dbQuestions = await Question.find({ testId: test._id });
+    console.log("Received Questions From DB:", dbQuestions.length);
+
+    // Format questions for student test page
+    const formattedQuestions = dbQuestions.map((q, index) => ({
+      num: index + 1,
+      question_en: q.text,
+      question_hi: q.text,
+      options_en: q.options,
+      options_hi: q.options,
+      answer_en: q.options[q.correctAnswer],
+      answer_hi: q.options[q.correctAnswer],
+      points: q.points || 1,     // ✅ MARKS FIELD ADDED
+      attempted: false,
+      selected: ""
+    }));
+
+    // Render test page with formatted questions
+res.render("tracher_deshboard/viewtext", {
+  testTitle: test.title,
+  questions: formattedQuestions,
+  duration: test.duration,
+  testId: test._id,
+  sid: ""   // teacher preview → no student id
+});
+
+  } catch (err) {
+    console.log("View Test Error:", err);
+    res.send("Error loading test");
+  }
+});
+
+// ================= DELETE TEST =================
+router.delete("/teacher/delete-test/:testId", ensureTeacher, async (req, res) => {
+  try {
+    const testId = req.params.testId;
+
+    // Delete questions first
+    await Question.deleteMany({ testId });
+
+    // Delete test
+    await Test.findByIdAndDelete(testId);
+
+    res.json({ success: true });
+  } catch (err) {
+    console.log("Delete Test Error:", err);
+    res.json({ success: false });
+  }
+});
+
+// ================= UPDATE TEST =================
+router.put("/teacher/update-test/:testId", ensureTeacher, async (req, res) => {
+  try {
+    const { title, subject, className, duration, totalMarks, instructions, startDate, endDate, questions } = req.body;
+
+
+    // Update Test basic info
+    await Test.findByIdAndUpdate(req.params.testId, {
+      title, subject, className, duration, totalMarks, instructions,
+      startDate,   // ✅ ADD
+      endDate      // ✅ ADD
     });
 
-    for (let q of req.body.questions) {
-      await Question.create({
-        testId: test._id,
-        type: q.type,
-        text: q.text,
-        options: q.options,
-        correctAnswer: q.correctAnswer,
-        points: q.points
-      });
-    }
 
+    // Remove old questions
+    await Question.deleteMany({ testId: req.params.testId });
+
+    // Insert new questions
+    const questionDocs = questions.map(q => ({
+      testId: req.params.testId,
+      type: q.type,
+      text: q.text,
+      options: q.options || [],
+      correctAnswer: q.correctAnswer || 0,
+      points: q.points || 1
+    }));
+
+    await Question.insertMany(questionDocs);
+
+    res.json({ success: true });
+  } catch (err) {
+    console.log("Update Test Error:", err);
+    res.json({ success: false });
+  }
+});
+
+// create class routes 
+router.post("/teacher/create-class", ensureTeacher, async (req,res)=>{
+  try{
+    console.log("Logged Teacher:", req.user._id); // 👈 test log
+
+    const newClass = new ClassModel({
+      teacherId: req.user._id,   // ✅ now always defined
+      name: req.body.name
+    });
+
+    await newClass.save();
     res.json({success:true});
-  } catch(err){
-    console.log("Create Test Error:",err);
+
+  }catch(err){
+    console.log("Create Class Error:", err);
     res.json({success:false});
+  }
+});
+router.get("/teacher/classes", ensureTeacher, async (req,res)=>{
+  try {
+    const classes = await ClassModel.find({ teacherId: req.user._id });
+    res.json(classes);
+  } catch(err){
+    res.json([]);
+  }
+});
+
+router.get("/teacher/analytics", ensureTeacher, (req, res) => {
+  res.render("tracher_deshboard/analytics", {
+    teacher: req.user   // optional but useful
+  });
+});
+// ================= UPDATE CLASS =================
+router.put("/teacher/update-class/:id", ensureTeacher, async (req, res) => {
+  try {
+    const updated = await ClassModel.findOneAndUpdate(
+      {
+        _id: req.params.id,
+        teacherId: req.user._id
+      },
+      { name: req.body.name },
+      { new: true }
+    );
+
+    if (!updated) return res.json({ success: false });
+
+    res.json({ success: true });
+  } catch (err) {
+    console.log("Update Class Error:", err);
+    res.json({ success: false });
+  }
+});
+// ================= DELETE CLASS =================
+router.delete("/teacher/delete-class/:id", ensureTeacher, async (req, res) => {
+  try {
+    const deleted = await ClassModel.findOneAndDelete({
+      _id: req.params.id,
+      teacherId: req.user._id
+    });
+
+    if (!deleted) return res.json({ success: false });
+
+    res.json({ success: true });
+  } catch (err) {
+    console.log("Delete Class Error:", err);
+    res.json({ success: false });
   }
 });
 

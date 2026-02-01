@@ -9,7 +9,12 @@ const authenticateJWT = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET); // Decode token
-    req.user = decoded; // Attach decoded user information to the request
+req.user = {
+  _id: decoded.userId,
+  userId: decoded.userId,   // 🔥 ADD THIS LINE
+  role: decoded.role
+};
+
     next(); // Proceed to the next middleware or route handler
   } catch (error) {
     return res.status(403).json({ message: "Forbidden: Invalid token" });

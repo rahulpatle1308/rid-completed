@@ -20,4 +20,5 @@ const studentSchema = new mongoose.Schema({
   parentContact: String
 });
 
+
 module.exports = mongoose.model("Student", studentSchema);

@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Send Test</title>
+  <title>Send Test Link</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
-<h2>Select Students to Send Test</h2>
 
-<form id="sendTestForm">
- <input type="hidden" id="testId" value="<%= testId %>">
+<h2>Test: <%= testTitle %></h2>
 
- <% students.forEach(st=>{ %>
-   <div>
-     <input type="checkbox" value="<%= st._id %>" class="studentCheck">
-     <%= st.name %> ( <%= st.class %> )
-   </div>
- <% }) %>
 
- <button type="submit">Send Test</button>
-</form>
+<canvas id="qrCanvas"></canvas>
+
+<p>Test Link:</p>
+<input id="testLink" value="<%= publicLink %>" readonly style="width:60%">
+
+<button onclick="copyLink()">Copy Link</button>
 
 <script>
-document.getElementById("sendTestForm").addEventListener("submit", async(e)=>{
- e.preventDefault();
+   QRCode.toCanvas(document.getElementById("qrCanvas"), 
+      "<%= publicLink %>", { width:200 });
 
- const testId = document.getElementById("testId").value;
- const studentIds = [];
-
- document.querySelectorAll(".studentCheck:checked").forEach(ch=>{
-   studentIds.push(ch.value);
- });
-
- const res = await fetch("/teacher/send-test",{
-   method:"POST",
-   headers:{"Content-Type":"application/json"},
-   body: JSON.stringify({testId, studentIds})
- });
-
- const result = await res.json();
- if(result.success) alert("Test Sent Successfully!");
-});
+   function copyLink(){
+     const input = document.getElementById("testLink");
+     input.select();
+     document.execCommand("copy");
+     alert("Link Copied");
+   }
 </script>
 
 </body>
