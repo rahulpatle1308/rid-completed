@@ -16,43 +16,64 @@ exports.login = async (req, res) => {
   try {
     // 🔹 Check in all collections
     let user = await User.findOne({ email });
-    if (!user) user = await require("../models/Teacher").findOne({ email });
-    if (!user) user = await require("../models/Organisation").findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      const Teacher = require("../models/Teacher");
+      user = await Teacher.findOne({ email });
+    }
+
+    if (!user) {
+      const Organisation = require("../models/Organisation");
+      user = await Organisation.findOne({ email });
+    }
+
+    // 🔹 User not found
+    if (!user) {
+      return res.send("Invalid email or password");
     }
 
     // 🔹 Compare password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      return res.send("Invalid email or password");
     }
 
-    // 🔹 Token
+    // 🔹 Generate token
     const token = jwt.sign(
       { userId: user._id, role: user.role },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET || "secret123",
       { expiresIn: "1h" }
     );
 
+    // 🔹 Set cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false, // local development
       maxAge: 3600000,
     });
 
-    // 🔹 Redirect
-    if (user.role === "student") return res.redirect("/student-dashboard");
-    if (user.role === "teacher") return res.redirect("/teacher-dashboard");
-    if (user.role === "organisation") return res.redirect("/organisation-dashboard");
-    if (user.role === "admin") return res.redirect("/admin");
+    // 🔹 Role-based redirect
+    if (user.role === "student") {
+      return res.redirect("/student-dashboard");
+    }
 
-    return res.status(400).json({ message: "Invalid role" });
+    if (user.role === "teacher") {
+      return res.redirect("/teacher-dashboard");
+    }
+
+    if (user.role === "organisation") {
+      return res.redirect("/organisation-dashboard");
+    }
+
+    if (user.role === "admin") {
+      return res.redirect("/admin");
+    }
+
+    return res.send("Invalid role");
 
   } catch (error) {
     console.error("Login error:", error);
-    res.status(500).json({ message: "Server error" });
+    res.status(500).send("Server error");
   }
 };
 

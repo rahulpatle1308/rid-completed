@@ -152,7 +152,7 @@ function submitQuiz() {
         localStorage.setItem("score", score);
 
         window.location.href =
-          "/RTS/public/Deshbord/category/test/submit-test.html";
+          "/RTS/public/Deshbord/category/test/submit-student-test.html";
     })
     .catch(err => {
         console.error("Submit Error:", err);

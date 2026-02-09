@@ -418,6 +418,9 @@ app.use(
 const teacherAnalyticsRoutess = require("./routes/teacherAnalyticsRoutes");
 app.use(teacherAnalyticsRoutess);
 
+app.get("/ebook", (req, res) => {
+  res.render("ebook/dashboard");
+});
 
 
 // ======= MAIN ROUTES (404 is inside this) =======

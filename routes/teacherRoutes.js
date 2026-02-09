@@ -465,6 +465,31 @@ router.delete("/teacher/delete-class/:id", ensureTeacher, async (req, res) => {
     res.json({ success: false });
   }
 });
+//upload profile
+// router.post(
+//   "/upload-profile",
+//   upload.single("profileImage"),
+//   async (req, res) => {
+//     try {
+//       const teacherId = req.user.id; // ya session id
 
+//       const teacher = await Teacher.findById(teacherId);
+//       teacher.profileImage = "/uploads/profile/" + req.file.filename;
+
+//       await teacher.save();
+
+//       res.json({
+//         success: true,
+//         image: teacher.profileImage
+//       });
+//     } catch (err) {
+//       console.log(err);
+//       res.json({ success: false });
+//     }
+//   }
+// );
+router.get("/advance-version", (req, res) => {
+  res.render("tracher_deshboard/advance-version/teacher-test-version");
+});
 
 module.exports = router;

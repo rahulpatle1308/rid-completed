@@ -7,57 +7,46 @@ const Organisation = require("../models/Organisation");
 exports.registerUser = async (req, res) => {
   try {
     const {
-      username,
-      lastname,
+      name,
       email,
       password,
       phone,
-      dob,
-      gender,
-      role
+      role,
+      organisationType
     } = req.body;
 
     let Model;
 
-    // 🔹 ROLE BASED MODEL
     if (role === "student") Model = User;
     else if (role === "teacher") Model = Teacher;
     else if (role === "organisation") Model = Organisation;
-    else return res.status(400).send("Invalid role");
+    else return res.status(400).json({ success: false, message: "Invalid role" });
 
-    // 🔹 Email duplicate check (role wise)
     const existingUser = await Model.findOne({ email });
     if (existingUser) {
-      return res.send("Email already exists");
+      return res.json({ success: false, message: "Email already exists" });
     }
 
-    // 🔹 Password hash
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // 🔹 Common data
     const data = {
-      name: username,
+      name,
       email,
       password: hashedPassword,
       phone,
       role,
     };
 
-    // 🔹 Student / Teacher extra fields
-    if (role !== "organisation") {
-      data.lastname = lastname;
-      data.dob = dob;
-      data.gender = gender;
+    if (role === "organisation") {
+      data.organisationType = organisationType;
     }
 
-    // 🔹 Save to correct collection
     await Model.create(data);
 
-    // ✅ SIGNUP SUCCESS → LOGIN PAGE
-    return res.redirect("/login");
+    return res.json({ success: true, message: "Registration successful" });
 
   } catch (error) {
     console.error("Registration error:", error);
-    res.status(500).send("Registration failed");
+    res.status(500).json({ success: false, message: "Server error" });
   }
 };
