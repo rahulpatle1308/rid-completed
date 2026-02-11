@@ -488,8 +488,23 @@ router.delete("/teacher/delete-class/:id", ensureTeacher, async (req, res) => {
 //     }
 //   }
 // );
-router.get("/advance-version", (req, res) => {
-  res.render("tracher_deshboard/advance-version/teacher-test-version");
+router.get("/advance-version", ensureTeacher, async (req, res) => {
+  try {
+    const token = req.cookies.token;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const teacher = await Teacher.findById(decoded.userId);
+    if (!teacher) return res.redirect("/login");
+
+    res.render("tracher_deshboard/advance-version/teacher-test-version", {
+      teacher
+    });
+
+  } catch (err) {
+    console.log("Advance Dashboard Error:", err);
+    res.redirect("/login");
+  }
 });
+
 
 module.exports = router;

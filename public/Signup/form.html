@@ -234,12 +234,19 @@ function selectOrg(el) {
 
 /* VALIDATION */
 function validateForm() {
-  const filled =
-    fullName.value.trim() &&
-    email.value.trim() &&
-    mobile.value.length === 10 &&
-    password.value.length >= 6;
+  const nameValid = fullName.value.trim().length > 0;
 
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+    email.value.trim()
+  );
+
+  const mobileValid = /^\d{10}$/.test(mobile.value);
+
+  const passwordValid = password.value.length >= 6;
+
+  const filled = nameValid && emailValid && mobileValid && passwordValid;
+
+  // Organisation type check
   if (role.value === "organisation" && !isOrgSelected) {
     submitBtn.disabled = true;
     return;
@@ -248,15 +255,18 @@ function validateForm() {
   submitBtn.disabled = !filled;
 }
 
+
 /* SUBMIT */
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  // Organisation validation
   if (role.value === "organisation" && !isOrgSelected) {
     orgValidation.style.display = "block";
     return;
   }
 
+  // Hidden field set
   document.getElementById("organisationType").value = selectedOrgType;
 
   const formData = new FormData(form);
@@ -270,10 +280,10 @@ form.addEventListener("submit", async (e) => {
     const result = await res.json();
     alert(result.message);
 
+    // Success redirect
     if (result.success) {
-  window.location.href = "/Login/login.html";
-}
-
+      window.location.href = "/Login/login.html";
+    }
 
   } catch (err) {
     alert("Server error");
@@ -286,9 +296,6 @@ document.querySelectorAll("input").forEach(i =>
   i.addEventListener("input", validateForm)
 );
 
-if (result.success) {
-  window.location.href = "/Login/login.html";
-}
 function goToLogin(){
   window.location.href = "/Login/login.html";
 

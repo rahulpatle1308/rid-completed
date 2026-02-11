@@ -6,7 +6,7 @@ const Organisation = require("../models/Organisation");
 
 exports.registerUser = async (req, res) => {
   try {
-    const {
+    let {
       name,
       email,
       password,
@@ -14,6 +14,9 @@ exports.registerUser = async (req, res) => {
       role,
       organisationType
     } = req.body;
+
+    // ✅ email normalize
+    email = email.toLowerCase().trim();
 
     let Model;
 

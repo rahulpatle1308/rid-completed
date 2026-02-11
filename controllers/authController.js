@@ -11,7 +11,9 @@ const { sendEmail } = require("../utils/sendEmail");
 
 // authController.js
 exports.login = async (req, res) => {
-  const { email, password } = req.body;
+  let { email, password } = req.body;
+  email = email.toLowerCase().trim();
+
 
   try {
     // 🔹 Check in all collections
@@ -62,8 +64,21 @@ exports.login = async (req, res) => {
     }
 
     if (user.role === "organisation") {
+      if (user.organisationType === "Library") {
+        return res.redirect("/library-dashboard");
+      }
+
+      if (user.organisationType === "DCA") {
+        return res.redirect("/dca-dashboard");
+      }
+
+      if (user.organisationType === "Coaching Centre") {
+        return res.redirect("/coaching-dashboard");
+      }
+
       return res.redirect("/organisation-dashboard");
     }
+
 
     if (user.role === "admin") {
       return res.redirect("/admin");
@@ -129,15 +144,28 @@ exports.resetPassword = async (req, res) => {
   const isValidOTP = await validateOTP(email, otp);  // ✅ await added
 
   if (!isValidOTP) {
-    return res.status(400).json({ success:false, message:"Invalid or expired OTP" });
+    return res.status(400).json({ success: false, message: "Invalid or expired OTP" });
   }
 
-  const user = await User.findOne({ email });
-  if (!user) return res.status(404).json({message:"User not found"});
+  let user = await User.findOne({ email });
+
+if (!user) {
+  const Teacher = require("../models/Teacher");
+  user = await Teacher.findOne({ email });
+}
+
+if (!user) {
+  const Organisation = require("../models/Organisation");
+  user = await Organisation.findOne({ email });
+}
+
+if (!user) {
+  return res.status(404).json({ message: "User not found" });
+}
 
   const hashedPassword = await bcrypt.hash(newPassword, 10); // ✅ hash password
   user.password = hashedPassword;
   await user.save();
 
-  res.json({ success:true, message:"Password reset successful" });
+  res.json({ success: true, message: "Password reset successful" });
 };

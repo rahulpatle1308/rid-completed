@@ -423,6 +423,11 @@ app.get("/ebook", (req, res) => {
 });
 
 
+// advance version routes
+const teacherTestApi = require("./routes/teacherTestApi");
+app.use("/api/teacher-tests", teacherTestApi);
+
+
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
 
