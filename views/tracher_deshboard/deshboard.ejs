@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <link rel="stylesheet" href="css\teacherDeshboard.css">
 </head>
-
 <body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -1112,16 +1110,11 @@
 
                 settings: 'Settings'
             };
-
             document.getElementById('pageTitle').textContent = pageTitles[page];
             currentPage = page;
-
             // ✅ MOBILE पर AUTOMATIC SIDEBAR CLOSE
             closeMobileSidebar();
-
-
-
-            // Load analytics test ranking
+             // Load analytics test ranking
             if (page === "analytics") {
                 loadTestRankingCards();
             }
@@ -2569,5 +2562,4 @@
         }
     </script>
 </body>
-
 </html>

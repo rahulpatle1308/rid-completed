@@ -306,7 +306,7 @@ router.get("/teacher/view-test/:testId", ensureTeacher, async (req, res) => {
 
     // Load questions from Question collection
     const dbQuestions = await Question.find({ testId: test._id });
-    console.log("Received Questions From DB:", dbQuestions.length);
+    // console.log("Received Questions From DB:", dbQuestions.length);
 
     // Format questions for student test page
     const formattedQuestions = dbQuestions.map((q, index) => ({
@@ -394,7 +394,7 @@ router.put("/teacher/update-test/:testId", ensureTeacher, async (req, res) => {
 // create class routes 
 router.post("/teacher/create-class", ensureTeacher, async (req,res)=>{
   try{
-    console.log("Logged Teacher:", req.user._id); // 👈 test log
+    // console.log("Logged Teacher:", req.user._id); // 👈 test log
 
     const newClass = new ClassModel({
       teacherId: req.user._id,   // ✅ now always defined

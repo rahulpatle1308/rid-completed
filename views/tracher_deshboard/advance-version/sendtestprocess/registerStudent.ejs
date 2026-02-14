@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creative flux · student registration</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ------- body with dynamic radial gradient (JS controlled) ------- */
+        body {
+            /* base colors & fonts – exactly as requested */
+            font-family: 'Poppins', 'Space Grotesk', sans-serif;
+            color: #e2f3ff;
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 20px 16px;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;   /* keep centering from original */
+
+            /* background variables – will be updated via js */
+            --gradient-x: 30%;
+            --gradient-y: 40%;
+            --deep-color-1: hsl(240, 78%, 8%);    /* #050b1a approx */
+            --deep-color-2: hsl(260, 85%, 3%);    /* #01040a approx */
+            
+            background: radial-gradient(
+                circle at var(--gradient-x) var(--gradient-y),
+                var(--deep-color-1),
+                var(--deep-color-2)
+            );
+            
+            /* smooth transition when mouse moves (optional) */
+            transition: background 0.08s ease-out;
+        }
+
+        /* soft glowing orbs that float – keep but adapt to dark theme */
+        .bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;  /* so mouse reaches the body */
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(180, 210, 255, 0.03);  /* very subtle, like stardust */
+            box-shadow: 0 0 40px rgba(70, 130, 200, 0.1);
+            backdrop-filter: blur(1px);
+        }
+
+        .shape:nth-child(1) {
+            width: 180px;
+            height: 180px;
+            top: 5%;
+            left: 10%;
+            animation: float 32s infinite alternate ease-in-out;
+        }
+
+        .shape:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            top: 70%;
+            left: 70%;
+            animation: float 42s infinite alternate-reverse ease-in-out;
+        }
+
+        .shape:nth-child(3) {
+            width: 130px;
+            height: 130px;
+            top: 20%;
+            left: 80%;
+            animation: float 28s infinite alternate ease-in-out;
+        }
+
+        .shape:nth-child(4) {
+            width: 210px;
+            height: 210px;
+            top: 80%;
+            left: 15%;
+            animation: float 38s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+            100% { transform: translate(80px, -60px) scale(1.2); opacity: 0.5; }
+        }
+
+        /* ---------- MAIN CONTAINER (form area) untouched structure ---------- */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(10, 15, 30, 0.82);  /* deeper, matches cosmic theme */
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(100, 150, 255, 0.2) inset;
+            overflow: hidden;
+            z-index: 2;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0 40px 60px rgba(0,20,60,0.9), 0 0 0 1px rgba(170, 200, 255, 0.3) inset;
+        }
+
+        /* header – keep original gradient but tweak to match dark elegance */
+        .header {
+            background: linear-gradient(145deg, #1c2a5c, #28174d);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.8;
+            max-width: 80%;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .header-icon {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: #b2d9ff;
+            filter: drop-shadow(0 4px 6px #00000060);
+        }
+
+        /* form container */
+        .form-container {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 26px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #d3eaff;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group label i {
+            margin-right: 10px;
+            color: #9bbaff;
+            width: 20px;
+            text-align: center;
+            filter: drop-shadow(0 2px 2px black);
+        }
+
+        /* input fields – structure identical, only colors adapted for dark bg */
+        input {
+            width: 100%;
+            padding: 15px 15px 15px 48px;
+            border: 2px solid #2d3555;
+            border-radius: 18px;
+            font-size: 16px;
+            transition: all 0.25s ease;
+            background-color: #101624;
+            color: #f0f6ff;
+            caret-color: #7f9eff;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #7f9eff;
+            box-shadow: 0 0 0 3px rgba(127, 158, 255, 0.25);
+            background-color: #181f30;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 41px;
+            color: #7f9eff;
+            font-size: 18px;
+            opacity: 0.9;
+            text-shadow: 0 2px 4px black;
+        }
+
+        /* special gmail field */
+        .gmail-field {
+            background-color: #182032;
+            border: 2px dashed #5f7dcd;
+        }
+
+        .gmail-field:focus {
+            border-style: solid;
+            background-color: #1f2a40;
+        }
+
+        /* button – fresh but fits the vibe */
+        .button-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        button {
+            background: linear-gradient(145deg, #2d4a9e, #40287e);
+            color: white;
+            border: none;
+            padding: 16px 44px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 20px -8px #020514, 0 0 0 1px #7f9eff40 inset;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.7px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 22px 28px -12px #000c33, 0 0 0 1px #b0c8ff inset;
+            background: linear-gradient(145deg, #3860c0, #53399b);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover i {
+            transform: translateX(7px);
+        }
+
+        /* animations on form groups (same as original) */
+        .form-group {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .form-group:nth-child(1) { animation-delay: 0.1s; }
+        .form-group:nth-child(2) { animation-delay: 0.2s; }
+        .form-group:nth-child(3) { animation-delay: 0.3s; }
+        .form-group:nth-child(4) { animation-delay: 0.4s; }
+        .form-group:nth-child(5) { animation-delay: 0.5s; }
+        .button-container { animation: fadeIn 0.5s 0.6s forwards; opacity: 0; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ------- responsive (original + fine tuning) ------- */
+        @media (max-width: 768px) {
+            .container { max-width: 90%; }
+            .header { padding: 25px 15px; }
+            .header h2 { font-size: 24px; }
+            .form-container { padding: 25px 20px; }
+            input { padding: 14px 14px 14px 44px; font-size: 15px; }
+            button { padding: 15px 35px; font-size: 17px; width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .container { max-width: 100%; border-radius: 24px; }
+            .header { padding: 20px 15px; }
+            .header h2 { font-size: 22px; }
+            .header p { font-size: 14px; max-width: 95%; }
+            .header-icon { font-size: 44px; }
+            .form-container { padding: 20px 15px; }
+            .form-group { margin-bottom: 20px; }
+            input { padding: 13px 13px 13px 40px; }
+            .input-icon { top: 39px; font-size: 16px; left: 16px; }
+        }
+
+        /* extra creative touch: floating micro-glow */
+        .form-group::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #7f9eff60, transparent);
+            border-radius: 100%;
+            filter: blur(2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- floating background shapes (keep but very subtle) -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- main card - form structure absolutely untouched (same fields, same names) -->
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">
+                <i class="fas fa-user-astronaut"></i>  <!-- little cosmic touch -->
+            </div>
+            <h2>new registration</h2>
+            <p>enter details to launch your test</p>
+        </div>
+
+        <div class="form-container">
+            <!-- exactly the same form, same fields, same EJS placeholders -->
+           <form action="/advance-student/register-and-start" method="POST">
+    <input type="hidden" name="testId" value="<%= testId %>">
+    
+    <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> E-Mail</label>
+        <div class="input-icon"><i class="fas fa-at"></i></div>
+        <input type="email" id="email" name="email" value="<%= email %>" required>
+    </div>
+
+    <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="className"><i class="fas fa-school"></i> Branch / Class</label>
+        <input type="text" id="className" name="className" required>
+    </div>
+
+    <div class="form-group">
+        <label for="roll"><i class="fas fa-id-card"></i> Roll Number</label>
+        <input type="text" id="roll" name="roll" required>
+    </div>
+
+    <div class="form-group">
+        <label for="parentContact"><i class="fas fa-phone-alt"></i> Contact</label>
+        <input type="text" id="parentContact" name="parentContact" required>
+    </div>
+
+    <div class="button-container">
+        <button type="submit">Start Test</button>
+    </div>
+</form>
+
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ---------- DYNAMIC BACKGROUND (JS changing colors & position) ----------
+            const body = document.body;
+
+            // initial colors (deep cosmic)
+            let hue1 = 240;  // deep blue
+            let hue2 = 260;  // deep violet
+            const sat = 78;   // saturation %
+            const light1 = 8;  // lightness %
+            const light2 = 3;
+
+            // variables for mouse tracking
+            let mouseX = 30;   // default %
+            let mouseY = 40;
+
+            // update gradient position on mousemove (respects full viewport)
+            const handleMouseMove = (e) => {
+                // calculate percentage relative to viewport
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                mouseX = Math.min(100, Math.max(0, x));
+                mouseY = Math.min(100, Math.max(0, y));
+                
+                body.style.setProperty('--gradient-x', mouseX + '%');
+                body.style.setProperty('--gradient-y', mouseY + '%');
+            };
+
+            window.addEventListener('mousemove', handleMouseMove);
+
+            // also set default position on resize (optional)
+            window.addEventListener('resize', () => {
+                // keep last mouse position, but if no mouse yet, keep default
+                body.style.setProperty('--gradient-x', mouseX + '%');
+                body.style.setProperty('--gradient-y', mouseY + '%');
+            });
+
+            // time-based color animation: slowly shift hues (very subtle, keeps dark)
+            let time = 0;
+            function animateColors() {
+                time += 0.004;  // gentle drift
+
+                // hue wanders between 235 and 265 (blue-violet range)
+                // use sine for smooth loop
+                const drift1 = Math.sin(time) * 10;      // -10 to +10
+                const drift2 = Math.cos(time * 0.8) * 12; 
+
+                let newHue1 = (240 + drift1 + 360) % 360;
+                let newHue2 = (260 + drift2 + 360) % 360;
+
+                // update css variables with HSL
+                body.style.setProperty('--deep-color-1', `hsl(${newHue1}, ${sat}%, ${light1}%)`);
+                body.style.setProperty('--deep-color-2', `hsl(${newHue2}, ${sat}%, ${light2}%)`);
+
+                requestAnimationFrame(animateColors);
+            }
+
+            // start the color animation
+            animateColors();
+
+            // optional: add a subtle initial mouse position if no movement yet
+            // but keep default 30% 40% as fallback
+
+            // ---- keep original interactive effects (focus etc) but integrate with new style ----
+            document.addEventListener('DOMContentLoaded', function() {
+                const inputs = document.querySelectorAll('input');
+                inputs.forEach(input => {
+                    input.addEventListener('focus', function() {
+                        this.parentElement.style.transform = 'scale(1.01)';
+                        this.parentElement.style.transition = 'transform 0.2s';
+                    });
+                    input.addEventListener('blur', function() {
+                        this.parentElement.style.transform = 'scale(1)';
+                    });
+                    
+                    input.addEventListener('input', function() {
+                        if(this.value.trim() !== '') {
+                            this.style.borderColor = '#9bbaff';
+                        } else {
+                            this.style.borderColor = '#2d3555';
+                        }
+                    });
+                });
+
+                // Form submit animation (unchanged)
+                const form = document.querySelector('form');
+                form.addEventListener('submit', function(e) {
+                    const button = this.querySelector('button');
+                    button.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> launching...';
+                    button.disabled = true;
+                    // (the actual redirect will happen, this is just visual)
+                });
+
+                // extra creative: container hover glow (already in css)
+            });
+        })();
+    </script>
+</body>
+</html>

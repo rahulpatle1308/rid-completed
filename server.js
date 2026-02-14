@@ -11,6 +11,8 @@ const cors = require("cors");
 const crypto = require("crypto");
 const fs = require("fs");
 const fileUpload = require("express-fileupload");
+const nodemailer = require("nodemailer");
+const dashboardRoutes = require("./routes/dashboard-count-all-system.js");
 
 
 // Load environment variables
@@ -427,6 +429,42 @@ app.get("/ebook", (req, res) => {
 const teacherTestApi = require("./routes/teacherTestApi");
 app.use("/api/teacher-tests", teacherTestApi);
 
+app.post("/api/send-email", async (req, res) => {
+    const { studentEmail, subject, message } = req.body;
+
+    try {
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            secure: false,
+            auth: {
+                user: process.env.SMTP_USERNAME,
+                pass: process.env.SMTP_PASSWORD
+            }
+        });
+
+        await transporter.sendMail({
+            from: process.env.SMTP_FROM_EMAIL,
+            to: studentEmail,
+            subject: subject,
+            text: message
+        });
+
+        res.json({ success: true });
+    } catch (err) {
+        console.error("Email error:", err);
+        res.json({ success: false });
+    }
+});
+const teacherTests = require("./routes/teacherTests");
+app.use("/teacher-tests", teacherTests);
+const advanceStudentRoutes = require("./routes/advanceStudentRoutes");
+app.use("/advance-student", advanceStudentRoutes);
+const aiRoutes = require("./routes/aiRoutes");
+app.use("/ai", aiRoutes);
+const AddvanceAnalyticsRoutes = require("./routes/Add-versionAnalyticsRoutes.js");
+app.use("/api/teacher/analytics", AddvanceAnalyticsRoutes);
+app.use("/dashboard", dashboardRoutes);
 
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();

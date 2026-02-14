@@ -13,7 +13,7 @@ router.post('/submit', (req, res) => {
     const { name, email, number, message } = req.body;
   
     // Log or save the data
-    console.log(`Name: ${name}, Email: ${email}, Number: ${number}, Message: ${message}`);
+    // console.log(`Name: ${name}, Email: ${email}, Number: ${number}, Message: ${message}`);
   
     // Optionally save the data to the database (if configured)
   

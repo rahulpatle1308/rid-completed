@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send Test Link</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+
+<h2>Test: <%= testTitle %></h2>
+
+
+<canvas id="qrCanvas"></canvas>
+
+<p>Test Link:</p>
+<input id="testLink" value="<%= publicLink %>" readonly style="width:60%">
+
+<button onclick="copyLink()">Copy Link</button>
+
+<script>
+   QRCode.toCanvas(document.getElementById("qrCanvas"), 
+      "<%= publicLink %>", { width:200 });
+
+   function copyLink(){
+     const input = document.getElementById("testLink");
+     input.select();
+     document.execCommand("copy");
+     alert("Link Copied");
+   }
+</script>
+
+</body>
+</html>

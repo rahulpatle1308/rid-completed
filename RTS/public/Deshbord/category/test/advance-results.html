@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes" />
+  <title>NEBULA QUIZ · CREATIVE DASHBOARD</title>
+
+  <!-- CHART.js (unchanged) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- FONT AWESOME 6 (FREE) – for creative icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- GOOGLE FONT POPPINS (enhanced) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- GLOBAL CHART STYLES – make charts readable on dark bg (no change to original JS) -->
+  <script>
+    Chart.defaults.color = '#f0fcff';
+    Chart.defaults.borderColor = 'rgba(120, 230, 255, 0.2)';
+    Chart.defaults.font.family = "'Poppins', sans-serif";
+    Chart.defaults.font.size = 11;
+    Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(10, 25, 45, 0.9)';
+  </script>
+
+  <style>
+    /* ---------- CREATIVE RESET / VARIABLES / FUTURISTIC GLASS CORE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 30%, #0a142f, #030812);
+      font-family: 'Poppins', sans-serif;
+      color: #e2f3ff;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 20px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* animated neon grid overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* floating orbs */
+    body::after {
+      content: "";
+      position: fixed;
+      top: -20%; left: -10%;
+      width: 140%; height: 140%;
+      background: radial-gradient(circle at 70% 30%, rgba(20, 160, 220, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 30% 80%, rgba(200, 80, 255, 0.06) 0%, transparent 50%);
+      animation: orbit 42s infinite alternate ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes orbit {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-3%, -2%) scale(1.03); }
+    }
+
+    .dashboard {
+      max-width: 1440px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ----- GLASS CARD (core style) ----- */
+    .glass-panel {
+      background: rgba(8, 25, 45, 0.55);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 32px;
+      border: 1px solid rgba(0, 230, 255, 0.25);
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 0 1px rgba(0, 240, 255, 0.1) inset;
+      padding: 24px 22px;
+      transition: all 0.25s ease;
+    }
+
+    .glass-panel:hover {
+      border-color: rgba(0, 240, 255, 0.6);
+      box-shadow: 0 22px 48px -8px rgba(0, 200, 255, 0.3), 0 0 0 1.5px rgba(0, 255, 255, 0.3) inset;
+      background: rgba(10, 35, 60, 0.7);
+    }
+
+    /* ---------- HEADER / TITLE SECTION ---------- */
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .title-area {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .title-icon {
+      background: linear-gradient(145deg, #00e0ff, #0066cc);
+      width: 56px;
+      height: 56px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      text-shadow: 0 0 15px cyan;
+      box-shadow: 0 12px 24px -8px #00a6ff;
+    }
+
+    .title-text h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #b3f0ff, #8ad4ff, #6ec8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .title-text span {
+      font-size: 0.9rem;
+      color: #a0e7ff;
+      background: rgba(0,200,255,0.15);
+      padding: 5px 14px;
+      border-radius: 40px;
+      font-weight: 500;
+      border: 0.5px solid cyan;
+    }
+
+    .user-badge {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(255,255,255,0.05);
+      padding: 10px 22px;
+      border-radius: 60px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0,255,255,0.2);
+    }
+
+    .user-badge i {
+      font-size: 22px;
+      color: #6effe8;
+    }
+
+    /* ---------- KPI GRID – 4 cards (creative) ---------- */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .kpi-item {
+      background: radial-gradient(145% 140% at 20% 20%, rgba(0, 180, 255, 0.2), rgba(0, 70, 140, 0.4));
+      backdrop-filter: blur(18px);
+      border-radius: 28px;
+      padding: 24px 20px;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      box-shadow: 0 15px 30px -10px #00000070, 0 0 0 1px rgba(0, 255, 200, 0.1) inset;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .kpi-item:hover {
+      transform: translateY(-6px);
+      border-color: #00ffe0;
+      box-shadow: 0 25px 40px -12px #00ccff80;
+    }
+
+    .kpi-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 220, 255, 0.15);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #aaf0ff;
+      text-shadow: 0 0 12px cyan;
+    }
+
+    .kpi-content {
+      flex: 1;
+    }
+
+    .kpi-label {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #b2f3ff;
+      opacity: 0.9;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .kpi-value {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(to right, #fff, #c0f5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+
+    /* special for time / sec */
+    .kpi-value small {
+      font-size: 16px;
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: #b4f0ff;
+      letter-spacing: 0;
+      margin-left: 4px;
+    }
+
+    /* ---------- CHARTS GRID – dynamic 3 cols ---------- */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      margin-bottom: 48px;
+    }
+
+    .chart-card {
+      background: rgba(6, 21, 40, 0.65);
+      backdrop-filter: blur(20px);
+      border-radius: 34px;
+      padding: 20px 18px;
+      border: 1px solid rgba(0, 230, 255, 0.2);
+      box-shadow: 0 20px 32px -12px black;
+    }
+
+    .chart-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgba(0, 255, 255, 0.3);
+    }
+
+    .chart-header i {
+      font-size: 26px;
+      color: #20e8ff;
+      text-shadow: 0 0 10px #00c3ff;
+    }
+
+    .chart-header h3 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: -0.3px;
+      color: #e2fdff;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 200px;
+      background: rgba(0, 20, 35, 0.4);
+      border-radius: 22px;
+      padding: 8px 6px;
+      transition: 0.2s;
+    }
+
+    /* ---------- RESPONSIVE TABLE – cosmic style ---------- */
+    .table-cosmic {
+      background: rgba(8, 28, 48, 0.6);
+      backdrop-filter: blur(18px);
+      border-radius: 36px;
+      padding: 26px 20px;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      margin-top: 20px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .section-title i {
+      font-size: 30px;
+      color: #00e7ff;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      background: linear-gradient(to right, #c6f5ff, #a6e9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+      color: white;
+    }
+
+    th {
+      background: rgba(0, 180, 220, 0.4);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 18px 12px;
+      text-align: left;
+      backdrop-filter: blur(4px);
+      border-bottom: 2px solid cyan;
+      color: #ffffff;
+      letter-spacing: 0.8px;
+    }
+
+    td {
+      padding: 16px 12px;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+      font-weight: 400;
+      background: rgba(0, 40, 60, 0.2);
+    }
+
+    tr:hover td {
+      background: rgba(0, 160, 255, 0.15);
+      transition: 0.15s;
+    }
+
+    .correct {
+      color: #b5ffcf;
+      font-weight: 700;
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    .wrong {
+      color: #ffaab3;
+      font-weight: 600;
+      text-shadow: 0 0 5px #ff3b3b;
+    }
+
+    i.fa-circle-check { color: #4eff8c; margin-right: 6px; }
+    i.fa-circle-xmark { color: #ff6e7f; margin-right: 6px; }
+
+    /* ---------- RESPONSIVE BREAKPOINTS – full control ---------- */
+    @media screen and (max-width: 1150px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .charts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media screen and (max-width: 850px) {
+      .dashboard-header { flex-direction: column; align-items: flex-start; }
+      .user-badge { align-self: flex-end; }
+      .charts-grid { grid-template-columns: 1fr; }
+    }
+
+    @media screen and (max-width: 600px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .title-text h1 { font-size: 1.8rem; }
+      .title-icon { width: 48px; height: 48px; font-size: 26px; }
+      .glass-panel { padding: 20px 16px; }
+      .kpi-value { font-size: 32px; }
+    }
+
+    @media screen and (max-width: 380px) {
+      body { padding: 12px 8px; }
+      .kpi-item { padding: 18px 14px; }
+    }
+
+    /* custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #03141f; border-radius: 20px; }
+    ::-webkit-scrollbar-thumb { background: #00a6c0; border-radius: 20px; box-shadow: inset 0 0 8px #00ffff; }
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- ===== CREATIVE HEADER ===== -->
+  <div class="dashboard-header">
+    <div class="title-area">
+      <div class="title-icon">
+        <i class="fas fa-question"></i>
+      </div>
+      <div class="title-text">
+        <h1>RESULTS QUIZ</h1>
+       <span>
+  <i class="fas fa-bolt" style="margin-right: 6px;"></i>
+  <a href="/index.html" target="_blank" style="color:#a0e7ff; text-decoration:none;">
+    INSIGHT RIDTEACH.IN
+  </a>
+</span>
+
+      </div>
+    </div>
+    <div class="user-badge">
+      <i class="fas fa-user-astronaut"></i>
+      <span style="font-weight: 600;">COSMIC ANALYST</span>
+      <i class="fas fa-globe" style="color: #64ffda;"></i>
+    </div>
+  </div>
+
+  <!-- ===== KPI GRID – 4 ELEMENTS ===== (original IDs preserved + new) -->
+  <div class="kpi-grid">
+    <!-- Score KPI (original) -->
+    <div class="kpi-item">
+      <div class="kpi-icon"><i class="fas fa-star"></i></div>
+      <div class="kpi-content">
+        <div class="kpi-label"><i class="fas fa-trophy" style="font-size: 14px;"></i> TOTAL SCORE</div>
+        <div class="kpi-value" id="scoreKPI">0</div>
+      </div>
+    </div>
+    <!-- Time KPI (original) -->
+    <div class="kpi-item" style="background: radial-gradient(145% 140% at 20% 20%, rgba(255, 120, 0, 0.2), rgba(120, 40, 0, 0.4));">
+      <div class="kpi-icon"><i class="fas fa-hourglass-half"></i></div>
+      <div class="kpi-content">
+        <div class="kpi-label"><i class="fas fa-clock"></i> TIME TAKEN</div>
+        <div class="kpi-value" id="timeKPI">0 sec</div>
+      </div>
+    </div>
+    <!-- Total Questions (extra KPI – brand new) -->
+    <div class="kpi-item" style="background: radial-gradient(145% 140% at 20% 20%, rgba(0, 220, 180, 0.2), rgba(0, 100, 120, 0.4));">
+      <div class="kpi-icon"><i class="fas fa-list-check"></i></div>
+      <div class="kpi-content">
+        <div class="kpi-label"><i class="fas fa-layer-group"></i> TOTAL QUESTIONS</div>
+        <div class="kpi-value" id="totalQKPI">0</div>
+      </div>
+    </div>
+    <!-- Accuracy (extra KPI) -->
+    <div class="kpi-item" style="background: radial-gradient(145% 140% at 20% 20%, rgba(255, 80, 200, 0.2), rgba(100, 20, 80, 0.4));">
+      <div class="kpi-icon"><i class="fas fa-bullseye"></i></div>
+      <div class="kpi-content">
+        <div class="kpi-label"><i class="fas fa-percent"></i> ACCURACY</div>
+        <div class="kpi-value" id="accuracyKPI">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHARTS GRID – bar, line, pie (original IDs untouched) ===== -->
+  <div class="charts-grid">
+    <!-- BAR CHART CARD -->
+    <div class="chart-card glass-panel">
+      <div class="chart-header">
+        <i class="fas fa-chart-simple"></i>
+        <h3>Quiz Score Overview</h3>
+      </div>
+      <canvas id="barChart"></canvas>
+    </div>
+    <!-- LINE CHART CARD -->
+    <div class="chart-card glass-panel">
+      <div class="chart-header">
+        <i class="fas fa-wave-square"></i>
+        <h3>Performance Trend</h3>
+      </div>
+      <canvas id="lineChart"></canvas>
+    </div>
+    <!-- PIE CHART CARD -->
+    <div class="chart-card glass-panel">
+      <div class="chart-header">
+        <i class="fas fa-chart-pie"></i>
+        <h3>Attempt Distribution</h3>
+      </div>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+
+  <!-- ===== COSMIC TABLE SECTION (original table id = resultsTable) ===== -->
+  <div class="table-cosmic">
+    <div class="section-title">
+      <i class="fas fa-table-cells-large"></i>
+      <h2>ANSWER DEEP DIVE</h2>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th><i class="fas fa-hashtag"></i> Q.No</th>
+            <th><i class="fas fa-file-lines"></i> Question</th>
+            <th><i class="fas fa-pen-to-square"></i> Your Answer</th>
+            <th><i class="fas fa-check-double"></i> Correct</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTable"></tbody>
+      </table>
+    </div>
+    <!-- subtle glow line -->
+    <div style="margin-top: 16px; text-align: right; opacity: 0.7; font-size: 14px;">
+      <i class="fas fa-flask"></i> live quiz intelligence
+    </div>
+  </div>
+
+</div> <!-- dashboard end -->
+<script>
+// ==============================
+// SAFE LOCAL STORAGE FETCH
+// ==============================
+const attempted = Number(localStorage.getItem("attempted")) || 0;
+const notAttempted = Number(localStorage.getItem("notAttempted")) || 0;
+const score = Number(localStorage.getItem("score")) || 0;
+const timeTaken = localStorage.getItem("timeTaken") || "0 sec";
+
+// load questions
+let questions = [];
+try {
+    questions = JSON.parse(localStorage.getItem("questions")) || [];
+} catch (e) {
+    questions = [];
+}
+
+// ==============================
+// KPI CALCULATIONS
+// ==============================
+const totalQuestions = questions.length || (attempted + notAttempted);
+const accuracy = attempted > 0
+    ? Math.round((score / attempted) * 100)
+    : 0;
+
+// ==============================
+// UPDATE KPI UI
+// ==============================
+document.getElementById("scoreKPI").innerText = score;
+document.getElementById("timeKPI").innerText = timeTaken;
+document.getElementById("totalQKPI").innerText = totalQuestions;
+document.getElementById("accuracyKPI").innerText = accuracy + "%";
+
+// ==============================
+// TABLE FILL
+// ==============================
+const table = document.getElementById("resultsTable");
+table.innerHTML = "";
+
+questions.forEach((q, i) => {
+
+    let selectedText = "<i>Not Attempted</i>";
+    let isCorrect = false;
+
+    if (q.selected !== undefined && q.selected !== null) {
+        selectedText = q.options[q.selected]?.text || "-";
+        isCorrect = q.options[q.selected]?.isCorrect || false;
+    }
+
+    const correctOption = q.options.find(opt => opt.isCorrect);
+    const correctText = correctOption ? correctOption.text : "-";
+
+    table.innerHTML += `
+    <tr>
+        <td>${i + 1}</td>
+        <td>${q.text || "-"}</td>
+        <td class="${isCorrect ? "correct" : "wrong"}">
+            ${selectedText}
+        </td>
+        <td class="correct">${correctText}</td>
+    </tr>`;
+});
+
+// ==============================
+// CHART DATA
+// ==============================
+const correctTrend = questions.map(q =>
+    q.selected !== undefined &&
+    q.options[q.selected]?.isCorrect ? 1 : 0
+);
+
+// ==============================
+// BAR CHART
+// ==============================
+new Chart(document.getElementById("barChart"), {
+    type: "bar",
+    data: {
+        labels: ["Attempted", "Not Attempted", "Score"],
+        datasets: [{
+            data: [attempted, notAttempted, score],
+            backgroundColor: ["#0092bd", "#ff5e5e", "#00ff9d"]
+        }]
+    },
+    options: {
+        plugins: { legend: { display: false } }
+    }
+});
+
+// ==============================
+// LINE CHART
+// ==============================
+new Chart(document.getElementById("lineChart"), {
+    type: "line",
+    data: {
+        labels: questions.map((_, i) => "Q" + (i + 1)),
+        datasets: [{
+            label: "Correct/Wrong Trend",
+            data: correctTrend,
+            borderColor: "#7be8ff",
+            tension: 0.4,
+            fill: false
+        }]
+    }
+});
+
+// ==============================
+// PIE CHART
+// ==============================
+new Chart(document.getElementById("pieChart"), {
+    type: "pie",
+    data: {
+        labels: ["Attempted", "Not Attempted"],
+        datasets: [{
+            data: [attempted, notAttempted],
+            backgroundColor: ["#0092bd", "#ff5e5e"]
+        }]
+    }
+});
+</script>
+
+
+</body>
+</html>
+
+
+
