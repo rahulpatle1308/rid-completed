@@ -163,9 +163,10 @@ body{
     <div id="orgSelection" class="org-selection">
       <p><b>Select Organization Type:</b></p>
       <div class="org-buttons">
-        <div class="org-btn" onclick="selectOrg(this)">Library</div>
-        <div class="org-btn" onclick="selectOrg(this)">DCA</div>
-        <div class="org-btn" onclick="selectOrg(this)">Coaching Centre</div>
+        <div class="org-btn" data-type="Library" onclick="selectOrg(this)">Library</div>
+<div class="org-btn" data-type="DCA" onclick="selectOrg(this)">DCA</div>
+<div class="org-btn" data-type="Coaching Centre" onclick="selectOrg(this)">Coaching Centre</div>
+
       </div>
       <div id="orgValidation" class="org-validation">
         Please select organization type
@@ -226,7 +227,8 @@ role.addEventListener("change", () => {
 function selectOrg(el) {
   document.querySelectorAll(".org-btn").forEach(b => b.classList.remove("selected"));
   el.classList.add("selected");
-  selectedOrgType = el.innerText;
+  selectedOrgType = el.dataset.type;
+
   isOrgSelected = true;
   orgValidation.style.display = "none";
   validateForm();
@@ -255,7 +257,6 @@ function validateForm() {
   submitBtn.disabled = !filled;
 }
 
-
 /* SUBMIT */
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -266,15 +267,23 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  // Hidden field set
-  document.getElementById("organisationType").value = selectedOrgType;
+const data = {
+  name: fullName.value,
+  email: email.value,
+  phone: mobile.value,
+  password: password.value,
+  role: role.value,
+  organisationType: role.value === "organisation" ? selectedOrgType : ""
+};
 
-  const formData = new FormData(form);
 
   try {
     const res = await fetch("/user/register", {
       method: "POST",
-      body: formData
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     });
 
     const result = await res.json();
@@ -282,7 +291,7 @@ form.addEventListener("submit", async (e) => {
 
     // Success redirect
     if (result.success) {
-      window.location.href = "/Login/login.html";
+      window.location.href = "/login";
     }
 
   } catch (err) {
@@ -297,11 +306,10 @@ document.querySelectorAll("input").forEach(i =>
 );
 
 function goToLogin(){
-  window.location.href = "/Login/login.html";
-
+  window.location.href = "/login";
 }
-
 </script>
+
 
 </body>
 </html>

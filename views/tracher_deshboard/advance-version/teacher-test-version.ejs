@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/teacher-advance.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-  
+
 </head>
 
 <body>
     <script>
-    const TEACHER_ID = "<%= teacher._id %>";
-</script>
+        const TEACHER_ID = "<%= teacher._id %>";
+    </script>
 
     <div class="main-container">
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -715,6 +715,7 @@
 
                     <!-- Research Papers Section -->
                     <div id="research-section" class="hidden">
+
                         <div class="lock-overlay" id="research-lock">
                             <div class="lock-message">
                                 <div class="lock-icon-large">
@@ -722,9 +723,7 @@
                                 </div>
                                 <h3>Research Papers Locked</h3>
                                 <p>This feature is only available after payment.</p>
-                                <p>Please complete the payment to access research papers.</p>
-                                <button class="btn btn-primary" style="margin-top: 20px;"
-                                    id="goto-payment-from-research">
+                                <button class="btn btn-primary" id="goto-payment-from-research">
                                     <i class="fas fa-credit-card"></i> Go to Payment
                                 </button>
                             </div>
@@ -734,30 +733,53 @@
                             <i class="fas fa-file-pdf"></i>
                             <h2>Research Papers Library</h2>
                         </div>
+<form id="research-form" class="card" enctype="multipart/form-data">
+    <h3><i class="fas fa-upload"></i> Upload Research Paper</h3>
 
-                        <div class="card">
-                            <h3><i class="fas fa-upload"></i> Upload Research Paper</h3>
-                            <div class="form-group">
-                                <label>Paper Title</label>
-                                <input type="text" id="research-title" placeholder="Enter research title">
-                            </div>
+    <div class="form-group">
+        <label>Subject</label>
+        <input type="text" id="research-subject" name="subject" placeholder="Enter research subject">
+    </div>
 
-                            <div class="form-group">
-                                <label>Upload PDF</label>
-                                <input type="file" id="research-file" accept="application/pdf">
-                            </div>
+    <div class="form-group">
+        <label>Paper Title</label>
+        <input type="text" id="research-title" name="title" placeholder="Enter research title">
+    </div>
 
-                            <button class="btn btn-primary" id="upload-research-btn" onclick="research()">
-                                <i class="fas fa-upload"></i> Upload Paper
-                            </button>
-                        </div>
+    <div class="form-group">
+        <label>Author Name</label>
+        <input type="text" id="research-author" name="author" placeholder="Enter author name">
+    </div>
 
-                        <div class="card">
-                            <h3><i class="fas fa-book"></i> Uploaded Papers</h3>
-                            <div id="research-list">
-                                <p style="color:#7f8c8d;">No research papers uploaded yet.</p>
-                            </div>
-                        </div>
+    <div class="form-group">
+        <label>Publication Year</label>
+        <input type="number" id="research-year" name="year" placeholder="e.g. 2024">
+    </div>
+
+    <div class="form-group">
+        <label>Journal / Publisher</label>
+        <input type="text" id="research-journal" name="journal" placeholder="e.g. Nature, Science, PRL">
+    </div>
+
+    <div class="form-group">
+        <label>Access Type</label>
+        <select id="research-access" name="access">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Upload PDF</label>
+        <input type="file" id="research-file" name="file" accept="application/pdf">
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="research()">
+        <i class="fas fa-upload"></i> Upload Paper
+    </button>
+</form>
+
+
                     </div>
 
                     <!-- Notes Upload Section -->

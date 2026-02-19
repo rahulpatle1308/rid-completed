@@ -97,10 +97,12 @@ app.use('/ebook/uploads', express.static(path.join(__dirname, 'public/uploads'))
 
 // ========== CREATE UPLOAD DIRECTORIES ==========
 const ensureUploadDirs = () => {
-    const directories = [
-        'public/uploads/pdfs',
-        'public/uploads/covers'
-    ];
+   const directories = [
+    'public/uploads/pdfs',
+    'public/uploads/covers',
+    'uploads/research'
+];
+
 
     directories.forEach(dir => {
         const fullPath = path.join(__dirname, dir);
@@ -117,19 +119,21 @@ ensureUploadDirs();
 // ========== ADDITIONAL MIDDLEWARE ==========
 const configureMiddleware = () => {
   app.use(cookieParser());
-  
-  app.use(
-    fileUpload({
-      useTempFiles: true,
-      tempFileDir: "/tmp/",
-      limits: { fileSize: 100 * 1024 * 1024 },
-    })
-  );
-  
+
+  // ❌ express-fileupload remove karo (multer use ho raha hai)
+  // app.use(
+  //   fileUpload({
+  //     useTempFiles: true,
+  //     tempFileDir: "/tmp/",
+  //     limits: { fileSize: 100 * 1024 * 1024 },
+  //   })
+  // );
+
   app.use(passport.initialize());
   app.use(passport.session());
   require("./config/passport")(passport);
 };
+
 
 // ========== VIEW ENGINE SETUP ==========
 const configureViews = () => {
@@ -468,6 +472,24 @@ app.use("/dashboard", dashboardRoutes);
 app.get("/research-papper",(req,res)=>{
   res.render("tracher_deshboard/advance-version/Research-papper/index.ejs")
 })
+app.use("/uploads", express.static("uploads"));
+const researchRoutes = require("./routes/researchRoutes");
+app.use("/api/research", researchRoutes);
+
+//===role by login pages origanition pages ===========================
+app.get("/library-dashboard",(req,res)=>{
+  res.render("organisation/library-dashboard.ejs")
+
+})
+app.get("/dca-dashboard",(req,res)=>{
+  res.render("organisation/dca-dashboard.ejs")
+  
+})
+app.get("/coaching-dashboard",(req,res)=>{
+  res.render("organisation/coaching-dashboard.ejs")
+  
+})
+
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
 
