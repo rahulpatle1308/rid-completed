@@ -13,6 +13,8 @@ const fs = require("fs");
 const fileUpload = require("express-fileupload");
 const nodemailer = require("nodemailer");
 const dashboardRoutes = require("./routes/dashboard-count-all-system.js");
+const candidateRoutes = require("./routes/candidateRoutes.js");
+
 
 
 // Load environment variables
@@ -489,9 +491,13 @@ app.get("/coaching-dashboard",(req,res)=>{
   res.render("organisation/coaching-dashboard.ejs")
   
 })
+// before configureRoutes()
+app.use("/api/candidates", candidateRoutes);
+
 
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
+
 
 // ========== START SERVER ==========
 app.listen(port, () => {
