@@ -61,7 +61,7 @@ exports.login = async (req, res) => {
 
     // 🔹 Role-based redirect
     if (user.role === "student") {
-      return res.redirect("/student");
+      return res.redirect("/RTS/public/main.html");
     }
 
     if (user.role === "teacher") {

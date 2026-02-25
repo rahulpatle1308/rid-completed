@@ -489,8 +489,23 @@ app.get("/coaching-dashboard",(req,res)=>{
   res.render("organisation/coaching-dashboard.ejs")
   
 })
+// Research Papers
+app.get("/research-paper", (req, res) => {
+  res.render("Research-Papers/Home");
+});
 
+//typing software
+app.get("/typing-software",(req,res)=>{
+  res.render("typing-software/main.ejs")
+})
+
+app.get("/com",(req,res)=>{
+  res.render("com/main.ejs")
+})
 // ======= MAIN ROUTES (404 is inside this) =======
+
+
+
 configureRoutes();
 
 // ========== START SERVER ==========
