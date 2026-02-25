@@ -13,6 +13,8 @@ const fs = require("fs");
 const fileUpload = require("express-fileupload");
 const nodemailer = require("nodemailer");
 const dashboardRoutes = require("./routes/dashboard-count-all-system.js");
+const candidateRoutes = require("./routes/candidateRoutes.js");
+
 
 
 // Load environment variables
@@ -502,13 +504,32 @@ app.get("/typing-software",(req,res)=>{
 app.get("/com",(req,res)=>{
   res.render("com/main.ejs")
 })
+
+// before configureRoutes()
+app.use("/api/candidates", candidateRoutes);
+
+
+app.get("/research-dashboard",(req,res)=>{
+  res.render("organisation/research-dashboard.ejs")
+
+})
+
+// ye previous year paper ke liye h
+
+const previousRoutes = require("./routes/previousyear");
+app.use("/", previousRoutes);
+
+app.use("/uploads", express.static("uploads"));
+
 // ======= MAIN ROUTES (404 is inside this) =======
 
 
 
 configureRoutes();
 
+
 // ========== START SERVER ==========
 app.listen(port, () => {
   console.log(`\n✅ Server is running on http://localhost:${port}`);
 });
+
