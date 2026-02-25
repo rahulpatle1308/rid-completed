@@ -2514,5 +2514,7 @@ async function research() {
         alert("Server error");
     }
 }
-
+function previous(){
+    window.location.href="/previous-year-paper";
+}
 

@@ -495,6 +495,17 @@ app.get("/coaching-dashboard",(req,res)=>{
 app.use("/api/candidates", candidateRoutes);
 
 
+app.get("/research-dashboard",(req,res)=>{
+  res.render("organisation/research-dashboard.ejs")
+
+})
+
+// ye previous year paper ke liye h
+
+const previousRoutes = require("./routes/previousyear");
+app.use("/", previousRoutes);
+
+app.use("/uploads", express.static("uploads"));
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
 
@@ -503,3 +514,4 @@ configureRoutes();
 app.listen(port, () => {
   console.log(`\n✅ Server is running on http://localhost:${port}`);
 });
+
